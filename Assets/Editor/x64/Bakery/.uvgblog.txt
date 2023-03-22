@@ -1,0 +1,1000 @@
+2023-3-20
+Rendering UV GBuffer for sd_T613_LM0 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for sd_T613_LMA15 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for sd_T613_LMA14 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for sd_T613_LMA13 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for sd_T613_LMA12 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for sd_T613_LMA11 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for sd_T613_LMA10 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for sd_T613_LMA9 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for sd_T613_LMA8 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for sd_T613_LMA7 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for sd_T613_LMA6 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for sd_T613_LMA5 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for sd_T613_LMA4 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for sd_T613_LMA3 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for sd_T613_LMA2 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for sd_T613_LMA1 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for sd_T613_LMA16 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for sd_T613_LMA17 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Done
+Done
+Running ftrace fixpos12 "D:/Temp" "uvpos_sd_T613_LMA8.lz4" 2 0 8 0
+Running ftrace fixpos12 "D:/Temp" "uvpos_sd_T613_LMA11.lz4" 2 0 5 0
+Running ftrace fixpos12 "D:/Temp" "uvpos_sd_T613_LMA13.lz4" 2 0 3 0
+Running ftrace fixpos12 "D:/Temp" "uvpos_sd_T613_LMA7.lz4" 2 0 9 0
+Running ftrace fixpos12 "D:/Temp" "uvpos_sd_T613_LMA6.lz4" 2 0 10 0
+Running ftrace fixpos12 "D:/Temp" "uvpos_sd_T613_LMA12.lz4" 2 0 4 0
+Running ftrace fixpos12 "D:/Temp" "uvpos_sd_T613_LMA15.lz4" 2 0 1 0
+Running ftrace fixpos12 "D:/Temp" "uvpos_sd_T613_LMA14.lz4" 2 0 2 0
+Running ftrace fixpos12 "D:/Temp" "uvpos_sd_T613_LMA4.lz4" 2 0 12 0
+Running ftrace fixpos12 "D:/Temp" "uvpos_sd_T613_LMA10.lz4" 2 0 6 0
+Running ftrace fixpos12 "D:/Temp" "uvpos_sd_T613_LMA17.lz4" 2 0 17 0
+Running ftrace fixpos12 "D:/Temp" "uvpos_sd_T613_LMA9.lz4" 2 0 7 0
+Running ftrace fixpos12 "D:/Temp" "uvpos_sd_T613_LMA16.lz4" 2 0 16 0
+Running ftrace fixpos12 "D:/Temp" "uvpos_sd_T613_LMA3.lz4" 2 0 13 0
+Running ftrace fixpos12 "D:/Temp" "uvpos_sd_T613_LMA2.lz4" 2 0 14 0
+Running ftrace fixpos12 "D:/Temp" "uvpos_sd_T613_LM0.lz4" 2 0 0 0
+Running ftrace fixpos12 "D:/Temp" "uvpos_sd_T613_LMA1.lz4" 2 0 15 0
+Running ftrace fixpos12 "D:/Temp" "uvpos_sd_T613_LMA5.lz4" 2 0 11 0
+Running ftrace batchpointlight "D:/Temp" "PointBatch_8_0_45" 4 0 8 batchpointlight_8_0_45.bin
+Running ftrace addmul "D:/Temp" "sd_T613_LMA8" 4 0 8 comp_8.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_5_0_45" 4 0 5 batchpointlight_5_0_45.bin
+Running ftrace addmul "D:/Temp" "sd_T613_LMA11" 4 0 5 comp_5.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_3_0_45" 4 0 3 batchpointlight_3_0_45.bin
+Running ftrace addmul "D:/Temp" "sd_T613_LMA13" 4 0 3 comp_3.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_9_0_45" 4 0 9 batchpointlight_9_0_45.bin
+Running ftrace addmul "D:/Temp" "sd_T613_LMA7" 4 0 9 comp_9.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_10_0_45" 4 0 10 batchpointlight_10_0_45.bin
+Running ftrace addmul "D:/Temp" "sd_T613_LMA6" 4 0 10 comp_10.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_4_0_45" 4 0 4 batchpointlight_4_0_45.bin
+Running ftrace addmul "D:/Temp" "sd_T613_LMA12" 4 0 4 comp_4.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_1_0_45" 4 0 1 batchpointlight_1_0_45.bin
+Running ftrace addmul "D:/Temp" "sd_T613_LMA15" 4 0 1 comp_1.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_2_0_45" 4 0 2 batchpointlight_2_0_45.bin
+Running ftrace addmul "D:/Temp" "sd_T613_LMA14" 4 0 2 comp_2.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_12_0_45" 4 0 12 batchpointlight_12_0_45.bin
+Running ftrace addmul "D:/Temp" "sd_T613_LMA4" 4 0 12 comp_12.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_6_0_45" 4 0 6 batchpointlight_6_0_45.bin
+Running ftrace addmul "D:/Temp" "sd_T613_LMA10" 4 0 6 comp_6.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_17_0_45" 4 0 17 batchpointlight_17_0_45.bin
+Running ftrace addmul "D:/Temp" "sd_T613_LMA17" 4 0 17 comp_17.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_7_0_45" 4 0 7 batchpointlight_7_0_45.bin
+Running ftrace addmul "D:/Temp" "sd_T613_LMA9" 4 0 7 comp_7.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_16_0_45" 4 0 16 batchpointlight_16_0_45.bin
+Running ftrace addmul "D:/Temp" "sd_T613_LMA16" 4 0 16 comp_16.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_13_0_45" 4 0 13 batchpointlight_13_0_45.bin
+Running ftrace addmul "D:/Temp" "sd_T613_LMA3" 4 0 13 comp_13.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_14_0_45" 4 0 14 batchpointlight_14_0_45.bin
+Running ftrace addmul "D:/Temp" "sd_T613_LMA2" 4 0 14 comp_14.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_0_0_45" 4 0 0 batchpointlight_0_0_45.bin
+Running ftrace addmul "D:/Temp" "sd_T613_LM0" 4 0 0 comp_0.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_15_0_45" 4 0 15 batchpointlight_15_0_45.bin
+Running ftrace addmul "D:/Temp" "sd_T613_LMA1" 4 0 15 comp_15.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_11_0_45" 4 0 11 batchpointlight_11_0_45.bin
+Running ftrace addmul "D:/Temp" "sd_T613_LMA5" 4 0 11 comp_11.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA8_diffuse" 4 16 8 "gi_sd_T613_LMA80.bin" "sd_T613_LMA8_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA11_diffuse" 4 16 5 "gi_sd_T613_LMA110.bin" "sd_T613_LMA11_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA13_diffuse" 4 16 3 "gi_sd_T613_LMA130.bin" "sd_T613_LMA13_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA7_diffuse" 4 16 9 "gi_sd_T613_LMA70.bin" "sd_T613_LMA7_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA6_diffuse" 4 16 10 "gi_sd_T613_LMA60.bin" "sd_T613_LMA6_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA12_diffuse" 4 16 4 "gi_sd_T613_LMA120.bin" "sd_T613_LMA12_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA15_diffuse" 4 16 1 "gi_sd_T613_LMA150.bin" "sd_T613_LMA15_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA14_diffuse" 4 16 2 "gi_sd_T613_LMA140.bin" "sd_T613_LMA14_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA4_diffuse" 4 16 12 "gi_sd_T613_LMA40.bin" "sd_T613_LMA4_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA10_diffuse" 4 16 6 "gi_sd_T613_LMA100.bin" "sd_T613_LMA10_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA17_diffuse" 4 16 17 "gi_sd_T613_LMA170.bin" "sd_T613_LMA17_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA9_diffuse" 4 16 7 "gi_sd_T613_LMA90.bin" "sd_T613_LMA9_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA16_diffuse" 4 16 16 "gi_sd_T613_LMA160.bin" "sd_T613_LMA16_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA3_diffuse" 4 16 13 "gi_sd_T613_LMA30.bin" "sd_T613_LMA3_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA2_diffuse" 4 16 14 "gi_sd_T613_LMA20.bin" "sd_T613_LMA2_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LM0_diffuse" 4 16 0 "gi_sd_T613_LM00.bin" "sd_T613_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA1_diffuse" 4 16 15 "gi_sd_T613_LMA10.bin" "sd_T613_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA5_diffuse" 4 16 11 "gi_sd_T613_LMA50.bin" "sd_T613_LMA5_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA8_diffuse" 4 16 8 "gi_sd_T613_LMA81.bin" "sd_T613_LMA8_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA11_diffuse" 4 16 5 "gi_sd_T613_LMA111.bin" "sd_T613_LMA11_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA13_diffuse" 4 16 3 "gi_sd_T613_LMA131.bin" "sd_T613_LMA13_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA7_diffuse" 4 16 9 "gi_sd_T613_LMA71.bin" "sd_T613_LMA7_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA6_diffuse" 4 16 10 "gi_sd_T613_LMA61.bin" "sd_T613_LMA6_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA12_diffuse" 4 16 4 "gi_sd_T613_LMA121.bin" "sd_T613_LMA12_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA15_diffuse" 4 16 1 "gi_sd_T613_LMA151.bin" "sd_T613_LMA15_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA14_diffuse" 4 16 2 "gi_sd_T613_LMA141.bin" "sd_T613_LMA14_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA4_diffuse" 4 16 12 "gi_sd_T613_LMA41.bin" "sd_T613_LMA4_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA10_diffuse" 4 16 6 "gi_sd_T613_LMA101.bin" "sd_T613_LMA10_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA17_diffuse" 4 16 17 "gi_sd_T613_LMA171.bin" "sd_T613_LMA17_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA9_diffuse" 4 16 7 "gi_sd_T613_LMA91.bin" "sd_T613_LMA9_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA16_diffuse" 4 16 16 "gi_sd_T613_LMA161.bin" "sd_T613_LMA16_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA3_diffuse" 4 16 13 "gi_sd_T613_LMA31.bin" "sd_T613_LMA3_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA2_diffuse" 4 16 14 "gi_sd_T613_LMA21.bin" "sd_T613_LMA2_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LM0_diffuse" 4 16 0 "gi_sd_T613_LM01.bin" "sd_T613_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA1_diffuse" 4 16 15 "gi_sd_T613_LMA11.bin" "sd_T613_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA5_diffuse" 4 16 11 "gi_sd_T613_LMA51.bin" "sd_T613_LMA5_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA8_diffuse" 4 16 8 "gi_sd_T613_LMA82.bin" "sd_T613_LMA8_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA11_diffuse" 4 16 5 "gi_sd_T613_LMA112.bin" "sd_T613_LMA11_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA13_diffuse" 4 16 3 "gi_sd_T613_LMA132.bin" "sd_T613_LMA13_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA7_diffuse" 4 16 9 "gi_sd_T613_LMA72.bin" "sd_T613_LMA7_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA6_diffuse" 4 16 10 "gi_sd_T613_LMA62.bin" "sd_T613_LMA6_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA12_diffuse" 4 16 4 "gi_sd_T613_LMA122.bin" "sd_T613_LMA12_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA15_diffuse" 4 16 1 "gi_sd_T613_LMA152.bin" "sd_T613_LMA15_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA14_diffuse" 4 16 2 "gi_sd_T613_LMA142.bin" "sd_T613_LMA14_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA4_diffuse" 4 16 12 "gi_sd_T613_LMA42.bin" "sd_T613_LMA4_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA10_diffuse" 4 16 6 "gi_sd_T613_LMA102.bin" "sd_T613_LMA10_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA17_diffuse" 4 16 17 "gi_sd_T613_LMA172.bin" "sd_T613_LMA17_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA9_diffuse" 4 16 7 "gi_sd_T613_LMA92.bin" "sd_T613_LMA9_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA16_diffuse" 4 16 16 "gi_sd_T613_LMA162.bin" "sd_T613_LMA16_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA3_diffuse" 4 16 13 "gi_sd_T613_LMA32.bin" "sd_T613_LMA3_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA2_diffuse" 4 16 14 "gi_sd_T613_LMA22.bin" "sd_T613_LMA2_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LM0_diffuse" 4 16 0 "gi_sd_T613_LM02.bin" "sd_T613_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA1_diffuse" 4 16 15 "gi_sd_T613_LMA12.bin" "sd_T613_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA5_diffuse" 4 16 11 "gi_sd_T613_LMA52.bin" "sd_T613_LMA5_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA8_final" 4 16 8 "gi_sd_T613_LMA83.bin" "sd_T613_LMA8_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA11_final" 4 16 5 "gi_sd_T613_LMA113.bin" "sd_T613_LMA11_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA13_final" 4 16 3 "gi_sd_T613_LMA133.bin" "sd_T613_LMA13_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA7_final" 4 16 9 "gi_sd_T613_LMA73.bin" "sd_T613_LMA7_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA6_final" 4 16 10 "gi_sd_T613_LMA63.bin" "sd_T613_LMA6_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA12_final" 4 16 4 "gi_sd_T613_LMA123.bin" "sd_T613_LMA12_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA15_final" 4 16 1 "gi_sd_T613_LMA153.bin" "sd_T613_LMA15_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA14_final" 4 16 2 "gi_sd_T613_LMA143.bin" "sd_T613_LMA14_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA4_final" 4 16 12 "gi_sd_T613_LMA43.bin" "sd_T613_LMA4_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA10_final" 4 16 6 "gi_sd_T613_LMA103.bin" "sd_T613_LMA10_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA17_final" 4 16 17 "gi_sd_T613_LMA173.bin" "sd_T613_LMA17_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA9_final" 4 16 7 "gi_sd_T613_LMA93.bin" "sd_T613_LMA9_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA16_final" 4 16 16 "gi_sd_T613_LMA163.bin" "sd_T613_LMA16_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA3_final" 4 16 13 "gi_sd_T613_LMA33.bin" "sd_T613_LMA3_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA2_final" 4 16 14 "gi_sd_T613_LMA23.bin" "sd_T613_LMA2_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LM0_final" 4 16 0 "gi_sd_T613_LM03.bin" "sd_T613_LM0_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA1_final" 4 16 15 "gi_sd_T613_LMA13.bin" "sd_T613_LMA1_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA5_final" 4 16 11 "gi_sd_T613_LMA53.bin" "sd_T613_LMA5_lights_HDR.lz4" vbTraceTex.bin
+Running denoiser72 c "D:/Temp/sd_T613_LMA8_final_HDR.lz4" "D:/Temp/sd_T613_LMA8_final_HDR.lz4" 1024 0
+Running seamfixer "D:/Temp" "8" "sd_T613_LMA8_final_HDR.lz4"
+Running denoiser72 c "D:/Temp/sd_T613_LMA11_final_HDR.lz4" "D:/Temp/sd_T613_LMA11_final_HDR.lz4" 1024 0
+Running seamfixer "D:/Temp" "5" "sd_T613_LMA11_final_HDR.lz4"
+Running denoiser72 c "D:/Temp/sd_T613_LMA13_final_HDR.lz4" "D:/Temp/sd_T613_LMA13_final_HDR.lz4" 1024 0
+Running seamfixer "D:/Temp" "3" "sd_T613_LMA13_final_HDR.lz4"
+Running denoiser72 c "D:/Temp/sd_T613_LMA7_final_HDR.lz4" "D:/Temp/sd_T613_LMA7_final_HDR.lz4" 1024 0
+Running seamfixer "D:/Temp" "9" "sd_T613_LMA7_final_HDR.lz4"
+Running denoiser72 c "D:/Temp/sd_T613_LMA6_final_HDR.lz4" "D:/Temp/sd_T613_LMA6_final_HDR.lz4" 1024 0
+Running seamfixer "D:/Temp" "10" "sd_T613_LMA6_final_HDR.lz4"
+Running denoiser72 c "D:/Temp/sd_T613_LMA12_final_HDR.lz4" "D:/Temp/sd_T613_LMA12_final_HDR.lz4" 1024 0
+Running seamfixer "D:/Temp" "4" "sd_T613_LMA12_final_HDR.lz4"
+Running denoiser72 c "D:/Temp/sd_T613_LMA15_final_HDR.lz4" "D:/Temp/sd_T613_LMA15_final_HDR.lz4" 1024 0
+Running seamfixer "D:/Temp" "1" "sd_T613_LMA15_final_HDR.lz4"
+Running denoiser72 c "D:/Temp/sd_T613_LMA14_final_HDR.lz4" "D:/Temp/sd_T613_LMA14_final_HDR.lz4" 1024 0
+Running seamfixer "D:/Temp" "2" "sd_T613_LMA14_final_HDR.lz4"
+Running denoiser72 c "D:/Temp/sd_T613_LMA4_final_HDR.lz4" "D:/Temp/sd_T613_LMA4_final_HDR.lz4" 1024 0
+Running seamfixer "D:/Temp" "12" "sd_T613_LMA4_final_HDR.lz4"
+Running denoiser72 c "D:/Temp/sd_T613_LMA10_final_HDR.lz4" "D:/Temp/sd_T613_LMA10_final_HDR.lz4" 1024 0
+Running seamfixer "D:/Temp" "6" "sd_T613_LMA10_final_HDR.lz4"
+Running denoiser72 c "D:/Temp/sd_T613_LMA17_final_HDR.lz4" "D:/Temp/sd_T613_LMA17_final_HDR.lz4" 1024 0
+Running seamfixer "D:/Temp" "17" "sd_T613_LMA17_final_HDR.lz4"
+Running denoiser72 c "D:/Temp/sd_T613_LMA9_final_HDR.lz4" "D:/Temp/sd_T613_LMA9_final_HDR.lz4" 1024 0
+Running seamfixer "D:/Temp" "7" "sd_T613_LMA9_final_HDR.lz4"
+Running denoiser72 c "D:/Temp/sd_T613_LMA16_final_HDR.lz4" "D:/Temp/sd_T613_LMA16_final_HDR.lz4" 1024 0
+Running seamfixer "D:/Temp" "16" "sd_T613_LMA16_final_HDR.lz4"
+Running denoiser72 c "D:/Temp/sd_T613_LMA3_final_HDR.lz4" "D:/Temp/sd_T613_LMA3_final_HDR.lz4" 1024 0
+Running seamfixer "D:/Temp" "13" "sd_T613_LMA3_final_HDR.lz4"
+Running denoiser72 c "D:/Temp/sd_T613_LMA2_final_HDR.lz4" "D:/Temp/sd_T613_LMA2_final_HDR.lz4" 1024 0
+Running seamfixer "D:/Temp" "14" "sd_T613_LMA2_final_HDR.lz4"
+Running denoiser72 c "D:/Temp/sd_T613_LM0_final_HDR.lz4" "D:/Temp/sd_T613_LM0_final_HDR.lz4" 1024 0
+Running seamfixer "D:/Temp" "0" "sd_T613_LM0_final_HDR.lz4"
+Running denoiser72 c "D:/Temp/sd_T613_LMA1_final_HDR.lz4" "D:/Temp/sd_T613_LMA1_final_HDR.lz4" 1024 0
+Running seamfixer "D:/Temp" "15" "sd_T613_LMA1_final_HDR.lz4"
+Running denoiser72 c "D:/Temp/sd_T613_LMA5_final_HDR.lz4" "D:/Temp/sd_T613_LMA5_final_HDR.lz4" 1024 0
+Running seamfixer "D:/Temp" "11" "sd_T613_LMA5_final_HDR.lz4"
+Running halffloat2hdr "D:/Temp/sd_T613_LMA8_final_HDR.lz4" "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LMA8_final.hdr" 1024
+Running halffloat2hdr "D:/Temp/sd_T613_LMA11_final_HDR.lz4" "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LMA11_final.hdr" 1024
+Running halffloat2hdr "D:/Temp/sd_T613_LMA13_final_HDR.lz4" "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LMA13_final.hdr" 1024
+Running halffloat2hdr "D:/Temp/sd_T613_LMA7_final_HDR.lz4" "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LMA7_final.hdr" 1024
+Running halffloat2hdr "D:/Temp/sd_T613_LMA6_final_HDR.lz4" "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LMA6_final.hdr" 1024
+Running halffloat2hdr "D:/Temp/sd_T613_LMA12_final_HDR.lz4" "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LMA12_final.hdr" 1024
+Running halffloat2hdr "D:/Temp/sd_T613_LMA15_final_HDR.lz4" "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LMA15_final.hdr" 1024
+Running halffloat2hdr "D:/Temp/sd_T613_LMA14_final_HDR.lz4" "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LMA14_final.hdr" 1024
+Running halffloat2hdr "D:/Temp/sd_T613_LMA4_final_HDR.lz4" "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LMA4_final.hdr" 1024
+Running halffloat2hdr "D:/Temp/sd_T613_LMA10_final_HDR.lz4" "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LMA10_final.hdr" 1024
+Running halffloat2hdr "D:/Temp/sd_T613_LMA17_final_HDR.lz4" "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LMA17_final.hdr" 1024
+Running halffloat2hdr "D:/Temp/sd_T613_LMA9_final_HDR.lz4" "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LMA9_final.hdr" 1024
+Running halffloat2hdr "D:/Temp/sd_T613_LMA16_final_HDR.lz4" "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LMA16_final.hdr" 1024
+Running halffloat2hdr "D:/Temp/sd_T613_LMA3_final_HDR.lz4" "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LMA3_final.hdr" 1024
+Running halffloat2hdr "D:/Temp/sd_T613_LMA2_final_HDR.lz4" "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LMA2_final.hdr" 1024
+Running halffloat2hdr "D:/Temp/sd_T613_LM0_final_HDR.lz4" "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LM0_final.hdr" 1024
+Running halffloat2hdr "D:/Temp/sd_T613_LMA1_final_HDR.lz4" "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LMA1_final.hdr" 1024
+Running halffloat2hdr "D:/Temp/sd_T613_LMA5_final_HDR.lz4" "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LMA5_final.hdr" 1024
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+initScene done
+Done
+Rendering UV GBuffer for sd_T613_LM0 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for sd_T613_LMA15 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for sd_T613_LMA14 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for sd_T613_LMA13 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for sd_T613_LMA12 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for sd_T613_LMA11 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for sd_T613_LMA10 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for sd_T613_LMA9 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for sd_T613_LMA8 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for sd_T613_LMA7 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for sd_T613_LMA6 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for sd_T613_LMA5 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for sd_T613_LMA4 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for sd_T613_LMA3 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for sd_T613_LMA2 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for sd_T613_LMA1 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for sd_T613_LMA16 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for sd_T613_LMA17 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Done
+Done
+Running ftrace fixpos12 "D:/Temp" "uvpos_sd_T613_LMA14.lz4" 2 0 2 0
+Running ftrace fixpos12 "D:/Temp" "uvpos_sd_T613_LMA6.lz4" 2 0 10 0
+Running ftrace fixpos12 "D:/Temp" "uvpos_sd_T613_LMA12.lz4" 2 0 4 0
+Running ftrace fixpos12 "D:/Temp" "uvpos_sd_T613_LMA15.lz4" 2 0 1 0
+Running ftrace fixpos12 "D:/Temp" "uvpos_sd_T613_LMA8.lz4" 2 0 8 0
+Running ftrace fixpos12 "D:/Temp" "uvpos_sd_T613_LMA10.lz4" 2 0 6 0
+Running ftrace fixpos12 "D:/Temp" "uvpos_sd_T613_LMA9.lz4" 2 0 7 0
+Running ftrace fixpos12 "D:/Temp" "uvpos_sd_T613_LMA7.lz4" 2 0 9 0
+Running ftrace fixpos12 "D:/Temp" "uvpos_sd_T613_LMA11.lz4" 2 0 5 0
+Running ftrace fixpos12 "D:/Temp" "uvpos_sd_T613_LMA16.lz4" 2 0 16 0
+Running ftrace fixpos12 "D:/Temp" "uvpos_sd_T613_LMA13.lz4" 2 0 3 0
+Running ftrace fixpos12 "D:/Temp" "uvpos_sd_T613_LMA2.lz4" 2 0 14 0
+Running ftrace fixpos12 "D:/Temp" "uvpos_sd_T613_LMA3.lz4" 2 0 13 0
+Running ftrace fixpos12 "D:/Temp" "uvpos_sd_T613_LMA1.lz4" 2 0 15 0
+Running ftrace fixpos12 "D:/Temp" "uvpos_sd_T613_LM0.lz4" 2 0 0 0
+Running ftrace fixpos12 "D:/Temp" "uvpos_sd_T613_LMA5.lz4" 2 0 11 0
+Running ftrace fixpos12 "D:/Temp" "uvpos_sd_T613_LMA17.lz4" 2 0 17 0
+Running ftrace fixpos12 "D:/Temp" "uvpos_sd_T613_LMA4.lz4" 2 0 12 0
+Running ftrace batchpointlight "D:/Temp" "PointBatch_2_0_45" 4 0 2 batchpointlight_2_0_45.bin
+Running ftrace addmul "D:/Temp" "sd_T613_LMA14" 4 0 2 comp_2.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_10_0_45" 4 0 10 batchpointlight_10_0_45.bin
+Running ftrace addmul "D:/Temp" "sd_T613_LMA6" 4 0 10 comp_10.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_4_0_45" 4 0 4 batchpointlight_4_0_45.bin
+Running ftrace addmul "D:/Temp" "sd_T613_LMA12" 4 0 4 comp_4.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_1_0_45" 4 0 1 batchpointlight_1_0_45.bin
+Running ftrace addmul "D:/Temp" "sd_T613_LMA15" 4 0 1 comp_1.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_8_0_45" 4 0 8 batchpointlight_8_0_45.bin
+Running ftrace addmul "D:/Temp" "sd_T613_LMA8" 4 0 8 comp_8.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_6_0_45" 4 0 6 batchpointlight_6_0_45.bin
+Running ftrace addmul "D:/Temp" "sd_T613_LMA10" 4 0 6 comp_6.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_7_0_45" 4 0 7 batchpointlight_7_0_45.bin
+Running ftrace addmul "D:/Temp" "sd_T613_LMA9" 4 0 7 comp_7.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_9_0_45" 4 0 9 batchpointlight_9_0_45.bin
+Running ftrace addmul "D:/Temp" "sd_T613_LMA7" 4 0 9 comp_9.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_5_0_45" 4 0 5 batchpointlight_5_0_45.bin
+Running ftrace addmul "D:/Temp" "sd_T613_LMA11" 4 0 5 comp_5.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_16_0_45" 4 0 16 batchpointlight_16_0_45.bin
+Running ftrace addmul "D:/Temp" "sd_T613_LMA16" 4 0 16 comp_16.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_3_0_45" 4 0 3 batchpointlight_3_0_45.bin
+Running ftrace addmul "D:/Temp" "sd_T613_LMA13" 4 0 3 comp_3.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_14_0_45" 4 0 14 batchpointlight_14_0_45.bin
+Running ftrace addmul "D:/Temp" "sd_T613_LMA2" 4 0 14 comp_14.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_13_0_45" 4 0 13 batchpointlight_13_0_45.bin
+Running ftrace addmul "D:/Temp" "sd_T613_LMA3" 4 0 13 comp_13.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_15_0_45" 4 0 15 batchpointlight_15_0_45.bin
+Running ftrace addmul "D:/Temp" "sd_T613_LMA1" 4 0 15 comp_15.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_0_0_45" 4 0 0 batchpointlight_0_0_45.bin
+Running ftrace addmul "D:/Temp" "sd_T613_LM0" 4 0 0 comp_0.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_11_0_45" 4 0 11 batchpointlight_11_0_45.bin
+Running ftrace addmul "D:/Temp" "sd_T613_LMA5" 4 0 11 comp_11.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_17_0_45" 4 0 17 batchpointlight_17_0_45.bin
+Running ftrace addmul "D:/Temp" "sd_T613_LMA17" 4 0 17 comp_17.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_12_0_45" 4 0 12 batchpointlight_12_0_45.bin
+Running ftrace addmul "D:/Temp" "sd_T613_LMA4" 4 0 12 comp_12.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA14_diffuse" 4 16 2 "gi_sd_T613_LMA140.bin" "sd_T613_LMA14_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA6_diffuse" 4 16 10 "gi_sd_T613_LMA60.bin" "sd_T613_LMA6_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA12_diffuse" 4 16 4 "gi_sd_T613_LMA120.bin" "sd_T613_LMA12_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA15_diffuse" 4 16 1 "gi_sd_T613_LMA150.bin" "sd_T613_LMA15_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA8_diffuse" 4 16 8 "gi_sd_T613_LMA80.bin" "sd_T613_LMA8_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA10_diffuse" 4 16 6 "gi_sd_T613_LMA100.bin" "sd_T613_LMA10_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA9_diffuse" 4 16 7 "gi_sd_T613_LMA90.bin" "sd_T613_LMA9_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA7_diffuse" 4 16 9 "gi_sd_T613_LMA70.bin" "sd_T613_LMA7_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA11_diffuse" 4 16 5 "gi_sd_T613_LMA110.bin" "sd_T613_LMA11_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA16_diffuse" 4 16 16 "gi_sd_T613_LMA160.bin" "sd_T613_LMA16_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA13_diffuse" 4 16 3 "gi_sd_T613_LMA130.bin" "sd_T613_LMA13_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA2_diffuse" 4 16 14 "gi_sd_T613_LMA20.bin" "sd_T613_LMA2_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA3_diffuse" 4 16 13 "gi_sd_T613_LMA30.bin" "sd_T613_LMA3_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA1_diffuse" 4 16 15 "gi_sd_T613_LMA10.bin" "sd_T613_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LM0_diffuse" 4 16 0 "gi_sd_T613_LM00.bin" "sd_T613_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA5_diffuse" 4 16 11 "gi_sd_T613_LMA50.bin" "sd_T613_LMA5_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA17_diffuse" 4 16 17 "gi_sd_T613_LMA170.bin" "sd_T613_LMA17_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA4_diffuse" 4 16 12 "gi_sd_T613_LMA40.bin" "sd_T613_LMA4_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA14_diffuse" 4 16 2 "gi_sd_T613_LMA141.bin" "sd_T613_LMA14_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA6_diffuse" 4 16 10 "gi_sd_T613_LMA61.bin" "sd_T613_LMA6_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA12_diffuse" 4 16 4 "gi_sd_T613_LMA121.bin" "sd_T613_LMA12_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA15_diffuse" 4 16 1 "gi_sd_T613_LMA151.bin" "sd_T613_LMA15_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA8_diffuse" 4 16 8 "gi_sd_T613_LMA81.bin" "sd_T613_LMA8_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA10_diffuse" 4 16 6 "gi_sd_T613_LMA101.bin" "sd_T613_LMA10_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA9_diffuse" 4 16 7 "gi_sd_T613_LMA91.bin" "sd_T613_LMA9_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA7_diffuse" 4 16 9 "gi_sd_T613_LMA71.bin" "sd_T613_LMA7_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA11_diffuse" 4 16 5 "gi_sd_T613_LMA111.bin" "sd_T613_LMA11_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA16_diffuse" 4 16 16 "gi_sd_T613_LMA161.bin" "sd_T613_LMA16_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA13_diffuse" 4 16 3 "gi_sd_T613_LMA131.bin" "sd_T613_LMA13_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA2_diffuse" 4 16 14 "gi_sd_T613_LMA21.bin" "sd_T613_LMA2_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA3_diffuse" 4 16 13 "gi_sd_T613_LMA31.bin" "sd_T613_LMA3_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA1_diffuse" 4 16 15 "gi_sd_T613_LMA11.bin" "sd_T613_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LM0_diffuse" 4 16 0 "gi_sd_T613_LM01.bin" "sd_T613_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA5_diffuse" 4 16 11 "gi_sd_T613_LMA51.bin" "sd_T613_LMA5_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA17_diffuse" 4 16 17 "gi_sd_T613_LMA171.bin" "sd_T613_LMA17_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA4_diffuse" 4 16 12 "gi_sd_T613_LMA41.bin" "sd_T613_LMA4_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA14_diffuse" 4 16 2 "gi_sd_T613_LMA142.bin" "sd_T613_LMA14_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA6_diffuse" 4 16 10 "gi_sd_T613_LMA62.bin" "sd_T613_LMA6_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA12_diffuse" 4 16 4 "gi_sd_T613_LMA122.bin" "sd_T613_LMA12_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA15_diffuse" 4 16 1 "gi_sd_T613_LMA152.bin" "sd_T613_LMA15_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA8_diffuse" 4 16 8 "gi_sd_T613_LMA82.bin" "sd_T613_LMA8_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA10_diffuse" 4 16 6 "gi_sd_T613_LMA102.bin" "sd_T613_LMA10_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA9_diffuse" 4 16 7 "gi_sd_T613_LMA92.bin" "sd_T613_LMA9_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA7_diffuse" 4 16 9 "gi_sd_T613_LMA72.bin" "sd_T613_LMA7_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA11_diffuse" 4 16 5 "gi_sd_T613_LMA112.bin" "sd_T613_LMA11_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA16_diffuse" 4 16 16 "gi_sd_T613_LMA162.bin" "sd_T613_LMA16_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA13_diffuse" 4 16 3 "gi_sd_T613_LMA132.bin" "sd_T613_LMA13_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA2_diffuse" 4 16 14 "gi_sd_T613_LMA22.bin" "sd_T613_LMA2_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA3_diffuse" 4 16 13 "gi_sd_T613_LMA32.bin" "sd_T613_LMA3_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA1_diffuse" 4 16 15 "gi_sd_T613_LMA12.bin" "sd_T613_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LM0_diffuse" 4 16 0 "gi_sd_T613_LM02.bin" "sd_T613_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA5_diffuse" 4 16 11 "gi_sd_T613_LMA52.bin" "sd_T613_LMA5_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA17_diffuse" 4 16 17 "gi_sd_T613_LMA172.bin" "sd_T613_LMA17_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA4_diffuse" 4 16 12 "gi_sd_T613_LMA42.bin" "sd_T613_LMA4_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA14_final" 4 16 2 "gi_sd_T613_LMA143.bin" "sd_T613_LMA14_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA6_final" 4 16 10 "gi_sd_T613_LMA63.bin" "sd_T613_LMA6_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA12_final" 4 16 4 "gi_sd_T613_LMA123.bin" "sd_T613_LMA12_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA15_final" 4 16 1 "gi_sd_T613_LMA153.bin" "sd_T613_LMA15_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA8_final" 4 16 8 "gi_sd_T613_LMA83.bin" "sd_T613_LMA8_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA10_final" 4 16 6 "gi_sd_T613_LMA103.bin" "sd_T613_LMA10_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA9_final" 4 16 7 "gi_sd_T613_LMA93.bin" "sd_T613_LMA9_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA7_final" 4 16 9 "gi_sd_T613_LMA73.bin" "sd_T613_LMA7_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA11_final" 4 16 5 "gi_sd_T613_LMA113.bin" "sd_T613_LMA11_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA16_final" 4 16 16 "gi_sd_T613_LMA163.bin" "sd_T613_LMA16_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA13_final" 4 16 3 "gi_sd_T613_LMA133.bin" "sd_T613_LMA13_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA2_final" 4 16 14 "gi_sd_T613_LMA23.bin" "sd_T613_LMA2_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA3_final" 4 16 13 "gi_sd_T613_LMA33.bin" "sd_T613_LMA3_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA1_final" 4 16 15 "gi_sd_T613_LMA13.bin" "sd_T613_LMA1_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LM0_final" 4 16 0 "gi_sd_T613_LM03.bin" "sd_T613_LM0_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA5_final" 4 16 11 "gi_sd_T613_LMA53.bin" "sd_T613_LMA5_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA17_final" 4 16 17 "gi_sd_T613_LMA173.bin" "sd_T613_LMA17_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA4_final" 4 16 12 "gi_sd_T613_LMA43.bin" "sd_T613_LMA4_lights_HDR.lz4" vbTraceTex.bin
+Running denoiser72 c "D:/Temp/sd_T613_LMA14_final_HDR.lz4" "D:/Temp/sd_T613_LMA14_final_HDR.lz4" 1024 0
+Running seamfixer "D:/Temp" "2" "sd_T613_LMA14_final_HDR.lz4"
+Running denoiser72 c "D:/Temp/sd_T613_LMA6_final_HDR.lz4" "D:/Temp/sd_T613_LMA6_final_HDR.lz4" 1024 0
+Running seamfixer "D:/Temp" "10" "sd_T613_LMA6_final_HDR.lz4"
+Running denoiser72 c "D:/Temp/sd_T613_LMA12_final_HDR.lz4" "D:/Temp/sd_T613_LMA12_final_HDR.lz4" 1024 0
+Running seamfixer "D:/Temp" "4" "sd_T613_LMA12_final_HDR.lz4"
+Running denoiser72 c "D:/Temp/sd_T613_LMA15_final_HDR.lz4" "D:/Temp/sd_T613_LMA15_final_HDR.lz4" 1024 0
+Running seamfixer "D:/Temp" "1" "sd_T613_LMA15_final_HDR.lz4"
+Running denoiser72 c "D:/Temp/sd_T613_LMA8_final_HDR.lz4" "D:/Temp/sd_T613_LMA8_final_HDR.lz4" 1024 0
+Running seamfixer "D:/Temp" "8" "sd_T613_LMA8_final_HDR.lz4"
+Running denoiser72 c "D:/Temp/sd_T613_LMA10_final_HDR.lz4" "D:/Temp/sd_T613_LMA10_final_HDR.lz4" 1024 0
+Running seamfixer "D:/Temp" "6" "sd_T613_LMA10_final_HDR.lz4"
+Running denoiser72 c "D:/Temp/sd_T613_LMA9_final_HDR.lz4" "D:/Temp/sd_T613_LMA9_final_HDR.lz4" 1024 0
+Running seamfixer "D:/Temp" "7" "sd_T613_LMA9_final_HDR.lz4"
+Running denoiser72 c "D:/Temp/sd_T613_LMA7_final_HDR.lz4" "D:/Temp/sd_T613_LMA7_final_HDR.lz4" 1024 0
+Running seamfixer "D:/Temp" "9" "sd_T613_LMA7_final_HDR.lz4"
+Running denoiser72 c "D:/Temp/sd_T613_LMA11_final_HDR.lz4" "D:/Temp/sd_T613_LMA11_final_HDR.lz4" 1024 0
+Running seamfixer "D:/Temp" "5" "sd_T613_LMA11_final_HDR.lz4"
+Running denoiser72 c "D:/Temp/sd_T613_LMA16_final_HDR.lz4" "D:/Temp/sd_T613_LMA16_final_HDR.lz4" 1024 0
+Running seamfixer "D:/Temp" "16" "sd_T613_LMA16_final_HDR.lz4"
+Running denoiser72 c "D:/Temp/sd_T613_LMA13_final_HDR.lz4" "D:/Temp/sd_T613_LMA13_final_HDR.lz4" 1024 0
+Running seamfixer "D:/Temp" "3" "sd_T613_LMA13_final_HDR.lz4"
+Running denoiser72 c "D:/Temp/sd_T613_LMA2_final_HDR.lz4" "D:/Temp/sd_T613_LMA2_final_HDR.lz4" 1024 0
+Running seamfixer "D:/Temp" "14" "sd_T613_LMA2_final_HDR.lz4"
+Running denoiser72 c "D:/Temp/sd_T613_LMA3_final_HDR.lz4" "D:/Temp/sd_T613_LMA3_final_HDR.lz4" 1024 0
+Running seamfixer "D:/Temp" "13" "sd_T613_LMA3_final_HDR.lz4"
+Running denoiser72 c "D:/Temp/sd_T613_LMA1_final_HDR.lz4" "D:/Temp/sd_T613_LMA1_final_HDR.lz4" 1024 0
+Running seamfixer "D:/Temp" "15" "sd_T613_LMA1_final_HDR.lz4"
+Running denoiser72 c "D:/Temp/sd_T613_LM0_final_HDR.lz4" "D:/Temp/sd_T613_LM0_final_HDR.lz4" 1024 0
+Running seamfixer "D:/Temp" "0" "sd_T613_LM0_final_HDR.lz4"
+Running denoiser72 c "D:/Temp/sd_T613_LMA5_final_HDR.lz4" "D:/Temp/sd_T613_LMA5_final_HDR.lz4" 1024 0
+Running seamfixer "D:/Temp" "11" "sd_T613_LMA5_final_HDR.lz4"
+Running denoiser72 c "D:/Temp/sd_T613_LMA17_final_HDR.lz4" "D:/Temp/sd_T613_LMA17_final_HDR.lz4" 1024 0
+Running seamfixer "D:/Temp" "17" "sd_T613_LMA17_final_HDR.lz4"
+Running denoiser72 c "D:/Temp/sd_T613_LMA4_final_HDR.lz4" "D:/Temp/sd_T613_LMA4_final_HDR.lz4" 1024 0
+Running seamfixer "D:/Temp" "12" "sd_T613_LMA4_final_HDR.lz4"
+Running halffloat2hdr "D:/Temp/sd_T613_LMA14_final_HDR.lz4" "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LMA14_final.hdr" 1024
+Running halffloat2hdr "D:/Temp/sd_T613_LMA6_final_HDR.lz4" "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LMA6_final.hdr" 1024
+Running halffloat2hdr "D:/Temp/sd_T613_LMA12_final_HDR.lz4" "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LMA12_final.hdr" 1024
+Running halffloat2hdr "D:/Temp/sd_T613_LMA15_final_HDR.lz4" "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LMA15_final.hdr" 1024
+Running halffloat2hdr "D:/Temp/sd_T613_LMA8_final_HDR.lz4" "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LMA8_final.hdr" 1024
+Running halffloat2hdr "D:/Temp/sd_T613_LMA10_final_HDR.lz4" "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LMA10_final.hdr" 1024
+Running halffloat2hdr "D:/Temp/sd_T613_LMA9_final_HDR.lz4" "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LMA9_final.hdr" 1024
+Running halffloat2hdr "D:/Temp/sd_T613_LMA7_final_HDR.lz4" "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LMA7_final.hdr" 1024
+Running halffloat2hdr "D:/Temp/sd_T613_LMA11_final_HDR.lz4" "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LMA11_final.hdr" 1024
+Running halffloat2hdr "D:/Temp/sd_T613_LMA16_final_HDR.lz4" "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LMA16_final.hdr" 1024
+Running halffloat2hdr "D:/Temp/sd_T613_LMA13_final_HDR.lz4" "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LMA13_final.hdr" 1024
+Running halffloat2hdr "D:/Temp/sd_T613_LMA2_final_HDR.lz4" "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LMA2_final.hdr" 1024
+Running halffloat2hdr "D:/Temp/sd_T613_LMA3_final_HDR.lz4" "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LMA3_final.hdr" 1024
+Running halffloat2hdr "D:/Temp/sd_T613_LMA1_final_HDR.lz4" "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LMA1_final.hdr" 1024
+Running halffloat2hdr "D:/Temp/sd_T613_LM0_final_HDR.lz4" "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LM0_final.hdr" 1024
+Running halffloat2hdr "D:/Temp/sd_T613_LMA5_final_HDR.lz4" "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LMA5_final.hdr" 1024
+Running halffloat2hdr "D:/Temp/sd_T613_LMA17_final_HDR.lz4" "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LMA17_final.hdr" 1024
+Running halffloat2hdr "D:/Temp/sd_T613_LMA4_final_HDR.lz4" "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LMA4_final.hdr" 1024
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+initScene done
+Done
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+initScene done
+Done
+Rendering UV GBuffer for sd_T613_LM0 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for sd_T613_LMA15 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for sd_T613_LMA14 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for sd_T613_LMA13 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for sd_T613_LMA12 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for sd_T613_LMA11 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for sd_T613_LMA10 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for sd_T613_LMA9 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for sd_T613_LMA8 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for sd_T613_LMA7 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for sd_T613_LMA6 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for sd_T613_LMA5 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for sd_T613_LMA4 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for sd_T613_LMA3 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for sd_T613_LMA2 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for sd_T613_LMA1 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for sd_T613_LMA16 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for sd_T613_LMA17 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Done
+Done
+Running ftrace fixpos12 "D:/Temp" "uvpos_sd_T613_LMA14.lz4" 2 0 2 0
+Running ftrace fixpos12 "D:/Temp" "uvpos_sd_T613_LMA6.lz4" 2 0 10 0
+Running ftrace fixpos12 "D:/Temp" "uvpos_sd_T613_LMA12.lz4" 2 0 4 0
+Running ftrace fixpos12 "D:/Temp" "uvpos_sd_T613_LMA15.lz4" 2 0 1 0
+Running ftrace fixpos12 "D:/Temp" "uvpos_sd_T613_LMA8.lz4" 2 0 8 0
+Running ftrace fixpos12 "D:/Temp" "uvpos_sd_T613_LMA10.lz4" 2 0 6 0
+Running ftrace fixpos12 "D:/Temp" "uvpos_sd_T613_LMA9.lz4" 2 0 7 0
+Running ftrace fixpos12 "D:/Temp" "uvpos_sd_T613_LMA7.lz4" 2 0 9 0
+Running ftrace fixpos12 "D:/Temp" "uvpos_sd_T613_LMA11.lz4" 2 0 5 0
+Running ftrace fixpos12 "D:/Temp" "uvpos_sd_T613_LMA16.lz4" 2 0 16 0
+Running ftrace fixpos12 "D:/Temp" "uvpos_sd_T613_LMA13.lz4" 2 0 3 0
+Running ftrace fixpos12 "D:/Temp" "uvpos_sd_T613_LMA2.lz4" 2 0 14 0
+Running ftrace fixpos12 "D:/Temp" "uvpos_sd_T613_LMA3.lz4" 2 0 13 0
+Running ftrace fixpos12 "D:/Temp" "uvpos_sd_T613_LMA1.lz4" 2 0 15 0
+Running ftrace fixpos12 "D:/Temp" "uvpos_sd_T613_LM0.lz4" 2 0 0 0
+Running ftrace fixpos12 "D:/Temp" "uvpos_sd_T613_LMA5.lz4" 2 0 11 0
+Running ftrace fixpos12 "D:/Temp" "uvpos_sd_T613_LMA17.lz4" 2 0 17 0
+Running ftrace fixpos12 "D:/Temp" "uvpos_sd_T613_LMA4.lz4" 2 0 12 0
+Running ftrace batchpointlight "D:/Temp" "PointBatch_2_0_4" 12 0 2 batchpointlight_2_0_4.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_2_5_7" 12 0 2 batchpointlight_2_5_7.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_2_8_12" 12 0 2 batchpointlight_2_8_12.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_2_13_17" 12 0 2 batchpointlight_2_13_17.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_2_18_45" 12 0 2 batchpointlight_2_18_45.bin
+Running ftrace addmul "D:/Temp" "sd_T613_LMA14" 4 0 2 comp_2.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_10_0_4" 12 0 10 batchpointlight_10_0_4.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_10_5_7" 12 0 10 batchpointlight_10_5_7.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_10_8_12" 12 0 10 batchpointlight_10_8_12.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_10_13_17" 12 0 10 batchpointlight_10_13_17.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_10_18_45" 12 0 10 batchpointlight_10_18_45.bin
+Running ftrace addmul "D:/Temp" "sd_T613_LMA6" 4 0 10 comp_10.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_4_0_4" 12 0 4 batchpointlight_4_0_4.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_4_5_7" 12 0 4 batchpointlight_4_5_7.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_4_8_12" 12 0 4 batchpointlight_4_8_12.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_4_13_17" 12 0 4 batchpointlight_4_13_17.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_4_18_45" 12 0 4 batchpointlight_4_18_45.bin
+Running ftrace addmul "D:/Temp" "sd_T613_LMA12" 4 0 4 comp_4.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_1_0_4" 12 0 1 batchpointlight_1_0_4.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_1_5_7" 12 0 1 batchpointlight_1_5_7.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_1_8_12" 12 0 1 batchpointlight_1_8_12.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_1_13_17" 12 0 1 batchpointlight_1_13_17.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_1_18_45" 12 0 1 batchpointlight_1_18_45.bin
+Running ftrace addmul "D:/Temp" "sd_T613_LMA15" 4 0 1 comp_1.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_8_0_4" 12 0 8 batchpointlight_8_0_4.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_8_5_7" 12 0 8 batchpointlight_8_5_7.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_8_8_12" 12 0 8 batchpointlight_8_8_12.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_8_13_17" 12 0 8 batchpointlight_8_13_17.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_8_18_45" 12 0 8 batchpointlight_8_18_45.bin
+Running ftrace addmul "D:/Temp" "sd_T613_LMA8" 4 0 8 comp_8.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_6_0_4" 12 0 6 batchpointlight_6_0_4.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_6_5_7" 12 0 6 batchpointlight_6_5_7.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_6_8_12" 12 0 6 batchpointlight_6_8_12.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_6_13_17" 12 0 6 batchpointlight_6_13_17.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_6_18_45" 12 0 6 batchpointlight_6_18_45.bin
+Running ftrace addmul "D:/Temp" "sd_T613_LMA10" 4 0 6 comp_6.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_7_0_4" 12 0 7 batchpointlight_7_0_4.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_7_5_7" 12 0 7 batchpointlight_7_5_7.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_7_8_12" 12 0 7 batchpointlight_7_8_12.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_7_13_17" 12 0 7 batchpointlight_7_13_17.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_7_18_45" 12 0 7 batchpointlight_7_18_45.bin
+Running ftrace addmul "D:/Temp" "sd_T613_LMA9" 4 0 7 comp_7.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_9_0_4" 12 0 9 batchpointlight_9_0_4.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_9_5_7" 12 0 9 batchpointlight_9_5_7.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_9_8_12" 12 0 9 batchpointlight_9_8_12.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_9_13_17" 12 0 9 batchpointlight_9_13_17.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_9_18_45" 12 0 9 batchpointlight_9_18_45.bin
+Running ftrace addmul "D:/Temp" "sd_T613_LMA7" 4 0 9 comp_9.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_5_0_4" 12 0 5 batchpointlight_5_0_4.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_5_5_7" 12 0 5 batchpointlight_5_5_7.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_5_8_12" 12 0 5 batchpointlight_5_8_12.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_5_13_17" 12 0 5 batchpointlight_5_13_17.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_5_18_45" 12 0 5 batchpointlight_5_18_45.bin
+Running ftrace addmul "D:/Temp" "sd_T613_LMA11" 4 0 5 comp_5.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_16_0_4" 12 0 16 batchpointlight_16_0_4.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_16_5_7" 12 0 16 batchpointlight_16_5_7.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_16_8_12" 12 0 16 batchpointlight_16_8_12.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_16_13_17" 12 0 16 batchpointlight_16_13_17.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_16_18_45" 12 0 16 batchpointlight_16_18_45.bin
+Running ftrace addmul "D:/Temp" "sd_T613_LMA16" 4 0 16 comp_16.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_3_0_4" 12 0 3 batchpointlight_3_0_4.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_3_5_7" 12 0 3 batchpointlight_3_5_7.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_3_8_12" 12 0 3 batchpointlight_3_8_12.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_3_13_17" 12 0 3 batchpointlight_3_13_17.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_3_18_45" 12 0 3 batchpointlight_3_18_45.bin
+Running ftrace addmul "D:/Temp" "sd_T613_LMA13" 4 0 3 comp_3.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_14_0_4" 12 0 14 batchpointlight_14_0_4.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_14_5_7" 12 0 14 batchpointlight_14_5_7.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_14_8_12" 12 0 14 batchpointlight_14_8_12.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_14_13_17" 12 0 14 batchpointlight_14_13_17.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_14_18_45" 12 0 14 batchpointlight_14_18_45.bin
+Running ftrace addmul "D:/Temp" "sd_T613_LMA2" 4 0 14 comp_14.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_13_0_4" 12 0 13 batchpointlight_13_0_4.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_13_5_7" 12 0 13 batchpointlight_13_5_7.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_13_8_12" 12 0 13 batchpointlight_13_8_12.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_13_13_17" 12 0 13 batchpointlight_13_13_17.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_13_18_45" 12 0 13 batchpointlight_13_18_45.bin
+Running ftrace addmul "D:/Temp" "sd_T613_LMA3" 4 0 13 comp_13.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_15_0_4" 12 0 15 batchpointlight_15_0_4.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_15_5_7" 12 0 15 batchpointlight_15_5_7.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_15_8_12" 12 0 15 batchpointlight_15_8_12.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_15_13_17" 12 0 15 batchpointlight_15_13_17.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_15_18_45" 12 0 15 batchpointlight_15_18_45.bin
+Running ftrace addmul "D:/Temp" "sd_T613_LMA1" 4 0 15 comp_15.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_0_0_4" 12 0 0 batchpointlight_0_0_4.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_0_5_7" 12 0 0 batchpointlight_0_5_7.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_0_8_12" 12 0 0 batchpointlight_0_8_12.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_0_13_17" 12 0 0 batchpointlight_0_13_17.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_0_18_45" 12 0 0 batchpointlight_0_18_45.bin
+Running ftrace addmul "D:/Temp" "sd_T613_LM0" 4 0 0 comp_0.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_11_0_4" 12 0 11 batchpointlight_11_0_4.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_11_5_7" 12 0 11 batchpointlight_11_5_7.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_11_8_12" 12 0 11 batchpointlight_11_8_12.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_11_13_17" 12 0 11 batchpointlight_11_13_17.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_11_18_45" 12 0 11 batchpointlight_11_18_45.bin
+Running ftrace addmul "D:/Temp" "sd_T613_LMA5" 4 0 11 comp_11.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_17_0_4" 12 0 17 batchpointlight_17_0_4.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_17_5_7" 12 0 17 batchpointlight_17_5_7.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_17_8_12" 12 0 17 batchpointlight_17_8_12.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_17_13_17" 12 0 17 batchpointlight_17_13_17.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_17_18_45" 12 0 17 batchpointlight_17_18_45.bin
+Running ftrace addmul "D:/Temp" "sd_T613_LMA17" 4 0 17 comp_17.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_12_0_4" 12 0 12 batchpointlight_12_0_4.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_12_5_7" 12 0 12 batchpointlight_12_5_7.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_12_8_12" 12 0 12 batchpointlight_12_8_12.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_12_13_18" 12 0 12 batchpointlight_12_13_18.bin
+Running ftrace batchpointlight "D:/Temp" "PointBatch_12_19_45" 12 0 12 batchpointlight_12_19_45.bin
+Running ftrace addmul "D:/Temp" "sd_T613_LMA4" 4 0 12 comp_12.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA14_diffuse" 4 16 2 "gi_sd_T613_LMA140.bin" "sd_T613_LMA14_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA6_diffuse" 4 16 10 "gi_sd_T613_LMA60.bin" "sd_T613_LMA6_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA12_diffuse" 4 16 4 "gi_sd_T613_LMA120.bin" "sd_T613_LMA12_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA15_diffuse" 4 16 1 "gi_sd_T613_LMA150.bin" "sd_T613_LMA15_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA8_diffuse" 4 16 8 "gi_sd_T613_LMA80.bin" "sd_T613_LMA8_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA10_diffuse" 4 16 6 "gi_sd_T613_LMA100.bin" "sd_T613_LMA10_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA9_diffuse" 4 16 7 "gi_sd_T613_LMA90.bin" "sd_T613_LMA9_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA7_diffuse" 4 16 9 "gi_sd_T613_LMA70.bin" "sd_T613_LMA7_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA11_diffuse" 4 16 5 "gi_sd_T613_LMA110.bin" "sd_T613_LMA11_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA16_diffuse" 4 16 16 "gi_sd_T613_LMA160.bin" "sd_T613_LMA16_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA13_diffuse" 4 16 3 "gi_sd_T613_LMA130.bin" "sd_T613_LMA13_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA2_diffuse" 4 16 14 "gi_sd_T613_LMA20.bin" "sd_T613_LMA2_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA3_diffuse" 4 16 13 "gi_sd_T613_LMA30.bin" "sd_T613_LMA3_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA1_diffuse" 4 16 15 "gi_sd_T613_LMA10.bin" "sd_T613_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LM0_diffuse" 4 16 0 "gi_sd_T613_LM00.bin" "sd_T613_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA5_diffuse" 4 16 11 "gi_sd_T613_LMA50.bin" "sd_T613_LMA5_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA17_diffuse" 4 16 17 "gi_sd_T613_LMA170.bin" "sd_T613_LMA17_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA4_diffuse" 4 16 12 "gi_sd_T613_LMA40.bin" "sd_T613_LMA4_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA14_diffuse" 4 16 2 "gi_sd_T613_LMA141.bin" "sd_T613_LMA14_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA6_diffuse" 4 16 10 "gi_sd_T613_LMA61.bin" "sd_T613_LMA6_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA12_diffuse" 4 16 4 "gi_sd_T613_LMA121.bin" "sd_T613_LMA12_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA15_diffuse" 4 16 1 "gi_sd_T613_LMA151.bin" "sd_T613_LMA15_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA8_diffuse" 4 16 8 "gi_sd_T613_LMA81.bin" "sd_T613_LMA8_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA10_diffuse" 4 16 6 "gi_sd_T613_LMA101.bin" "sd_T613_LMA10_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA9_diffuse" 4 16 7 "gi_sd_T613_LMA91.bin" "sd_T613_LMA9_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA7_diffuse" 4 16 9 "gi_sd_T613_LMA71.bin" "sd_T613_LMA7_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA11_diffuse" 4 16 5 "gi_sd_T613_LMA111.bin" "sd_T613_LMA11_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA16_diffuse" 4 16 16 "gi_sd_T613_LMA161.bin" "sd_T613_LMA16_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA13_diffuse" 4 16 3 "gi_sd_T613_LMA131.bin" "sd_T613_LMA13_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA2_diffuse" 4 16 14 "gi_sd_T613_LMA21.bin" "sd_T613_LMA2_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA3_diffuse" 4 16 13 "gi_sd_T613_LMA31.bin" "sd_T613_LMA3_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA1_diffuse" 4 16 15 "gi_sd_T613_LMA11.bin" "sd_T613_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LM0_diffuse" 4 16 0 "gi_sd_T613_LM01.bin" "sd_T613_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA5_diffuse" 4 16 11 "gi_sd_T613_LMA51.bin" "sd_T613_LMA5_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA17_diffuse" 4 16 17 "gi_sd_T613_LMA171.bin" "sd_T613_LMA17_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA4_diffuse" 4 16 12 "gi_sd_T613_LMA41.bin" "sd_T613_LMA4_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA14_diffuse" 4 16 2 "gi_sd_T613_LMA142.bin" "sd_T613_LMA14_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA6_diffuse" 4 16 10 "gi_sd_T613_LMA62.bin" "sd_T613_LMA6_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA12_diffuse" 4 16 4 "gi_sd_T613_LMA122.bin" "sd_T613_LMA12_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA15_diffuse" 4 16 1 "gi_sd_T613_LMA152.bin" "sd_T613_LMA15_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA8_diffuse" 4 16 8 "gi_sd_T613_LMA82.bin" "sd_T613_LMA8_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA10_diffuse" 4 16 6 "gi_sd_T613_LMA102.bin" "sd_T613_LMA10_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA9_diffuse" 4 16 7 "gi_sd_T613_LMA92.bin" "sd_T613_LMA9_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA7_diffuse" 4 16 9 "gi_sd_T613_LMA72.bin" "sd_T613_LMA7_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA11_diffuse" 4 16 5 "gi_sd_T613_LMA112.bin" "sd_T613_LMA11_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA16_diffuse" 4 16 16 "gi_sd_T613_LMA162.bin" "sd_T613_LMA16_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA13_diffuse" 4 16 3 "gi_sd_T613_LMA132.bin" "sd_T613_LMA13_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA2_diffuse" 4 16 14 "gi_sd_T613_LMA22.bin" "sd_T613_LMA2_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA3_diffuse" 4 16 13 "gi_sd_T613_LMA32.bin" "sd_T613_LMA3_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA1_diffuse" 4 16 15 "gi_sd_T613_LMA12.bin" "sd_T613_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LM0_diffuse" 4 16 0 "gi_sd_T613_LM02.bin" "sd_T613_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA5_diffuse" 4 16 11 "gi_sd_T613_LMA52.bin" "sd_T613_LMA5_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA17_diffuse" 4 16 17 "gi_sd_T613_LMA172.bin" "sd_T613_LMA17_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA4_diffuse" 4 16 12 "gi_sd_T613_LMA42.bin" "sd_T613_LMA4_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA14_final" 20 16 2 "gi_sd_T613_LMA143.bin" "sd_T613_LMA14_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA6_final" 20 16 10 "gi_sd_T613_LMA63.bin" "sd_T613_LMA6_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA12_final" 20 16 4 "gi_sd_T613_LMA123.bin" "sd_T613_LMA12_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA15_final" 20 16 1 "gi_sd_T613_LMA153.bin" "sd_T613_LMA15_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA8_final" 20 16 8 "gi_sd_T613_LMA83.bin" "sd_T613_LMA8_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA10_final" 20 16 6 "gi_sd_T613_LMA103.bin" "sd_T613_LMA10_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA9_final" 20 16 7 "gi_sd_T613_LMA93.bin" "sd_T613_LMA9_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA7_final" 20 16 9 "gi_sd_T613_LMA73.bin" "sd_T613_LMA7_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA11_final" 20 16 5 "gi_sd_T613_LMA113.bin" "sd_T613_LMA11_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA16_final" 20 16 16 "gi_sd_T613_LMA163.bin" "sd_T613_LMA16_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA13_final" 20 16 3 "gi_sd_T613_LMA133.bin" "sd_T613_LMA13_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA2_final" 20 16 14 "gi_sd_T613_LMA23.bin" "sd_T613_LMA2_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA3_final" 20 16 13 "gi_sd_T613_LMA33.bin" "sd_T613_LMA3_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA1_final" 20 16 15 "gi_sd_T613_LMA13.bin" "sd_T613_LMA1_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LM0_final" 20 16 0 "gi_sd_T613_LM03.bin" "sd_T613_LM0_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA5_final" 20 16 11 "gi_sd_T613_LMA53.bin" "sd_T613_LMA5_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA17_final" 20 16 17 "gi_sd_T613_LMA173.bin" "sd_T613_LMA17_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "D:/Temp" "sd_T613_LMA4_final" 20 16 12 "gi_sd_T613_LMA43.bin" "sd_T613_LMA4_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace add "D:/Temp" "sd_T613_LMA14_final_HDR.lz4" 4 0 2 comp_indirect2.bin
+Running ftrace add "D:/Temp" "sd_T613_LMA6_final_HDR.lz4" 4 0 10 comp_indirect10.bin
+Running ftrace add "D:/Temp" "sd_T613_LMA12_final_HDR.lz4" 4 0 4 comp_indirect4.bin
+Running ftrace add "D:/Temp" "sd_T613_LMA15_final_HDR.lz4" 4 0 1 comp_indirect1.bin
+Running ftrace add "D:/Temp" "sd_T613_LMA8_final_HDR.lz4" 4 0 8 comp_indirect8.bin
+Running ftrace add "D:/Temp" "sd_T613_LMA10_final_HDR.lz4" 4 0 6 comp_indirect6.bin
+Running ftrace add "D:/Temp" "sd_T613_LMA9_final_HDR.lz4" 4 0 7 comp_indirect7.bin
+Running ftrace add "D:/Temp" "sd_T613_LMA7_final_HDR.lz4" 4 0 9 comp_indirect9.bin
+Running ftrace add "D:/Temp" "sd_T613_LMA11_final_HDR.lz4" 4 0 5 comp_indirect5.bin
+Running ftrace add "D:/Temp" "sd_T613_LMA16_final_HDR.lz4" 4 0 16 comp_indirect16.bin
+Running ftrace add "D:/Temp" "sd_T613_LMA13_final_HDR.lz4" 4 0 3 comp_indirect3.bin
+Running ftrace add "D:/Temp" "sd_T613_LMA2_final_HDR.lz4" 4 0 14 comp_indirect14.bin
+Running ftrace add "D:/Temp" "sd_T613_LMA3_final_HDR.lz4" 4 0 13 comp_indirect13.bin
+Running ftrace add "D:/Temp" "sd_T613_LMA1_final_HDR.lz4" 4 0 15 comp_indirect15.bin
+Running ftrace add "D:/Temp" "sd_T613_LM0_final_HDR.lz4" 4 0 0 comp_indirect0.bin
+Running ftrace add "D:/Temp" "sd_T613_LMA5_final_HDR.lz4" 4 0 11 comp_indirect11.bin
+Running ftrace add "D:/Temp" "sd_T613_LMA17_final_HDR.lz4" 4 0 17 comp_indirect17.bin
+Running ftrace add "D:/Temp" "sd_T613_LMA4_final_HDR.lz4" 4 0 12 comp_indirect12.bin
+Running denoiser72 c "D:/Temp/sd_T613_LMA14_final_HDR.lz4" "D:/Temp/sd_T613_LMA14_final_HDR.lz4" 1024 0
+Running seamfixer "D:/Temp" "2" "sd_T613_LMA14_final_HDR.lz4"
+Running denoiser72 c "D:/Temp/sd_T613_LMA6_final_HDR.lz4" "D:/Temp/sd_T613_LMA6_final_HDR.lz4" 1024 0
+Running seamfixer "D:/Temp" "10" "sd_T613_LMA6_final_HDR.lz4"
+Running denoiser72 c "D:/Temp/sd_T613_LMA12_final_HDR.lz4" "D:/Temp/sd_T613_LMA12_final_HDR.lz4" 1024 0
+Running seamfixer "D:/Temp" "4" "sd_T613_LMA12_final_HDR.lz4"
+Running denoiser72 c "D:/Temp/sd_T613_LMA15_final_HDR.lz4" "D:/Temp/sd_T613_LMA15_final_HDR.lz4" 1024 0
+Running seamfixer "D:/Temp" "1" "sd_T613_LMA15_final_HDR.lz4"
+Running denoiser72 c "D:/Temp/sd_T613_LMA8_final_HDR.lz4" "D:/Temp/sd_T613_LMA8_final_HDR.lz4" 1024 0
+Running seamfixer "D:/Temp" "8" "sd_T613_LMA8_final_HDR.lz4"
+Running denoiser72 c "D:/Temp/sd_T613_LMA10_final_HDR.lz4" "D:/Temp/sd_T613_LMA10_final_HDR.lz4" 1024 0
+Running seamfixer "D:/Temp" "6" "sd_T613_LMA10_final_HDR.lz4"
+Running denoiser72 c "D:/Temp/sd_T613_LMA9_final_HDR.lz4" "D:/Temp/sd_T613_LMA9_final_HDR.lz4" 1024 0
+Running seamfixer "D:/Temp" "7" "sd_T613_LMA9_final_HDR.lz4"
+Running denoiser72 c "D:/Temp/sd_T613_LMA7_final_HDR.lz4" "D:/Temp/sd_T613_LMA7_final_HDR.lz4" 1024 0
+Running seamfixer "D:/Temp" "9" "sd_T613_LMA7_final_HDR.lz4"
+Running denoiser72 c "D:/Temp/sd_T613_LMA11_final_HDR.lz4" "D:/Temp/sd_T613_LMA11_final_HDR.lz4" 1024 0
+Running seamfixer "D:/Temp" "5" "sd_T613_LMA11_final_HDR.lz4"
+Running denoiser72 c "D:/Temp/sd_T613_LMA16_final_HDR.lz4" "D:/Temp/sd_T613_LMA16_final_HDR.lz4" 1024 0
+Running seamfixer "D:/Temp" "16" "sd_T613_LMA16_final_HDR.lz4"
+Running denoiser72 c "D:/Temp/sd_T613_LMA13_final_HDR.lz4" "D:/Temp/sd_T613_LMA13_final_HDR.lz4" 1024 0
+Running seamfixer "D:/Temp" "3" "sd_T613_LMA13_final_HDR.lz4"
+Running denoiser72 c "D:/Temp/sd_T613_LMA2_final_HDR.lz4" "D:/Temp/sd_T613_LMA2_final_HDR.lz4" 1024 0
+Running seamfixer "D:/Temp" "14" "sd_T613_LMA2_final_HDR.lz4"
+Running denoiser72 c "D:/Temp/sd_T613_LMA3_final_HDR.lz4" "D:/Temp/sd_T613_LMA3_final_HDR.lz4" 1024 0
+Running seamfixer "D:/Temp" "13" "sd_T613_LMA3_final_HDR.lz4"
+Running denoiser72 c "D:/Temp/sd_T613_LMA1_final_HDR.lz4" "D:/Temp/sd_T613_LMA1_final_HDR.lz4" 1024 0
+Running seamfixer "D:/Temp" "15" "sd_T613_LMA1_final_HDR.lz4"
+Running denoiser72 c "D:/Temp/sd_T613_LM0_final_HDR.lz4" "D:/Temp/sd_T613_LM0_final_HDR.lz4" 1024 0
+Running seamfixer "D:/Temp" "0" "sd_T613_LM0_final_HDR.lz4"
+Running denoiser72 c "D:/Temp/sd_T613_LMA5_final_HDR.lz4" "D:/Temp/sd_T613_LMA5_final_HDR.lz4" 1024 0
+Running seamfixer "D:/Temp" "11" "sd_T613_LMA5_final_HDR.lz4"
+Running denoiser72 c "D:/Temp/sd_T613_LMA17_final_HDR.lz4" "D:/Temp/sd_T613_LMA17_final_HDR.lz4" 1024 0
+Running seamfixer "D:/Temp" "17" "sd_T613_LMA17_final_HDR.lz4"
+Running denoiser72 c "D:/Temp/sd_T613_LMA4_final_HDR.lz4" "D:/Temp/sd_T613_LMA4_final_HDR.lz4" 1024 0
+Running seamfixer "D:/Temp" "12" "sd_T613_LMA4_final_HDR.lz4"
+Running combineMasks "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LMA14_mask.tga" "D:/Temp/masks_2.bin" "D:/Temp/"
+Running combineMasks "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LMA6_mask.tga" "D:/Temp/masks_10.bin" "D:/Temp/"
+Running combineMasks "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LMA12_mask.tga" "D:/Temp/masks_4.bin" "D:/Temp/"
+Running combineMasks "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LMA15_mask.tga" "D:/Temp/masks_1.bin" "D:/Temp/"
+Running combineMasks "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LMA8_mask.tga" "D:/Temp/masks_8.bin" "D:/Temp/"
+Running combineMasks "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LMA10_mask.tga" "D:/Temp/masks_6.bin" "D:/Temp/"
+Running combineMasks "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LMA9_mask.tga" "D:/Temp/masks_7.bin" "D:/Temp/"
+Running combineMasks "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LMA7_mask.tga" "D:/Temp/masks_9.bin" "D:/Temp/"
+Running combineMasks "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LMA11_mask.tga" "D:/Temp/masks_5.bin" "D:/Temp/"
+Running combineMasks "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LMA16_mask.tga" "D:/Temp/masks_16.bin" "D:/Temp/"
+Running combineMasks "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LMA13_mask.tga" "D:/Temp/masks_3.bin" "D:/Temp/"
+Running combineMasks "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LMA2_mask.tga" "D:/Temp/masks_14.bin" "D:/Temp/"
+Running combineMasks "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LMA3_mask.tga" "D:/Temp/masks_13.bin" "D:/Temp/"
+Running combineMasks "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LMA1_mask.tga" "D:/Temp/masks_15.bin" "D:/Temp/"
+Running combineMasks "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LM0_mask.tga" "D:/Temp/masks_0.bin" "D:/Temp/"
+Running combineMasks "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LMA5_mask.tga" "D:/Temp/masks_11.bin" "D:/Temp/"
+Running combineMasks "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LMA17_mask.tga" "D:/Temp/masks_17.bin" "D:/Temp/"
+Running combineMasks "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LMA4_mask.tga" "D:/Temp/masks_12.bin" "D:/Temp/"
+Running halffloat2hdr "D:/Temp/sd_T613_LMA14_final_HDR.lz4" "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LMA14_final.hdr" 1024
+Running halffloat2hdr "D:/Temp/sd_T613_LMA6_final_HDR.lz4" "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LMA6_final.hdr" 1024
+Running halffloat2hdr "D:/Temp/sd_T613_LMA12_final_HDR.lz4" "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LMA12_final.hdr" 1024
+Running halffloat2hdr "D:/Temp/sd_T613_LMA15_final_HDR.lz4" "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LMA15_final.hdr" 1024
+Running halffloat2hdr "D:/Temp/sd_T613_LMA8_final_HDR.lz4" "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LMA8_final.hdr" 1024
+Running halffloat2hdr "D:/Temp/sd_T613_LMA10_final_HDR.lz4" "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LMA10_final.hdr" 1024
+Running halffloat2hdr "D:/Temp/sd_T613_LMA9_final_HDR.lz4" "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LMA9_final.hdr" 1024
+Running halffloat2hdr "D:/Temp/sd_T613_LMA7_final_HDR.lz4" "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LMA7_final.hdr" 1024
+Running halffloat2hdr "D:/Temp/sd_T613_LMA11_final_HDR.lz4" "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LMA11_final.hdr" 1024
+Running halffloat2hdr "D:/Temp/sd_T613_LMA16_final_HDR.lz4" "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LMA16_final.hdr" 1024
+Running halffloat2hdr "D:/Temp/sd_T613_LMA13_final_HDR.lz4" "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LMA13_final.hdr" 1024
+Running halffloat2hdr "D:/Temp/sd_T613_LMA2_final_HDR.lz4" "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LMA2_final.hdr" 1024
+Running halffloat2hdr "D:/Temp/sd_T613_LMA3_final_HDR.lz4" "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LMA3_final.hdr" 1024
+Running halffloat2hdr "D:/Temp/sd_T613_LMA1_final_HDR.lz4" "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LMA1_final.hdr" 1024
+Running halffloat2hdr "D:/Temp/sd_T613_LM0_final_HDR.lz4" "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LM0_final.hdr" 1024
+Running halffloat2hdr "D:/Temp/sd_T613_LMA5_final_HDR.lz4" "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LMA5_final.hdr" 1024
+Running halffloat2hdr "D:/Temp/sd_T613_LMA17_final_HDR.lz4" "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LMA17_final.hdr" 1024
+Running halffloat2hdr "D:/Temp/sd_T613_LMA4_final_HDR.lz4" "D:/Unity projects/snowdown-main/Assets/Client/Scenes/sd_T613/sd_T613_LMA4_final.hdr" 1024
+Symbol file LoadedFromMemory doesn't match image D:\Unity projects\snowdown-main\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image D:\Unity projects\snowdown-main\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+10000 46000000
