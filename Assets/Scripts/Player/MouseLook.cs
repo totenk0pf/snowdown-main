@@ -8,7 +8,6 @@ using System;
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using Photon.Realtime;
 
 /// <summary>
 /// Script responsible for camera controls and mouse looking.

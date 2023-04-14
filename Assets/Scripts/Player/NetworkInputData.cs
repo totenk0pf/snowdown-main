@@ -2,7 +2,7 @@
 using UnityEngine;
 
 namespace Player {
-    public class NetworkInputData : INetworkInput {
-        public Vector3 direction;
+    public struct NetworkInputData : INetworkInput {
+        public Vector2 direction;
     }
 }

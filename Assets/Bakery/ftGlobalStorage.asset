@@ -401,7 +401,8 @@ MonoBehaviour:
   - Assets/Bakery/examples/content/sponza/bush.FBX
   - Assets/Bakery/examples/content/floor_lamp.FBX
   - Assets/Client/Maps/T613.fbx
-  uvOverlapAssetList: 00000000ffffffff01010000
+  - Assets/Client/Models/Arms/m_arms_prototype.fbx
+  uvOverlapAssetList: 00000000ffffffff0101000000000000
   xatlasWarningShown: 0
   foundCompatibleSetup: 1
   gpuName: NVIDIA GeForce GTX 1660 SUPER
