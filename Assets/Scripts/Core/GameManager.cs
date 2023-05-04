@@ -11,9 +11,6 @@ namespace Core {
         [SerializeField] private GameManagerData data;
         [ShowInInspector] [ReadOnly] private float _currentScale;
 
-        private void Awake() {
-        }
-
         public void ModifyTimescale(TimescaleType type) {
             if (!data) return;
             var targetScale = data.scaleDict.GetValueOrDefault(type, 1f);
