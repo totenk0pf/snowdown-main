@@ -45,19 +45,23 @@ namespace Room {
             entry.state = state;
         }
         
-        [Rpc(RpcSources.All, RpcTargets.All)]
+        [Rpc(RpcSources.All, RpcTargets.All, Channel = RpcChannel.Unreliable, InvokeResim = true, TickAligned = false)]
         private void RPC_UpdateEntries(RpcInfo info = default) {
             roomText.text = _roomPrefix + _runner.SessionInfo.Name.Split('-')[0];
             UpdatePlayerList(_runner.ActivePlayers.ToList());
         }
 
-        [Rpc(RpcSources.All, RpcTargets.All)]
+        [Rpc(RpcSources.All, RpcTargets.All, Channel = RpcChannel.Unreliable, InvokeResim = true, TickAligned = false)]
         private void RPC_UpdateOnLeave(PlayerRef player, RpcInfo info = default) {
             var playerList = _runner.ActivePlayers.ToList();
             playerList.Remove(player);
             UpdatePlayerList(playerList);
         }
 
+        private void UpdateOnJoin() {
+            RPC_UpdateEntries();
+        }
+        
         private void UpdateOnLeave(PlayerRef player) {
             RPC_UpdateOnLeave(player);
         }
@@ -82,20 +86,16 @@ namespace Room {
         }
         
         public void OnPlayerJoined(NetworkRunner runner, PlayerRef player) {
-            StartCoroutine(UpdatePlayers());
+            // StartCoroutine(UpdatePlayers());
+            UpdateOnJoin();
         }
 
         public void OnPlayerLeft(NetworkRunner runner, PlayerRef player) {
             UpdateOnLeave(player);
         }
 
-        public void OnInput(NetworkRunner runner, NetworkInput input) {
-            
-        }
-
-        public void OnInputMissing(NetworkRunner runner, PlayerRef player, NetworkInput input) {
-            
-        }
+        public void OnInput(NetworkRunner runner, NetworkInput input) { }
+        public void OnInputMissing(NetworkRunner runner, PlayerRef player, NetworkInput input) { }
 
         public void OnShutdown(NetworkRunner runner, ShutdownReason shutdownReason) {
             
@@ -109,36 +109,16 @@ namespace Room {
             
         }
 
-        public void OnConnectRequest(NetworkRunner runner, NetworkRunnerCallbackArgs.ConnectRequest request, byte[] token) {
-            
-        }
-
-        public void OnConnectFailed(NetworkRunner runner, NetAddress remoteAddress, NetConnectFailedReason reason) {
-            
-        }
-
-        public void OnUserSimulationMessage(NetworkRunner runner, SimulationMessagePtr message) {
-            
-        }
-
-        public void OnSessionListUpdated(NetworkRunner runner, List<SessionInfo> sessionList) {
-            
-        }
-
-        public void OnCustomAuthenticationResponse(NetworkRunner runner, Dictionary<string, object> data) {
-            
-        }
-
-        public void OnHostMigration(NetworkRunner runner, HostMigrationToken hostMigrationToken) {
-            
-        }
-
-        public void OnReliableDataReceived(NetworkRunner runner, PlayerRef player, ArraySegment<byte> data) {
-            
-        }
+        public void OnConnectRequest(NetworkRunner runner, NetworkRunnerCallbackArgs.ConnectRequest request, byte[] token) { }
+        public void OnConnectFailed(NetworkRunner runner, NetAddress remoteAddress, NetConnectFailedReason reason) { }
+        public void OnUserSimulationMessage(NetworkRunner runner, SimulationMessagePtr message) { }
+        public void OnSessionListUpdated(NetworkRunner runner, List<SessionInfo> sessionList) { }
+        public void OnCustomAuthenticationResponse(NetworkRunner runner, Dictionary<string, object> data) { }
+        public void OnHostMigration(NetworkRunner runner, HostMigrationToken hostMigrationToken) { }
+        public void OnReliableDataReceived(NetworkRunner runner, PlayerRef player, ArraySegment<byte> data) { }
 
         public void OnSceneLoadDone(NetworkRunner runner) {
-            StartCoroutine(UpdatePlayers());
+            // StartCoroutine(UpdatePlayers());
         }
 
         public void OnSceneLoadStart(NetworkRunner runner) {
