@@ -10,21 +10,20 @@ using UnityEngine;
 namespace Core {
     [RequireComponent(typeof(NetworkRunner))]
     [RequireComponent(typeof(NetworkSceneManagerDefault))]
-    public class NetworkContainer : Singleton<NetworkContainer>, INetworkRunnerCallbacks {
+    public class NetworkContainer : MonoBehaviour, INetworkRunnerCallbacks {
         [ReadOnly] public NetworkRunner runner;
         private NetworkSceneManagerDefault _sceneManager;
 
-        protected override void Awake() {
-            base.Awake();
+        private void Awake() {
             runner       = GetComponent<NetworkRunner>();
             _sceneManager = GetComponent<NetworkSceneManagerDefault>();
         }
 
         public async void CreateMatch() {
             StartGameResult result = await runner.StartGame(new StartGameArgs {
-                GameMode = GameMode.Host,
-                PlayerCount = 4,
-                Scene = 1,
+                GameMode     = GameMode.Host,
+                PlayerCount  = 4,
+                Scene        = 1,
                 SceneManager = _sceneManager
             });
             if (result.Ok) {
@@ -34,9 +33,9 @@ namespace Core {
                              $"res: {result.ShutdownReason}", LogLevel.ERROR);
             }
         }
-
+        
         public async void FindMatch() {
-            StartGameResult result = await runner.StartGame(new StartGameArgs() {
+            StartGameResult result = await runner.StartGame(new StartGameArgs {
                 GameMode     = GameMode.Client,
                 Scene        = 1,
                 SceneManager = _sceneManager

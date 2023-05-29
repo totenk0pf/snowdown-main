@@ -23,7 +23,7 @@ RenderSettings:
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 0
+  m_AmbientIntensity: 5
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: e14a3f995927f4b49b24eaa734a46348, type: 2}
@@ -888,7 +888,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh187780
+  m_Name: pb_Mesh205308
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1241,7 +1241,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh187972
+  m_Name: pb_Mesh205500
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1511,7 +1511,7 @@ Light:
   m_InnerSpotAngle: 130
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -1792,7 +1792,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh188140
+  m_Name: pb_Mesh205668
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2370,6 +2370,7 @@ GameObject:
   - component: {fileID: 352450532}
   - component: {fileID: 352450531}
   - component: {fileID: 352450530}
+  - component: {fileID: 352450533}
   m_Layer: 5
   m_Name: StartButton
   m_TagString: Untagged
@@ -2421,10 +2422,10 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 1, g: 0.8235295, b: 0.3019608, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0.87650603, g: 1, b: 0.5, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -2469,7 +2470,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.825, b: 0.3, a: 0.7490196}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.7490196}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2494,6 +2495,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 352450528}
   m_CullTransparentMesh: 1
+--- !u!114 &352450533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 352450528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68a7769fceb096444882c2a9ff895224, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  readyText: {fileID: 746512125}
 --- !u!1 &415453849
 GameObject:
   m_ObjectHideFlags: 0
@@ -2788,7 +2802,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh187474
+  m_Name: pb_Mesh205002
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2982,7 +2996,7 @@ Light:
   m_InnerSpotAngle: 60
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -3067,7 +3081,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh187702
+  m_Name: pb_Mesh205230
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3798,7 +3812,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -8217,7 +8231,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh187910
+  m_Name: pb_Mesh205438
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -8763,7 +8777,7 @@ MonoBehaviour:
   priority: 0
   blendDistance: 0
   weight: 1
-  sharedProfile: {fileID: 11400000, guid: d0c07e6a83bc90540852d17c461a7ac3, type: 2}
+  sharedProfile: {fileID: 11400000, guid: 10471454a93bb11438baa532eafa9315, type: 2}
 --- !u!4 &1737698299
 Transform:
   m_ObjectHideFlags: 0
@@ -9949,7 +9963,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh188022
+  m_Name: pb_Mesh205550
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10113,7 +10127,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh187634
+  m_Name: pb_Mesh205162
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11294,7 +11308,7 @@ Light:
   m_InnerSpotAngle: 60
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1

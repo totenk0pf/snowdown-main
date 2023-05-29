@@ -19,7 +19,7 @@ namespace Client.UI {
             Vector3 camLookPos = _cam.transform.position + _cam.transform.forward * distFromCam;
             Vector3 target = new (camLookPos.x, camLookPos.y, camLookPos.z);
             Debug.DrawLine(transform.position, camLookPos, Color.green, Time.deltaTime);
-            transform.LookAt(target, Vector3.down);
+            transform.rotation = Quaternion.LookRotation(transform.position - target);
         }
     }
 }

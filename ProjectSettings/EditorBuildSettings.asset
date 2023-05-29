@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Client/Scenes/sd_room.unity
     guid: eb2ab2d3f27910143a1bf52f3e1aee1e
+  - enabled: 1
+    path: Assets/Client/Scenes/sd_T613.unity
+    guid: c96c52648dd319642b0f90a4b7536879
   m_configObjects: {}
