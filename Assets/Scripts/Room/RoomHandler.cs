@@ -22,6 +22,9 @@ namespace Room {
     public class RoomHandler : NetworkBehaviour, INetworkRunnerCallbacks {
         [SerializeField] private TextMeshProUGUI roomText;
         [SerializeField] private PlayerEntry[] entries = new PlayerEntry[4];
+        [SerializeField] private TMP_InputField chatField;
+        [SerializeField] private TextMeshProUGUI chatBox;
+        
         private bool[] _readyStates = new bool[4];
         private const string _roomPrefix = "ROOM ";
         private NetworkContainer _container;
@@ -36,6 +39,7 @@ namespace Room {
             }
             _container.runner.AddCallbacks(this);
             EventDispatcher.Instance.AddListener(EventType.ToggleReady, state => HandleReady((bool) state));
+            chatField.onSubmit.AddListener(SendChatMessage);
         }
     
         private void OnDestroy() {
@@ -84,9 +88,20 @@ namespace Room {
             }
         }
 
-        [Rpc(RpcSources.InputAuthority, RpcTargets.All)]
-        private void RPC_UpdateReady(int index, bool newState) {
+        [Rpc(RpcSources.All, RpcTargets.All)]
+        private void RPC_UpdateReady(int index, bool newState, RpcInfo info = default) {
             _readyStates[index] = newState;
+            NCLogger.Log($"{_readyStates}");
+        }
+
+        private void SendChatMessage(string message) {
+            RPC_SendChatMessage(message);
+            chatField.text = "";
+        }
+        
+        [Rpc(RpcSources.All, RpcTargets.All, TickAligned = false)]
+        private void RPC_SendChatMessage(string message, RpcInfo info = default) {
+            chatBox.text += $"<b>{{Player {info.Source.PlayerId + 1}}}:</b>" + message + "\n";
         }
         
         public void OnPlayerJoined(NetworkRunner runner, PlayerRef player) {

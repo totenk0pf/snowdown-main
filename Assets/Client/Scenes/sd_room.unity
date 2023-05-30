@@ -888,7 +888,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh205308
+  m_Name: pb_Mesh49428
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1241,7 +1241,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh205500
+  m_Name: pb_Mesh49620
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1792,7 +1792,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh205668
+  m_Name: pb_Mesh49788
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2210,6 +2210,8 @@ MonoBehaviour:
   - playerRef: {fileID: 1141225336}
     nameRef: {fileID: 52527575}
     state: 0
+  chatField: {fileID: 78810601}
+  chatBox: {fileID: 529548322}
 --- !u!4 &265725950
 Transform:
   m_ObjectHideFlags: 0
@@ -2634,16 +2636,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '<b>{PLAYER}:</b> Test message a b c
-
-    <b>{Totenkopf}:</b> 0123456789
-    1 2 3
-
-    <b>{DeapKev}:</b> Something !@#$^&*() ! @ #...
-
-    <b>{LegendOfNothing}:</b>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pulvinar et
-    justo vitae ultricies. '
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f09ba32dbf0d15943afba9e408a3c3f8, type: 2}
   m_sharedMaterial: {fileID: -3601883648400685996, guid: f09ba32dbf0d15943afba9e408a3c3f8, type: 2}
@@ -2688,7 +2681,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 3
+  m_overflowMode: 4
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
@@ -2802,7 +2795,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh205002
+  m_Name: pb_Mesh49120
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3081,7 +3074,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh205230
+  m_Name: pb_Mesh49350
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -8231,7 +8224,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh205438
+  m_Name: pb_Mesh49558
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -9963,7 +9956,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh205550
+  m_Name: pb_Mesh49670
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10127,7 +10120,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh205162
+  m_Name: pb_Mesh49282
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10836,7 +10829,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8233d90336aea43098adf6dbabd606a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MeshFormatVersion: 1
+  m_MeshFormatVersion: 2
   m_Faces:
   - m_Indexes: 000000000100000002000000010000000300000002000000
     m_SmoothingGroup: 0
