@@ -12,6 +12,7 @@ using System.Collections.Generic;
 using Fusion.Sockets;
 using Player;
 using UnityEngine.Serialization;
+using Core;
 
 /// <summary>
 /// Player states.
@@ -31,7 +32,7 @@ public enum PlayerState {
 [RequireComponent(typeof(CapsuleCollider))]
 public class PlayerController : NetworkBehaviour, INetworkRunnerCallbacks
 {
-    #region Fields
+#region Fields
     [Header("Player settings")]
     [SerializeField] private float maxSpeed;
     [SerializeField] private float acceleration;
@@ -68,10 +69,11 @@ public class PlayerController : NetworkBehaviour, INetworkRunnerCallbacks
     private Vector3 _slideVector;
 
     [Header("Components")] 
-    public static PlayerController LocalPlayerInstance;
     [SerializeField] private GameObject body;
-    [FormerlySerializedAs("moveCamera")] [SerializeField] private CameraHandler cameraHandler;
-    [SerializeField] private MouseLook mouseLook;
+    private CameraHandler _cameraHandler;
+    private MouseLook _mouseLook;
+    private NetworkContainer _container;
+    private NetworkRunner _runner;
 
     private Rigidbody _rb;
     private Rigidbody Rb {
@@ -90,23 +92,25 @@ public class PlayerController : NetworkBehaviour, INetworkRunnerCallbacks
     }
     
     private Bounds _cBox;
-    #endregion
+#endregion
 
     #region Unity Methods
     private void Awake() {
-        if (Object.HasInputAuthority) {
-            LocalPlayerInstance = this;
-            mouseLook.orientation = orientation;
-            body.SetActive(false);
-        }
-        DontDestroyOnLoad(this.gameObject);
+        _container     = NetworkContainer.Instance;
+        _runner        = _container.runner;
+        _cameraHandler = FindObjectOfType<CameraHandler>();
+        _mouseLook     = FindObjectOfType<MouseLook>();
+
+        _mouseLook.orientation = orientation;
+        body.SetActive(false);
+
         _defaultHeight = Col.height;
         _currentStamina = maxStamina;
         _currentSprint = 1;
     }
 
     private void Start() {
-        cameraHandler.StartFollowing();
+        _cameraHandler.StartFollowing();
     }
  
     private void Update() {
@@ -143,20 +147,20 @@ public class PlayerController : NetworkBehaviour, INetworkRunnerCallbacks
         ApplyGravity();
         switch (_currentState) {
             case PlayerState.Idle:
-                mouseLook.TransitionFOV(defaultFOV);
+                _mouseLook.TransitionFOV(defaultFOV);
                 break;
             case PlayerState.Walking:
                 _currentSprint = 1.0f;
-                mouseLook.TransitionFOV(defaultFOV);
+                _mouseLook.TransitionFOV(defaultFOV);
                 Walk(_moveVector);
                 break;
             case PlayerState.Running:
                 _currentSprint = sprintModifier;
-                mouseLook.TransitionFOV(sprintFOV);
+                _mouseLook.TransitionFOV(sprintFOV);
                 Walk(_moveVector);
                 break;
             case PlayerState.Sliding:
-                mouseLook.TransitionFOV(slideFOV);
+                _mouseLook.TransitionFOV(slideFOV);
                 Slide(_slideVector);
                 break;
             case PlayerState.Crouching:

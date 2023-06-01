@@ -31,7 +31,7 @@ namespace Room {
         private NetworkRunner _runner;
     
         private void Start() {
-            _container = FindObjectOfType<NetworkContainer>();
+            _container = NetworkContainer.Instance;
             _runner    = _container.runner;
             for (var i = 0; i < entries.Length; i++) {
                 PlayerEntry entry = entries[i];
@@ -83,7 +83,10 @@ namespace Room {
 
         private void HandleReady(bool newState) {
             RPC_UpdateReady(_runner.LocalPlayer.PlayerId, newState);
-            if (_readyStates.Length == _runner.ActivePlayers.ToArray().Length) {
+            var readyCount = _readyStates.Where(x => x == true).ToList().Count;
+            var roomCount = _runner.ActivePlayers.ToArray().Length;
+            if (readyCount == roomCount) {
+                NCLogger.Log($"{readyCount}/{roomCount} ready, switching scene...");
                 _runner.SetActiveScene(2);
             }
         }
@@ -91,17 +94,18 @@ namespace Room {
         [Rpc(RpcSources.All, RpcTargets.All)]
         private void RPC_UpdateReady(int index, bool newState, RpcInfo info = default) {
             _readyStates[index] = newState;
-            NCLogger.Log($"{_readyStates}");
+            // NCLogger.Log($"{_readyStates.Where(x => x == true).ToList().Count}");
         }
 
         private void SendChatMessage(string message) {
-            RPC_SendChatMessage(message);
+            if (string.IsNullOrWhiteSpace(message)) return;
+            RPC_SendChatMessage(message.Trim());
             chatField.text = "";
         }
         
         [Rpc(RpcSources.All, RpcTargets.All, TickAligned = false)]
         private void RPC_SendChatMessage(string message, RpcInfo info = default) {
-            chatBox.text += $"<b>{{Player {info.Source.PlayerId + 1}}}:</b>" + message + "\n";
+            chatBox.text += $"<b>{{Player {info.Source.PlayerId + 1}}}: </b>" + message + "\n";
         }
         
         public void OnPlayerJoined(NetworkRunner runner, PlayerRef player) {

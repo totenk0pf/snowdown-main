@@ -6,6 +6,8 @@ Last modified by: Huu Quang Nguyen
 
 using System;
 using Cinemachine;
+using Core;
+using Fusion;
 using UnityEngine;
 
 /// <summary>
@@ -15,19 +17,21 @@ public class CameraHandler : MonoBehaviour
 {
     #region Fields
     [SerializeField] private CinemachineVirtualCamera _virtualCam;
-    // public bool isFollowing = false;
+    private Transform _camTransform => _runner.GetPlayerObject(_runner.LocalPlayer).GetComponent<PlayerController>().camTransform;
+    private NetworkContainer _container;
+    private NetworkRunner _runner;
     #endregion
 
     #region Unity Methods
     private void LateUpdate() {
         if (!_virtualCam.Follow) StartFollowing();
         // if (!isFollowing) return;
-        _virtualCam.Follow = PlayerController.LocalPlayerInstance.camTransform;
+        StartFollowing();
     }
 
     public void StartFollowing() {
         // isFollowing = true;
-        _virtualCam.Follow = PlayerController.LocalPlayerInstance.camTransform;
+        _virtualCam.Follow = _camTransform;
     }
     #endregion
 }

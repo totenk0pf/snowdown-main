@@ -222,7 +222,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _interpolationDataSource: 0
   InterpolationSpace: 0
-  InterpolationTarget: {fileID: 0}
+  InterpolationTarget: {fileID: 3456936895269456312}
   InterpolateErrorCorrection: 1
   InterpolatedErrorCorrectionSettings:
     MinRate: 3.3
@@ -273,7 +273,7 @@ MonoBehaviour:
   isGrounded: 0
   canJump: 0
   body: {fileID: 1080943365934952973}
-  moveCamera: {fileID: 0}
+  cameraHandler: {fileID: 0}
   mouseLook: {fileID: 0}
 --- !u!1 &9068927625401640637
 GameObject:

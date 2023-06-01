@@ -10,7 +10,7 @@ using UnityEngine;
 namespace Core {
     [RequireComponent(typeof(NetworkRunner))]
     [RequireComponent(typeof(NetworkSceneManagerDefault))]
-    public class NetworkContainer : MonoBehaviour, INetworkRunnerCallbacks {
+    public class NetworkContainer : Singleton<NetworkContainer>, INetworkRunnerCallbacks {
         [ReadOnly] public NetworkRunner runner;
         private NetworkSceneManagerDefault _sceneManager;
 
