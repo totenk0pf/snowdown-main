@@ -74,6 +74,7 @@ public class PlayerController : NetworkBehaviour, INetworkRunnerCallbacks
     private MouseLook _mouseLook;
     private NetworkContainer _container;
     private NetworkRunner _runner;
+    private NetworkObject _networkObject;
 
     private Rigidbody _rb;
     private Rigidbody Rb {
@@ -98,19 +99,22 @@ public class PlayerController : NetworkBehaviour, INetworkRunnerCallbacks
     private void Awake() {
         _container     = NetworkContainer.Instance;
         _runner        = _container.runner;
+
+        _networkObject = GetComponent<NetworkObject>();
         _cameraHandler = FindObjectOfType<CameraHandler>();
         _mouseLook     = FindObjectOfType<MouseLook>();
-
-        _mouseLook.orientation = orientation;
-        body.SetActive(false);
 
         _defaultHeight = Col.height;
         _currentStamina = maxStamina;
         _currentSprint = 1;
     }
 
-    private void Start() {
-        _cameraHandler.StartFollowing();
+    public override void Spawned() {
+        if (_networkObject.HasInputAuthority) {
+            body.SetActive(false);
+            _cameraHandler.StartFollowing(camTransform);
+            _mouseLook.orientation = orientation;
+        }
     }
  
     private void Update() {
