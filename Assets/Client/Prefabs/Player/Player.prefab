@@ -160,7 +160,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6161690073032346574}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 318d869db2c08d84e93dbda26e1b66b0, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
@@ -181,8 +181,8 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
-  m_CollisionDetection: 1
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!114 &5564674300202360807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -249,29 +249,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _interpolationDataSource: 0
-  maxSpeed: 8
-  acceleration: 1800
+  maxSpeed: 48
+  acceleration: 4800
   groundMargin: 0.2
   groundFriction: 5
   groundRadius: 0.1
-  airFriction: 5.3
-  jumpForce: 20
-  slideSpeed: 105
+  airFriction: 5.2
+  jumpForce: 2
+  slideSpeed: 120
   maxStamina: 1
-  heightSpeed: 4
-  sprintModifier: 2
-  worldGravity: 600
-  gravityForce: 1800
+  staminaRegen: 5
+  staminaCost: 5
+  heightSpeed: 48
+  sprintModifier: 1.5
+  gravityForce: 3200
+  gravityLimit: 8000
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
   orientation: {fileID: 3456936895269456312}
   camTransform: {fileID: 8651487091373096290}
   defaultFOV: 80
-  sprintFOV: 90
-  slideFOV: 105
-  isGrounded: 0
-  canJump: 0
+  sprintFOV: 95
+  slideFOV: 110
+  isGrounded: 1
+  canJump: 1
   body: {fileID: 1080943365934952973}
 --- !u!1 &9068927625401640637
 GameObject:

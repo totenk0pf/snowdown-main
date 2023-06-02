@@ -43,6 +43,8 @@ public class PlayerController : NetworkBehaviour, INetworkRunnerCallbacks
     [SerializeField] private float jumpForce;
     [SerializeField] private float slideSpeed;
     [SerializeField] private float maxStamina;
+    [SerializeField] private float staminaRegen;
+    [SerializeField] private float staminaCost;
     [SerializeField] private float heightSpeed;
     [SerializeField] private float sprintModifier;
     private float _currentStamina;
@@ -50,8 +52,8 @@ public class PlayerController : NetworkBehaviour, INetworkRunnerCallbacks
     private float _currentSprint;
     
     [Header("Gravity")]
-    [SerializeField] private float worldGravity;
     [SerializeField] private float gravityForce;
+    [SerializeField] private float gravityLimit;
     [SerializeField] private LayerMask whatIsGround;
     
     [Header("Camera settings")]
@@ -79,7 +81,7 @@ public class PlayerController : NetworkBehaviour, INetworkRunnerCallbacks
     private Rigidbody _rb;
     private Rigidbody Rb {
         get {
-            if (!_rb) _rb = GetComponent<NetworkRigidbody>().Rigidbody;
+            if (!_rb) _rb = GetComponent<Rigidbody>();
             return _rb;
         }  
     }
@@ -99,14 +101,20 @@ public class PlayerController : NetworkBehaviour, INetworkRunnerCallbacks
     private void Awake() {
         _container     = NetworkContainer.Instance;
         _runner        = _container.runner;
+        if (_runner) _runner.AddCallbacks(this);
 
         _networkObject = GetComponent<NetworkObject>();
         _cameraHandler = FindObjectOfType<CameraHandler>();
-        _mouseLook     = FindObjectOfType<MouseLook>();
+        _mouseLook     = _cameraHandler.mouseLook;
 
         _defaultHeight = Col.height;
         _currentStamina = maxStamina;
         _currentSprint = 1;
+    }
+
+    private void OnDestroy() {
+        if (_runner) return;
+        _runner.RemoveCallbacks(this);
     }
 
     public override void Spawned() {
@@ -116,10 +124,12 @@ public class PlayerController : NetworkBehaviour, INetworkRunnerCallbacks
             _mouseLook.orientation = orientation;
         }
     }
- 
+
     private void Update() {
-        _cBox = Col.bounds;
+        _cBox      = Col.bounds;
         isGrounded = CheckGround(groundRadius);
+        Rb.drag    = isGrounded ? groundFriction : airFriction;
+        canJump    = isGrounded;
         if (_currentState != PlayerState.Sliding) {
             ResetHeight();
             ResetStamina();
@@ -132,46 +142,61 @@ public class PlayerController : NetworkBehaviour, INetworkRunnerCallbacks
     public override void FixedUpdateNetwork() {
         base.FixedUpdateNetwork();
         ApplyGravity();
-        if (GetInput(out NetworkInputData data)) {
-            _moveVector = orientation.right * data.direction.x + orientation.forward * data.direction.y;
-        }
-        Rb.drag = isGrounded ? groundFriction : airFriction;
-        canJump = isGrounded;
+        if (!GetInput(out NetworkInputData data)) return;
+        _moveVector = orientation.right * data.direction.x + orientation.forward * data.direction.y;
         if (_moveVector.magnitude > 0.1f) {
-            if (Input.GetKeyDown(KeyCode.LeftControl)) _slideVector = orientation.forward.normalized;
-            if (Input.GetKey(KeyCode.LeftShift)) _currentState = PlayerState.Running;
-            if (Input.GetKey(KeyCode.LeftControl)) {
+            if (data.buttons.IsSet(InputButtons.Crouch)) {
                 _currentState = PlayerState.Sliding;
+                _slideVector  = orientation.forward.normalized;
             }
-            if (!Input.GetKey(KeyCode.LeftShift) && !Input.GetKey(KeyCode.LeftControl)) _currentState = PlayerState.Walking;
+            if (data.buttons.IsSet(InputButtons.Sprint)) _currentState = PlayerState.Running;
+            if (!data.buttons.IsSet(InputButtons.Sprint) && !data.buttons.IsSet(InputButtons.Crouch)) {
+                _currentState = PlayerState.Walking;
+            }
         } else _currentState = PlayerState.Idle;
-        if (Input.GetKeyDown(KeyCode.Space)) {
+        if (data.buttons.IsSet(InputButtons.Jump)) {
             if (!canJump) return;
             Jump();
         }
         switch (_currentState) {
             case PlayerState.Idle:
-                _mouseLook.TransitionFOV(defaultFOV);
                 break;
             case PlayerState.Walking:
                 _currentSprint = 1.0f;
-                _mouseLook.TransitionFOV(defaultFOV);
                 Walk(_moveVector);
                 break;
             case PlayerState.Running:
                 _currentSprint = sprintModifier;
-                _mouseLook.TransitionFOV(sprintFOV);
                 Walk(_moveVector);
                 break;
             case PlayerState.Sliding:
-                _mouseLook.TransitionFOV(slideFOV);
                 Slide(_slideVector);
                 break;
             case PlayerState.Crouching:
                 break;
         }
     }
-    #endregion
+
+    private void LateUpdate() {
+        switch (_currentState) {
+            case PlayerState.Idle:
+                _mouseLook.TransitionFOV(defaultFOV);
+                break;
+            case PlayerState.Walking:
+                _mouseLook.TransitionFOV(defaultFOV);
+                break;
+            case PlayerState.Running:
+                _mouseLook.TransitionFOV(sprintFOV);
+                break;
+            case PlayerState.Sliding:
+                _mouseLook.TransitionFOV(slideFOV);
+                break;
+            case PlayerState.Crouching:
+                break;
+        }
+    }
+
+#endregion
 
     /// <summary>
     /// Check if the player is currently grounded.
@@ -200,15 +225,15 @@ public class PlayerController : NetworkBehaviour, INetworkRunnerCallbacks
         moveInput = moveInput.normalized;
         Vector3 moveForce = new (moveInput.x * acceleration, 0, moveInput.z * acceleration);
         if (Rb.velocity.magnitude >= maxSpeed) return;
-        Rb.AddForce(moveForce * _currentSprint * Time.fixedDeltaTime, ForceMode.Acceleration);
+        Rb.AddForce(moveForce * _currentSprint * _runner.DeltaTime, ForceMode.Acceleration);
     }
 
     /// <summary>
     /// Manually apply gravity since Unity's air drag is fucked.
     /// </summary>
     private void ApplyGravity() {
-        if (Rb.velocity.y <= -worldGravity) return;
-        Rb.AddForce(Vector3.down * gravityForce * Time.fixedDeltaTime, ForceMode.Acceleration);
+        if (Rb.velocity.y <= -gravityLimit) return;
+        Rb.AddForce(Vector3.down * gravityForce * _runner.DeltaTime, ForceMode.Acceleration);
     }
 
     private void Slide(Vector3 slideDirection) {
@@ -224,8 +249,9 @@ public class PlayerController : NetworkBehaviour, INetworkRunnerCallbacks
     }
 
     private void ResetHeight() {
+        if (Col.height == _defaultHeight) return;
         if (Col.height < _defaultHeight) {
-            Col.height += heightSpeed * Time.fixedDeltaTime;
+            Col.height += heightSpeed * _runner.DeltaTime;
         } else {
             Col.height = _defaultHeight;
         }
@@ -236,15 +262,16 @@ public class PlayerController : NetworkBehaviour, INetworkRunnerCallbacks
             _currentStamina = 0;
             return;
         }
-        _currentStamina -= Time.fixedDeltaTime;
+        _currentStamina -= staminaCost * _runner.DeltaTime;
     }
 
     private void ResetStamina() {
+        if (_currentStamina == maxStamina) return;
         if (_currentStamina >= maxStamina) {
             _currentStamina = maxStamina;
             return;
         }
-        _currentStamina += Time.fixedDeltaTime;
+        _currentStamina += staminaRegen * _runner.DeltaTime;
     }
 
     public void OnPlayerJoined(NetworkRunner runner, PlayerRef player) {
@@ -258,9 +285,14 @@ public class PlayerController : NetworkBehaviour, INetworkRunnerCallbacks
     }
 
     public void OnInput(NetworkRunner runner, NetworkInput input) {
-        input.Set(new NetworkInputData() {
-            direction = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"))
-        });
+        NetworkInputData playerInput = new ();
+        
+        playerInput.direction.Set(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        playerInput.buttons.Set(InputButtons.Crouch, Input.GetKey(KeyCode.LeftControl));
+        playerInput.buttons.Set(InputButtons.Sprint, Input.GetKey(KeyCode.LeftShift));
+        playerInput.buttons.Set(InputButtons.Jump, Input.GetKey(KeyCode.Space));
+        
+        input.Set(playerInput);
     }
 
     public void OnInputMissing(NetworkRunner runner, PlayerRef player, NetworkInput input) {

@@ -4,29 +4,30 @@ Author: Huu Quang Nguyen
 Last modified by: Huu Quang Nguyen
 --------------------------------------*/
 
-using System;
 using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
+using DG.Tweening;
+using Cinemachine;
 
 /// <summary>
 /// Script responsible for camera controls and mouse looking.
 /// </summary>
+[RequireComponent(typeof(CinemachineVirtualCamera))]
 public class MouseLook : MonoBehaviour
 {
     #region Fields
     public float mouseSpeed;
     public Vector3 lookVector;
     public Transform orientation;
+    private CinemachineVirtualCamera _cam;
     [SerializeField] private Camera[] overlayCamList;
-    private Camera _cam => Camera.main;
     [SerializeField] private float fovTransitionTime;
     #endregion
 
     #region Unity Methods
 
     private void Awake() {
-        Cursor.visible = false;
+        _cam             = GetComponent<CinemachineVirtualCamera>();
+        Cursor.visible   = false;
         Cursor.lockState = CursorLockMode.Locked;
     }
 
@@ -44,9 +45,15 @@ public class MouseLook : MonoBehaviour
     }
 
     public void TransitionFOV(float targetFOV) {
-        _cam.fieldOfView = Mathf.Lerp(_cam.fieldOfView, targetFOV, fovTransitionTime * Time.deltaTime);
-        foreach (Camera cam in overlayCamList) {
-            cam.fieldOfView = Mathf.Lerp(cam.fieldOfView, targetFOV, fovTransitionTime * Time.deltaTime);
+        DOTween.To(() => _cam.m_Lens.FieldOfView,
+                   x => _cam.m_Lens.FieldOfView = x,
+                   targetFOV, 
+                   fovTransitionTime);
+        foreach (Camera childCam in overlayCamList) {
+            DOTween.To(() => childCam.fieldOfView,
+                       x => childCam.fieldOfView = x,
+                       targetFOV, 
+                       fovTransitionTime);
         } 
     }
     #endregion
