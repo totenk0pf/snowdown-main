@@ -39,6 +39,7 @@ public class MouseLook : MonoBehaviour
     }
     
     private void LateUpdate() {
+        if (!orientation) return;
         Look();
     }
 

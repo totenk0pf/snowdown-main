@@ -24,7 +24,7 @@ namespace Game {
                     _spawnPoints[i].rotation,
                     playerList[i]
                 );
-                _runner.SetPlayerObject(playerList[i], obj);
+                // _runner.SetPlayerObject(playerList[i], obj);
             }
         }
     }

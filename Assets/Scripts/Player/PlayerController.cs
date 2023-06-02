@@ -120,6 +120,18 @@ public class PlayerController : NetworkBehaviour, INetworkRunnerCallbacks
     private void Update() {
         _cBox = Col.bounds;
         isGrounded = CheckGround(groundRadius);
+        if (_currentState != PlayerState.Sliding) {
+            ResetHeight();
+            ResetStamina();
+        } else {
+            DecreaseHeight();
+            DecreaseStamina();
+        }
+    }
+
+    public override void FixedUpdateNetwork() {
+        base.FixedUpdateNetwork();
+        ApplyGravity();
         if (GetInput(out NetworkInputData data)) {
             _moveVector = orientation.right * data.direction.x + orientation.forward * data.direction.y;
         }
@@ -137,18 +149,6 @@ public class PlayerController : NetworkBehaviour, INetworkRunnerCallbacks
             if (!canJump) return;
             Jump();
         }
-        if (_currentState != PlayerState.Sliding) {
-            ResetHeight();
-            ResetStamina();
-        } else {
-            DecreaseHeight();
-            DecreaseStamina();
-        }
-    }
-
-    public override void FixedUpdateNetwork() {
-        base.FixedUpdateNetwork();
-        ApplyGravity();
         switch (_currentState) {
             case PlayerState.Idle:
                 _mouseLook.TransitionFOV(defaultFOV);
@@ -170,9 +170,6 @@ public class PlayerController : NetworkBehaviour, INetworkRunnerCallbacks
             case PlayerState.Crouching:
                 break;
         }
-    }
-
-    private void FixedUpdate() {
     }
     #endregion
 
