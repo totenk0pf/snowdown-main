@@ -13,6 +13,8 @@ using Fusion.Sockets;
 using Player;
 using UnityEngine.Serialization;
 using Core;
+using Core.Logging;
+using Unity.VisualScripting;
 
 /// <summary>
 /// Player states.
@@ -33,20 +35,40 @@ public enum PlayerState {
 public class PlayerController : NetworkBehaviour, INetworkRunnerCallbacks
 {
 #region Fields
-    [Header("Player settings")]
+    [Header("Speed")]
     [SerializeField] private float maxSpeed;
     [SerializeField] private float acceleration;
+    
+    [Header("Ground")]
     [SerializeField] private float groundMargin;
     [SerializeField] private float groundFriction;
     [SerializeField] private float groundRadius;
+    
+    [Header("Air")]
     [SerializeField] private float airFriction;
     [SerializeField] private float jumpForce;
+    
+    [Header("Slide")]
     [SerializeField] private float slideSpeed;
+    [SerializeField] private float slideThreshold;
+    
+    [Header("Sprint")]
+    [SerializeField] private float sprintModifier;
     [SerializeField] private float maxStamina;
     [SerializeField] private float staminaRegen;
     [SerializeField] private float staminaCost;
+    
+    [Header("Crouch")]
     [SerializeField] private float heightSpeed;
-    [SerializeField] private float sprintModifier;
+    [SerializeField] private float heightResetSpeed;
+    [SerializeField] private float crouchModifier;
+
+    [Header("Step")] 
+    [SerializeField] private float stepHeightOffset;
+    [SerializeField] private float stepDistance;
+    [SerializeField] private Vector3 stepExtents;
+    [SerializeField] private float stepForce;
+
     private float _currentStamina;
     private float _defaultHeight;
     private float _currentSprint;
@@ -57,8 +79,9 @@ public class PlayerController : NetworkBehaviour, INetworkRunnerCallbacks
     [SerializeField] private LayerMask whatIsGround;
     
     [Header("Camera settings")]
-    public Transform orientation;
-    public Transform camTransform;
+    [SerializeField] private Transform orientation;
+    [SerializeField] private Transform camTransform;
+    [SerializeField] private Transform viewTransform;
     [SerializeField] private float defaultFOV;
     [SerializeField] private float sprintFOV;
     [SerializeField] private float slideFOV;
@@ -107,9 +130,9 @@ public class PlayerController : NetworkBehaviour, INetworkRunnerCallbacks
         _cameraHandler = FindObjectOfType<CameraHandler>();
         _mouseLook     = _cameraHandler.mouseLook;
 
-        _defaultHeight = Col.height;
+        _defaultHeight  = Col.height;
         _currentStamina = maxStamina;
-        _currentSprint = 1;
+        _currentSprint  = 1;
     }
 
     private void OnDestroy() {
@@ -121,7 +144,9 @@ public class PlayerController : NetworkBehaviour, INetworkRunnerCallbacks
         if (_networkObject.HasInputAuthority) {
             body.SetActive(false);
             _cameraHandler.StartFollowing(camTransform);
-            _mouseLook.orientation = orientation;
+            _mouseLook.orientation   = orientation;
+            _mouseLook.viewTransform = viewTransform;
+            _mouseLook.SetupView();
         }
     }
 
@@ -130,13 +155,36 @@ public class PlayerController : NetworkBehaviour, INetworkRunnerCallbacks
         isGrounded = CheckGround(groundRadius);
         Rb.drag    = isGrounded ? groundFriction : airFriction;
         canJump    = isGrounded;
-        if (_currentState != PlayerState.Sliding) {
+        if (_currentState is not (PlayerState.Crouching or PlayerState.Sliding)) {
             ResetHeight();
-            ResetStamina();
         } else {
             DecreaseHeight();
+        }
+        if (_currentState != PlayerState.Sliding) {
+            ResetStamina();
+        } else {
             DecreaseStamina();
         }
+    }
+
+    private void Step() {
+        if (!isGrounded) return;
+        Vector3 stepOffset = orientation.position + _moveVector.normalized * stepDistance;
+        stepOffset.y += stepHeightOffset;
+        if (Physics.OverlapBox(stepOffset, stepExtents, Quaternion.identity).Length <= 0) return;
+        Vector3 dir = (stepOffset - orientation.position).normalized;
+        if (!Physics.Raycast(orientation.position,
+                             dir,
+                             out var hit,
+                             Vector3.Distance(orientation.position, stepOffset),
+                             whatIsGround)) return;
+        if (hit.normal != Vector3.up) return;
+        // Debug.DrawLine(orientation.position, stepOffset, Color.green, Mathf.Infinity);
+        Vector3 mirroredTarget = stepOffset;
+        mirroredTarget.y *= -1;
+        Vector3 forceDir = (mirroredTarget - orientation.position).normalized;
+        // Debug.DrawLine(orientation.position, mirroredTarget, Color.cyan, Mathf.Infinity);
+        Rb.AddForce(forceDir, ForceMode.VelocityChange);
     }
 
     public override void FixedUpdateNetwork() {
@@ -145,15 +193,26 @@ public class PlayerController : NetworkBehaviour, INetworkRunnerCallbacks
         if (!GetInput(out NetworkInputData data)) return;
         _moveVector = orientation.right * data.direction.x + orientation.forward * data.direction.y;
         if (_moveVector.magnitude > 0.1f) {
-            if (data.buttons.IsSet(InputButtons.Crouch)) {
-                _currentState = PlayerState.Sliding;
-                _slideVector  = orientation.forward.normalized;
+            Step();
+            if (Rb.velocity.magnitude >= slideThreshold || _currentState == PlayerState.Sliding) {
+                if (data.buttons.IsSet(InputButtons.Crouch)) {
+                    _currentState = PlayerState.Sliding;
+                    if (_slideVector != Vector3.zero) return; 
+                    _slideVector = orientation.forward.normalized;
+                } 
+            } else {
+                _slideVector = Vector3.zero;
             }
-            if (data.buttons.IsSet(InputButtons.Sprint)) _currentState = PlayerState.Running;
+            if (data.buttons.IsSet(InputButtons.Sprint)) {
+                _currentState = PlayerState.Running;
+            }
             if (!data.buttons.IsSet(InputButtons.Sprint) && !data.buttons.IsSet(InputButtons.Crouch)) {
                 _currentState = PlayerState.Walking;
             }
         } else _currentState = PlayerState.Idle;
+        if (_currentState != PlayerState.Sliding && data.buttons.IsSet(InputButtons.Crouch)) {
+            _currentState = PlayerState.Crouching;
+        }
         if (data.buttons.IsSet(InputButtons.Jump)) {
             if (!canJump) return;
             Jump();
@@ -173,6 +232,8 @@ public class PlayerController : NetworkBehaviour, INetworkRunnerCallbacks
                 Slide(_slideVector);
                 break;
             case PlayerState.Crouching:
+                _currentSprint = crouchModifier;
+                Walk(_moveVector);
                 break;
         }
     }
@@ -192,10 +253,10 @@ public class PlayerController : NetworkBehaviour, INetworkRunnerCallbacks
                 _mouseLook.TransitionFOV(slideFOV);
                 break;
             case PlayerState.Crouching:
+                _mouseLook.TransitionFOV(defaultFOV);
                 break;
         }
     }
-
 #endregion
 
     /// <summary>
@@ -242,7 +303,7 @@ public class PlayerController : NetworkBehaviour, INetworkRunnerCallbacks
 
     private void DecreaseHeight() {
         if (Col.height > 0) {
-            Col.height /= heightSpeed;
+            Col.height -= heightSpeed * _runner.DeltaTime;
         } else {
             Col.height = 0;
         }
@@ -251,7 +312,7 @@ public class PlayerController : NetworkBehaviour, INetworkRunnerCallbacks
     private void ResetHeight() {
         if (Col.height == _defaultHeight) return;
         if (Col.height < _defaultHeight) {
-            Col.height += heightSpeed * _runner.DeltaTime;
+            Col.height += heightResetSpeed * _runner.DeltaTime;
         } else {
             Col.height = _defaultHeight;
         }
@@ -273,16 +334,18 @@ public class PlayerController : NetworkBehaviour, INetworkRunnerCallbacks
         }
         _currentStamina += staminaRegen * _runner.DeltaTime;
     }
-
-    public void OnPlayerJoined(NetworkRunner runner, PlayerRef player) {
-        if (runner.IsServer) {
-            
-        }
+    
+#if UNITY_EDITOR
+    private void OnDrawGizmos() {
+        Gizmos.color = Color.green;
+        Vector3 o = orientation.position + _moveVector.normalized * stepDistance;
+        o.y += stepHeightOffset;
+        Gizmos.DrawWireCube(o, stepExtents);
     }
+#endif
 
-    public void OnPlayerLeft(NetworkRunner runner, PlayerRef player) {
-        throw new NotImplementedException();
-    }
+    public void OnPlayerJoined(NetworkRunner runner, PlayerRef player) { }
+    public void OnPlayerLeft(NetworkRunner runner, PlayerRef player) { }
 
     public void OnInput(NetworkRunner runner, NetworkInput input) {
         NetworkInputData playerInput = new ();
@@ -295,55 +358,17 @@ public class PlayerController : NetworkBehaviour, INetworkRunnerCallbacks
         input.Set(playerInput);
     }
 
-    public void OnInputMissing(NetworkRunner runner, PlayerRef player, NetworkInput input) {
-        throw new NotImplementedException();
-    }
-
-    public void OnShutdown(NetworkRunner runner, ShutdownReason shutdownReason) {
-        throw new NotImplementedException();
-    }
-
-    public void OnConnectedToServer(NetworkRunner runner) {
-        throw new NotImplementedException();
-    }
-
-    public void OnDisconnectedFromServer(NetworkRunner runner) {
-        throw new NotImplementedException();
-    }
-
-    public void OnConnectRequest(NetworkRunner runner, NetworkRunnerCallbackArgs.ConnectRequest request, byte[] token) {
-        throw new NotImplementedException();
-    }
-
-    public void OnConnectFailed(NetworkRunner runner, NetAddress remoteAddress, NetConnectFailedReason reason) {
-        throw new NotImplementedException();
-    }
-
-    public void OnUserSimulationMessage(NetworkRunner runner, SimulationMessagePtr message) {
-        throw new NotImplementedException();
-    }
-
-    public void OnSessionListUpdated(NetworkRunner runner, List<SessionInfo> sessionList) {
-        throw new NotImplementedException();
-    }
-
-    public void OnCustomAuthenticationResponse(NetworkRunner runner, Dictionary<string, object> data) {
-        throw new NotImplementedException();
-    }
-
-    public void OnHostMigration(NetworkRunner runner, HostMigrationToken hostMigrationToken) {
-        throw new NotImplementedException();
-    }
-
-    public void OnReliableDataReceived(NetworkRunner runner, PlayerRef player, ArraySegment<byte> data) {
-        throw new NotImplementedException();
-    }
-
-    public void OnSceneLoadDone(NetworkRunner runner) {
-        throw new NotImplementedException();
-    }
-
-    public void OnSceneLoadStart(NetworkRunner runner) {
-        throw new NotImplementedException();
-    }
+    public void OnInputMissing(NetworkRunner runner, PlayerRef player, NetworkInput input) { }
+    public void OnShutdown(NetworkRunner runner, ShutdownReason shutdownReason) { }
+    public void OnConnectedToServer(NetworkRunner runner) { }
+    public void OnDisconnectedFromServer(NetworkRunner runner) { }
+    public void OnConnectRequest(NetworkRunner runner, NetworkRunnerCallbackArgs.ConnectRequest request, byte[] token) { }
+    public void OnConnectFailed(NetworkRunner runner, NetAddress remoteAddress, NetConnectFailedReason reason) { }
+    public void OnUserSimulationMessage(NetworkRunner runner, SimulationMessagePtr message) { }
+    public void OnSessionListUpdated(NetworkRunner runner, List<SessionInfo> sessionList) { }
+    public void OnCustomAuthenticationResponse(NetworkRunner runner, Dictionary<string, object> data) { }
+    public void OnHostMigration(NetworkRunner runner, HostMigrationToken hostMigrationToken) { }
+    public void OnReliableDataReceived(NetworkRunner runner, PlayerRef player, ArraySegment<byte> data) { }
+    public void OnSceneLoadDone(NetworkRunner runner) { }
+    public void OnSceneLoadStart(NetworkRunner runner) { }
 }

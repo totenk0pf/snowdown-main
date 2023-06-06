@@ -18,6 +18,7 @@ public class MouseLook : MonoBehaviour
     public float mouseSpeed;
     public Vector3 lookVector;
     public Transform orientation;
+    public Transform viewTransform;
     private CinemachineVirtualCamera _cam;
     [SerializeField] private Camera[] overlayCamList;
     [SerializeField] private float fovTransitionTime;
@@ -42,6 +43,12 @@ public class MouseLook : MonoBehaviour
     private void LateUpdate() {
         if (!orientation) return;
         Look();
+    }
+
+    public void SetupView() {
+        Vector3 pos = viewTransform.transform.localPosition;
+        viewTransform.parent             = Camera.main.transform;
+        viewTransform.transform.localPosition = new Vector3(0, pos.y, 0);
     }
 
     public void TransitionFOV(float targetFOV) {

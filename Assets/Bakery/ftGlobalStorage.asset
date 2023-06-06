@@ -407,7 +407,117 @@ MonoBehaviour:
   - Assets/Client/Models/Prototype/proto_zombie_idle.fbx
   - Assets/Client/Models/Prototype/proto_zombie_idle_2.fbx
   - Assets/Client/Models/Prototype/proto_zombie_agony.fbx
-  uvOverlapAssetList: 00000000ffffffff01010000000000000000000000000000000000000000000000000000
+  - Assets/Client/Models/Arms/arms.fbx
+  - Assets/Client/Modern gun stuff/Animations/Weapons/(Legacy)arms_grenade_launcher_01.fbx
+  - Assets/Client/Modern gun stuff/Animations/Weapons/(Legacy)arms_handgun_02.fbx
+  - Assets/Client/Modern gun stuff/Meshes/Magazines/(Legacy)SM_sniper_02_mag_empty.fbx
+  - Assets/Client/Modern gun stuff/Meshes/Magazines/(Legacy)SM_assault_rifle_02_mag_empty.fbx
+  - Assets/Client/Modern gun stuff/Animations/Weapons/(Legacy)arms_sniper_03.fbx
+  - Assets/Client/Modern gun stuff/Meshes/Magazines/(Legacy)SM_assault_rifle_03_mag_empty.fbx
+  - Assets/Client/Modern gun stuff/Meshes/Weapons/(Legacy)SM_smg_01.fbx
+  - Assets/Client/Modern gun stuff/Animations/Weapons/(Legacy)arms_smg_04.fbx
+  - Assets/Client/Modern gun stuff/Meshes/Magazines/(Legacy)SM_smg_05_mag_empty.fbx
+  - Assets/Client/Modern gun stuff/Meshes/Magazines/(Legacy)SM_smg_01_mag_full.fbx
+  - Assets/Client/Modern gun stuff/Meshes/Attachments/(Legacy)SM_scope_04.fbx
+  - Assets/Client/Modern gun stuff/Meshes/Attachments/(Legacy)SM_rails.fbx
+  - Assets/Client/Modern gun stuff/Meshes/Magazines/(Legacy)SM_assault_rifle_01_mag_empty.fbx
+  - Assets/Client/Modern gun stuff/Meshes/Magazines/(Legacy)SM_sniper_03_mag_empty.fbx
+  - Assets/Client/Modern gun stuff/Meshes/Weapons/(Legacy)SM_handgun_02.fbx
+  - Assets/Client/Modern gun stuff/Meshes/Magazines/(Legacy)SM_handgun_02_mag_empty.fbx
+  - Assets/Client/Modern gun stuff/Meshes/Attachments/(Legacy)SM_scope_01.fbx
+  - Assets/Client/Modern gun stuff/Meshes/Magazines/(Legacy)SM_handgun_04_mag_empty.fbx
+  - Assets/Client/Modern gun stuff/Animations/Weapons/(Legacy)arms_sniper_01.fbx
+  - Assets/Client/Modern gun stuff/Animations/Weapons/(Legacy)arms_assault_rifle_03.fbx
+  - Assets/Client/Modern gun stuff/Meshes/Magazines/(Legacy)SM_handgun_01_mag_empty.fbx
+  - Assets/Client/Modern gun stuff/Meshes/Weapons/(Legacy)SM_handgun_04.fbx
+  - Assets/Client/Modern gun stuff/Meshes/Weapons/(Legacy)SM_grenade_launcher_01.fbx
+  - Assets/Client/Modern gun stuff/Meshes/Magazines/(Legacy)SM_sniper_02_mag_full.fbx
+  - Assets/Client/Modern gun stuff/Meshes/Magazines/(Legacy)SM_smg_04_mag_full.fbx
+  - Assets/Client/Modern gun stuff/Meshes/Weapons/(Legacy)SM_smg_05.fbx
+  - Assets/Client/Modern gun stuff/Animations/Demo/(Legacy)SK_Demo_Plane_Character_03.fbx
+  - Assets/Client/Modern gun stuff/Meshes/Magazines/(Legacy)SM_handgun_01_mag_full.fbx
+  - Assets/Client/Modern gun stuff/Animations/Demo/(Legacy)SM_Demo_Plane.fbx
+  - Assets/Client/Modern gun stuff/Meshes/Magazines/(Legacy)SM_smg_02_mag_empty.fbx
+  - Assets/Client/Modern gun stuff/Animations/Weapons/(Legacy)arms_smg_02.fbx
+  - Assets/Client/Modern gun stuff/Meshes/Magazines/(Legacy)SM_assault_rifle_01_mag_full.fbx
+  - Assets/Client/Modern gun stuff/Animations/Weapons/(Legacy)arms_handgun_01.fbx
+  - Assets/Client/Modern gun stuff/Meshes/Weapons/(Legacy)SM_smg_03.fbx
+  - Assets/Client/Modern gun stuff/Animations/Demo/(Legacy)SK_Demo_Plane_Character_01.fbx
+  - Assets/Client/Modern gun stuff/Meshes/Weapons/(Legacy)SM_shotgun_01.fbx
+  - Assets/Client/Modern gun stuff/Meshes/Attachments/(Legacy)SM_silencer.fbx
+  - Assets/Client/Modern gun stuff/Meshes/Magazines/(Legacy)SM_assault_rifle_02_mag_full.fbx
+  - Assets/Client/Modern gun stuff/Meshes/Props/(Legacy)SM_Headset.fbx
+  - Assets/Client/Modern gun stuff/Animations/Weapons/(Legacy)arms_sniper_02.fbx
+  - Assets/Client/Modern gun stuff/Meshes/Attachments/(Legacy)SM_scope_02.fbx
+  - Assets/Client/Modern gun stuff/Meshes/Weapons/(Legacy)SM_sniper_02.fbx
+  - Assets/Client/Modern gun stuff/Meshes/Magazines/(Legacy)SM_smg_03_mag_full.fbx
+  - Assets/Client/Modern gun stuff/Meshes/Magazines/(Legacy)SM_assault_rifle_03_mag_full.fbx
+  - Assets/Client/Modern gun stuff/Animations/Weapons/(Legacy)arms_handgun_03.fbx
+  - Assets/Client/Modern gun stuff/Animations/Weapons/(Legacy)arms_assault_rifle_01.fbx
+  - Assets/Client/Modern gun stuff/Animations/Weapons/(Legacy)arms_smg_05.fbx
+  - Assets/Client/Modern gun stuff/Animations/Demo/(Legacy)SK_Demo_Plane_Character_02.fbx
+  - Assets/Client/Modern gun stuff/Meshes/Attachments/(Legacy)SM_scope_03.fbx
+  - Assets/Client/Modern gun stuff/Animations/Weapons/(Legacy)arms_rocket_launcher_01.fbx
+  - Assets/Client/Modern gun stuff/Meshes/Weapons/(Legacy)SM_assault_rifle_01.fbx
+  - Assets/Client/Modern gun stuff/Animations/Weapons/(Legacy)arms_assault_rifle_02.fbx
+  - Assets/Client/Modern gun stuff/Meshes/Character/(Legacy)SK_TP_CH.fbx
+  - Assets/Client/Modern gun stuff/Meshes/Magazines/(Legacy)SM_handgun_04_mag_full.fbx
+  - Assets/Client/Modern gun stuff/Meshes/Magazines/(Legacy)SM_handgun_03_mag_full.fbx
+  - Assets/Client/Modern gun stuff/Meshes/Props/(Legacy)SM_Goggles.fbx
+  - Assets/Client/Modern gun stuff/Animations/Weapons/(Legacy)arms_shotgun_01.fbx
+  - Assets/Client/Modern gun stuff/Meshes/Magazines/(Legacy)SM_smg_03_mag_empty.fbx
+  - Assets/Client/Modern gun stuff/Meshes/Magazines/(Legacy)SM_smg_04_mag_empty.fbx
+  - Assets/Client/Modern gun stuff/Animations/Weapons/(Legacy)arms_handgun_04.fbx
+  - Assets/Client/Modern gun stuff/Meshes/Weapons/(Legacy)SM_smg_04.fbx
+  - Assets/Client/Modern gun stuff/Meshes/Magazines/(Legacy)SM_sniper_03_mag_full.fbx
+  - Assets/Client/Modern gun stuff/Meshes/Weapons/(Legacy)SM_sniper_01.fbx
+  - Assets/Client/Modern gun stuff/Meshes/Weapons/(Legacy)SM_handgun_03.fbx
+  - Assets/Client/Modern gun stuff/Meshes/Magazines/(Legacy)SM_smg_02_mag_full.fbx
+  - Assets/Client/Modern gun stuff/Meshes/Weapons/(Legacy)SM_assault_rifle_02.fbx
+  - Assets/Client/Modern gun stuff/Meshes/Magazines/(Legacy)SM_handgun_03_mag_empty.fbx
+  - Assets/Client/Modern gun stuff/Meshes/Weapons/(Legacy)SM_handgun_01.fbx
+  - Assets/Client/Modern gun stuff/Meshes/Magazines/(Legacy)SM_smg_01_mag_empty.fbx
+  - Assets/Client/Modern gun stuff/Meshes/Props/(Legacy)SM_Helmet.fbx
+  - Assets/Client/Modern gun stuff/Meshes/Magazines/(Legacy)SM_smg_05_mag_full.fbx
+  - Assets/Client/Modern gun stuff/Animations/Weapons/(Legacy)arms_smg_03.fbx
+  - Assets/Client/Modern gun stuff/Animations/Weapons/(Legacy)arms_smg_01.fbx
+  - Assets/Client/Modern gun stuff/Meshes/Weapons/(Legacy)SM_assault_rifle_03.fbx
+  - Assets/Client/Modern gun stuff/Meshes/Weapons/(Legacy)SM_sniper_03.fbx
+  - Assets/Client/Modern gun stuff/Meshes/Magazines/(Legacy)SM_handgun_02_mag_full.fbx
+  - Assets/Client/Modern gun stuff/Meshes/Weapons/(Legacy)SM_smg_02.fbx
+  - Assets/Client/Modern gun stuff/Meshes/Weapons/(Legacy)SM_rocket_launcher_01.fbx
+  - Assets/Polygon-NewYork/Models/Aditional/Foundation_15_(2x3)_Angle_01.fbx
+  - "Assets/Polygon-NewYork/Models/Sidewalk_01_\u0421_01.fbx"
+  - Assets/Polygon-NewYork/Models/Sidewalk_010_B_01.fbx
+  - "Assets/Polygon-NewYork/Models/Sidewalk_04_\u0421_01.fbx"
+  - "Assets/Polygon-NewYork/Models/Sidewalk_02_\u0421_01.fbx"
+  - Assets/Polygon-NewYork/Models/Sidewalk_02_E_01.fbx
+  - Assets/Polygon-NewYork/Models/Sidewalk_012_B_01.fbx
+  - Assets/Polygon-NewYork/Models/Fence_01_C.fbx
+  - Assets/Polygon-NewYork/Models/Sidewalk_012_D_01.fbx
+  - Assets/Polygon-NewYork/Models/Sidewalk_04_E_01.fbx
+  - Assets/Polygon-NewYork/Models/Sidewalk_011_D_01.fbx
+  - "Assets/Polygon-NewYork/Models/Sidewalk_05_\u0421_01.fbx"
+  - Assets/Polygon-NewYork/Models/Sidewalk_05_E_01.fbx
+  - Assets/Polygon-NewYork/Models/Sidewalk_03_E_01.fbx
+  - Assets/Polygon-NewYork/Models/Fence_03_A.fbx
+  - Assets/Polygon-NewYork/Models/Sidewalk_09_D_01.fbx
+  - Assets/Polygon-NewYork/Models/Sidewalk_010_D_01.fbx
+  - Assets/Polygon-NewYork/Models/Sidewalk_07_E_01.fbx
+  - Assets/Polygon-NewYork/Models/Fence_02_A.fbx
+  - Assets/Polygon-NewYork/Models/Sidewalk_01_E_01.fbx
+  - Assets/Polygon-NewYork/Models/Sidewalk_09_B_01.fbx
+  - Assets/Polygon-NewYork/Models/Fence_01_E.fbx
+  - Assets/Polygon-NewYork/Models/Aditional/Foundation_15_(2x3)_01.fbx
+  - Assets/Polygon-NewYork/Models/Sidewalk_08_D_01.fbx
+  - Assets/Polygon-NewYork/Models/Sidewalk_06_E_01.fbx
+  - "Assets/Polygon-NewYork/Models/Sidewalk_07_\u0421_01.fbx"
+  - Assets/Polygon-NewYork/Models/Sidewalk_08_B_01.fbx
+  - Assets/Polygon-NewYork/Models/Fence_01_D.fbx
+  - "Assets/Polygon-NewYork/Models/Sidewalk_06_\u0421_01.fbx"
+  - "Assets/Polygon-NewYork/Models/Sidewalk_03_\u0421_01.fbx"
+  - Assets/Polygon-NewYork/Models/Sidewalk_011_B_01.fbx
+  uvOverlapAssetList: 00000000ffffffff010100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001010000000000000000000001010000000000000000000000000000000000000101000000000000000000000000000000000000000000000000000001010000010100000101000001010000000000000000000001010000010100000000000000000000010100000000000000000000000000000000000000000000010100000000000000000000000000000000000001010000010100000000000000000000000000000000000000000000000000000101000000000000000000000101000001010000010100000000000000000000000000000000000000000000010100000000000001010000010100000101000000000000010100000000000000000000010100000000000000000000010100000000000001010000010100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   xatlasWarningShown: 0
   foundCompatibleSetup: 1
   gpuName: NVIDIA GeForce GTX 1660 SUPER
