@@ -1,4 +1,4 @@
-﻿namespace Weapon {
+﻿namespace Combat {
     public class Shotgun : Weapon {
         
     }

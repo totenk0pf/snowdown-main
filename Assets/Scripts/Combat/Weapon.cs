@@ -1,17 +1,25 @@
 ﻿using System;
 using System.Collections;
 using Core;
+using Core.Events;
 using Fusion;
 using UnityEngine;
+using EventType = Core.Events.EventType;
 
-namespace Weapon {
+namespace Combat {
     public enum WeaponState {
         Idle,
         Firing,
         AltFiring,
         Reloading
     }
+
+    public struct AmmoMsg {
+        public int ammo;
+        public int reserve;
+    }
     
+    [Serializable]
     public class Weapon : WeaponBase {
         private bool _muzzleState;
         protected WeaponState CurrentState;
@@ -27,37 +35,39 @@ namespace Weapon {
 
             StartCoroutine(FireCoroutine());
             StartCoroutine(AltFireCoroutine());
-            StartCoroutine(ReloadCoroutine());
         }
 
         public override void Fire() {
             if (!_canFire && CurrentState != WeaponState.Reloading) return;
             CurrentState = WeaponState.Firing;
+            _muzzleState = true;
+            if (_muzzleState) return;
+            for (var i = 0; i < muzzleSprites.Length; i++) {
+                muzzleSprites[i].gameObject.SetActive(true);
+            }
+            muzzleLight.gameObject.SetActive(true);
         }
 
         public override void Reset() {
             CurrentState = WeaponState.Idle;
+            _muzzleState = false;
         }
 
         public override IEnumerator FireCoroutine() {
             while (CurrentState == WeaponState.Firing) {
-                _muzzleState = true;
-                if (!_muzzleState) {
-                    for (var i = 0; i < muzzleSprites.Length; i++) {
-                        muzzleSprites[i].gameObject.SetActive(true);
-                    }
-                    muzzleLight.gameObject.SetActive(true);
-                }
                 HandleAttack();
                 yield return new WaitForSeconds(attackDelay / attackSpeed);
             }
-            _muzzleState = false;
             CurrentState    = WeaponState.Idle;
             yield return null;
         }
 
         public override void HandleAttack() {
             _canFire = currentAmmo != 0;
+            this.FireEvent(EventType.OnWeaponFire, new AmmoMsg {
+                ammo = currentAmmo,
+                reserve = currentReserve
+            });
         }
 
         public override void SpawnProjectiles() {
@@ -75,6 +85,7 @@ namespace Weapon {
         public override void Reload() {
             if (currentAmmo == defaultAmmo) return;
             CurrentState = WeaponState.Reloading;
+            StartCoroutine(ReloadCoroutine());
         }
 
         public override IEnumerator ReloadCoroutine() {
@@ -82,7 +93,8 @@ namespace Weapon {
             var reloadAmount = defaultAmmo - currentAmmo;
             currentAmmo    += reloadAmount;
             currentReserve -= reloadAmount;
-            _canFire        =  true;
+            _canFire       =  true;
+            CurrentState   =  WeaponState.Idle;
             yield return null;
         }
 

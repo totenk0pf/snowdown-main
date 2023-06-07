@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 
-namespace Weapon {
+namespace Combat {
     public interface IWeapon {
         public void Fire();
         public void Reset();

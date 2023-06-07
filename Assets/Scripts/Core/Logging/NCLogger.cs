@@ -23,6 +23,11 @@ namespace Core.Logging {
             UnityEngine.Debug.Log(content);
         }
 
+        public static void Log(object message, LogLevel level = LogLevel.INFO) {
+            string content = $"<color={_colors[level]}>[{GetClassName()}]</color> {message}";
+            UnityEngine.Debug.Log(content);
+        }
+
         private static string GetClassName() {
             string name;
             Type type;

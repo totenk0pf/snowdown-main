@@ -179,12 +179,10 @@ public class PlayerController : NetworkBehaviour, INetworkRunnerCallbacks
                              Vector3.Distance(orientation.position, stepOffset),
                              whatIsGround)) return;
         if (hit.normal != Vector3.up) return;
-        // Debug.DrawLine(orientation.position, stepOffset, Color.green, Mathf.Infinity);
         Vector3 mirroredTarget = stepOffset;
         mirroredTarget.y *= -1;
         Vector3 forceDir = (mirroredTarget - orientation.position).normalized;
-        // Debug.DrawLine(orientation.position, mirroredTarget, Color.cyan, Mathf.Infinity);
-        Rb.AddForce(forceDir, ForceMode.VelocityChange);
+        Rb.AddForce(forceDir * stepForce * _runner.DeltaTime, ForceMode.VelocityChange);
     }
 
     public override void FixedUpdateNetwork() {
@@ -194,15 +192,11 @@ public class PlayerController : NetworkBehaviour, INetworkRunnerCallbacks
         _moveVector = orientation.right * data.direction.x + orientation.forward * data.direction.y;
         if (_moveVector.magnitude > 0.1f) {
             Step();
-            if (Rb.velocity.magnitude >= slideThreshold || _currentState == PlayerState.Sliding) {
-                if (data.buttons.IsSet(InputButtons.Crouch)) {
-                    _currentState = PlayerState.Sliding;
-                    if (_slideVector != Vector3.zero) return; 
-                    _slideVector = orientation.forward.normalized;
-                } 
-            } else {
-                _slideVector = Vector3.zero;
+            if (_currentState == PlayerState.Sliding) {
+                if (_slideVector == Vector3.zero) _slideVector = orientation.forward.normalized;
+                return;
             }
+            _slideVector = Vector3.zero;
             if (data.buttons.IsSet(InputButtons.Sprint)) {
                 _currentState = PlayerState.Running;
             }
@@ -210,6 +204,11 @@ public class PlayerController : NetworkBehaviour, INetworkRunnerCallbacks
                 _currentState = PlayerState.Walking;
             }
         } else _currentState = PlayerState.Idle;
+        if (data.buttons.IsSet(InputButtons.Crouch)) {
+            // if (isGrounded && Rb.velocity.magnitude >= slideThreshold) {
+                // _currentState = PlayerState.Sliding;
+            // }
+        }
         if (_currentState != PlayerState.Sliding && data.buttons.IsSet(InputButtons.Crouch)) {
             _currentState = PlayerState.Crouching;
         }
@@ -341,6 +340,10 @@ public class PlayerController : NetworkBehaviour, INetworkRunnerCallbacks
         Vector3 o = orientation.position + _moveVector.normalized * stepDistance;
         o.y += stepHeightOffset;
         Gizmos.DrawWireCube(o, stepExtents);
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(new Vector3(_cBox.center.x, 
+                                        _cBox.min.y - groundMargin, 
+                                        _cBox.center.z), groundRadius);
     }
 #endif
 

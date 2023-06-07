@@ -1,5 +1,10 @@
 namespace Core.Events {
     public enum EventType {
-        ToggleReady
+        ToggleReady,
+        OnWeaponSwap,
+        OnWeaponFire,
+        OnWeaponStop,
+        OnWeaponReloadStart,
+        OnWeaponReloadEnd,
     }
 }

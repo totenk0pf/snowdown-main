@@ -3,7 +3,7 @@ using System.Collections;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace Weapon {
+namespace Combat {
     [Serializable]
     public enum WeaponType {
         Gun,
@@ -49,8 +49,8 @@ namespace Weapon {
         [HideIf("IsMelee")] [SerializeField] public int reserveAdd;
 
         [TitleGroup("View")] 
-        [SerializeField] protected Transform leftIK;
-        [SerializeField] protected Transform rightIK;
+        public Transform leftIK;
+        public Transform rightIK;
         
         public abstract void Fire();
         public abstract void Reset();

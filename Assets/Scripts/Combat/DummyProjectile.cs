@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Weapon {
+namespace Combat {
     public class DummyProjectile : MonoBehaviour {
         public float aliveDuration;
         public void Awake() {

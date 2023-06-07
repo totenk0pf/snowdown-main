@@ -1,9 +1,8 @@
-﻿using System;
-using Core.Logging;
+﻿using Core.Logging;
 using Fusion;
 using UnityEngine;
 
-namespace Weapon {
+namespace Combat {
     public class SMG : Weapon {
         public override void HandleAttack() {
             if (Runner.LagCompensation.Raycast(firePoint.position,
@@ -17,6 +16,7 @@ namespace Weapon {
                 NCLogger.Log(hit.Hitbox.Root);
             }
             SpawnProjectiles();
+            currentAmmo--;
             base.HandleAttack();
         }
     }
