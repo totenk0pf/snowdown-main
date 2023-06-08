@@ -2,8 +2,41 @@ fileFormatVersion: 2
 guid: 664eb4226efc39d4c86f7a656d47695b
 ModelImporter:
   serializedVersion: 21300
-  internalIDToNameTable: []
-  externalObjects: {}
+  internalIDToNameTable:
+  - first:
+      74: -7305240885795738425
+    second: Character|Idle
+  - first:
+      74: 8580825830522509558
+    second: Character|Melee
+  - first:
+      74: 5431337530838294815
+    second: Character|Pistol
+  - first:
+      74: 7220129432104243308
+    second: Character|Shotgun
+  - first:
+      74: -6341406550029134205
+    second: Character|SMG
+  - first:
+      74: -5554530729292034084
+    second: Character|Sniper
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Arm
+    second: {fileID: 2100000, guid: bbf92e5bc45c0d144b79060c99e28145, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Gloves
+    second: {fileID: 2100000, guid: 6f96cb37307dbf248927e32a6e86ce0a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sleeves
+    second: {fileID: 2100000, guid: 07371ef1469581241bb33aad1b61889c, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -42,12 +75,12 @@ ModelImporter:
     sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
-    importCameras: 1
+    importCameras: 0
     importLights: 0
     nodeNameCollisionStrategy: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
@@ -76,7 +109,7 @@ ModelImporter:
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
   referencedClips: []
-  importAnimation: 0
+  importAnimation: 1
   humanDescription:
     serializedVersion: 3
     human: []

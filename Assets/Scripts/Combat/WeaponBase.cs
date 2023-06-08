@@ -2,13 +2,17 @@
 using System.Collections;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Combat {
     [Serializable]
     public enum WeaponType {
-        Gun,
         Melee,
-        Throwable
+        Pistol,
+        SMG,
+        Shotgun,
+        Sniper,
+        Grenade
     }
 
     [Serializable]
@@ -21,7 +25,8 @@ namespace Combat {
     
     public abstract class WeaponBase : MonoBehaviour, IWeapon {
         [TitleGroup("General")]
-        [SerializeField] protected WeaponType Type;
+        public WeaponType weaponType;
+        public Sprite weaponIcon;
         [SerializeField] protected WeaponSlot Slot;
         
         [TitleGroup("Attack")]
@@ -43,7 +48,9 @@ namespace Combat {
 
         [TitleGroup("Ammo")] 
         [HideIf("IsMelee")] [ShowInInspector] [ReadOnly] protected int currentAmmo;
+        public int CurrentAmmo => currentAmmo;
         [HideIf("IsMelee")] [ShowInInspector] [ReadOnly] protected int currentReserve;
+        public int CurrentReserve => currentReserve;
         [HideIf("IsMelee")] [SerializeField] protected int defaultAmmo;
         [HideIf("IsMelee")] [SerializeField] protected int defaultReserve;
         [HideIf("IsMelee")] [SerializeField] public int reserveAdd;
@@ -64,7 +71,7 @@ namespace Combat {
         public abstract void Reload();
         public abstract IEnumerator ReloadCoroutine();
 
-        private bool IsMelee() => Type == WeaponType.Melee;
+        private bool IsMelee() => weaponType == WeaponType.Melee;
 
         protected abstract void Awake();
     }

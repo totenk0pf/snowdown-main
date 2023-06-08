@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5590509856091046996}
   - component: {fileID: 333897386816887555}
+  - component: {fileID: 8001100546714546383}
   m_Layer: 0
   m_Name: DummyProjectile
   m_TagString: Untagged
@@ -129,5 +130,22 @@ LineRenderer:
     textureMode: 0
     shadowBias: 0.5
     generateLightingData: 0
-  m_UseWorldSpace: 1
+  m_UseWorldSpace: 0
   m_Loop: 0
+--- !u!114 &8001100546714546383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1258010561939257876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8ee187f9ccb4af28112ef19da9e0ce9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aliveDuration: 5
+  speed: 100
+  whatIsLevel:
+    serializedVersion: 2
+    m_Bits: 64

@@ -95,6 +95,7 @@ public class PlayerController : NetworkBehaviour, INetworkRunnerCallbacks
 
     [Header("Components")] 
     [SerializeField] private GameObject body;
+    [SerializeField] private Canvas hud;
     private CameraHandler _cameraHandler;
     private MouseLook _mouseLook;
     private NetworkContainer _container;
@@ -129,6 +130,7 @@ public class PlayerController : NetworkBehaviour, INetworkRunnerCallbacks
         _networkObject = GetComponent<NetworkObject>();
         _cameraHandler = FindObjectOfType<CameraHandler>();
         _mouseLook     = _cameraHandler.mouseLook;
+        if (hud) hud.worldCamera = _cameraHandler.uiCamera;
 
         _defaultHeight  = Col.height;
         _currentStamina = maxStamina;
@@ -197,22 +199,22 @@ public class PlayerController : NetworkBehaviour, INetworkRunnerCallbacks
                 return;
             }
             _slideVector = Vector3.zero;
-            if (data.buttons.IsSet(InputButtons.Sprint)) {
+            if (data.moveInput.IsSet(InputButtons.Sprint)) {
                 _currentState = PlayerState.Running;
             }
-            if (!data.buttons.IsSet(InputButtons.Sprint) && !data.buttons.IsSet(InputButtons.Crouch)) {
+            if (!data.moveInput.IsSet(InputButtons.Sprint) && !data.moveInput.IsSet(InputButtons.Crouch)) {
                 _currentState = PlayerState.Walking;
             }
         } else _currentState = PlayerState.Idle;
-        if (data.buttons.IsSet(InputButtons.Crouch)) {
+        if (data.moveInput.IsSet(InputButtons.Crouch)) {
             // if (isGrounded && Rb.velocity.magnitude >= slideThreshold) {
                 // _currentState = PlayerState.Sliding;
             // }
         }
-        if (_currentState != PlayerState.Sliding && data.buttons.IsSet(InputButtons.Crouch)) {
+        if (_currentState != PlayerState.Sliding && data.moveInput.IsSet(InputButtons.Crouch)) {
             _currentState = PlayerState.Crouching;
         }
-        if (data.buttons.IsSet(InputButtons.Jump)) {
+        if (data.moveInput.IsSet(InputButtons.Jump)) {
             if (!canJump) return;
             Jump();
         }
@@ -349,18 +351,7 @@ public class PlayerController : NetworkBehaviour, INetworkRunnerCallbacks
 
     public void OnPlayerJoined(NetworkRunner runner, PlayerRef player) { }
     public void OnPlayerLeft(NetworkRunner runner, PlayerRef player) { }
-
-    public void OnInput(NetworkRunner runner, NetworkInput input) {
-        NetworkInputData playerInput = new ();
-        
-        playerInput.direction.Set(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        playerInput.buttons.Set(InputButtons.Crouch, Input.GetKey(KeyCode.LeftControl));
-        playerInput.buttons.Set(InputButtons.Sprint, Input.GetKey(KeyCode.LeftShift));
-        playerInput.buttons.Set(InputButtons.Jump, Input.GetKey(KeyCode.Space));
-        
-        input.Set(playerInput);
-    }
-
+    public void OnInput(NetworkRunner runner, NetworkInput input) { }
     public void OnInputMissing(NetworkRunner runner, PlayerRef player, NetworkInput input) { }
     public void OnShutdown(NetworkRunner runner, ShutdownReason shutdownReason) { }
     public void OnConnectedToServer(NetworkRunner runner) { }

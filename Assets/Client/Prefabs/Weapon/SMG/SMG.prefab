@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46acc9a41fa1414d87d56dcc533462a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: 0
+  weaponType: 2
   Slot: 0
   attackSpeed: 1
   attackDelay: 0.25

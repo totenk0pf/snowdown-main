@@ -8,8 +8,23 @@ namespace Player {
         Jump = 2,
     }
     
+    public enum WeaponButtons {
+        Fire,
+        AltFire,
+        Reload
+    }
+
+    public enum SlotButtons {
+        PrimarySlot,
+        SecondarySlot,
+        MeleeSlot,
+        GrenadeSlot,
+    }
+    
     public struct NetworkInputData : INetworkInput {
         public Vector2 direction;
-        public NetworkButtons buttons;
+        public NetworkButtons moveInput;
+        public NetworkButtons weaponInput;
+        public NetworkButtons slotInput;
     }
 }

@@ -14,15 +14,22 @@ namespace Client.UI {
 
         private void Awake() {
             this.AddListener(EventType.OnWeaponFire, data => UpdateAmmoText((AmmoMsg) data));
+            this.AddListener(EventType.OnWeaponReloadEnd, data => UpdateAmmoText((AmmoMsg) data));
             this.AddListener(EventType.OnWeaponSwap, data => UpdateWeaponInfo((WeaponMsg) data));
         }
 
-        private void UpdateWeaponInfo(WeaponMsg data) {
-            weaponText.text = data.weaponName;
+        private void UpdateWeaponInfo(WeaponMsg msg) {
+            weaponText.text     = msg.weaponName;
+            weaponSprite.sprite = msg.weaponIcon;
+            UpdateAmmoText(msg);
         }
         
         private void UpdateAmmoText(AmmoMsg msg) {
             ammoText.text = $"{msg.ammo}/ {msg.reserve}";
+        }
+        
+        private void UpdateAmmoText(WeaponMsg msg) {
+            ammoText.text = $"{msg.weapon.CurrentAmmo}/ {msg.weapon.CurrentReserve}";
         }
     }
 }

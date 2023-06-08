@@ -17,6 +17,7 @@ public class CameraHandler : MonoBehaviour
 {
     #region Fields
         [SerializeField] private CinemachineVirtualCamera _virtualCam;
+        public Camera uiCamera;
         public MouseLook mouseLook;
         private bool _isFollowing;
     #endregion

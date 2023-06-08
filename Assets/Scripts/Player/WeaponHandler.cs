@@ -19,6 +19,8 @@ namespace Player {
 
     public struct WeaponMsg {
         public string weaponName;
+        public Sprite weaponIcon;
+        public Weapon weapon;
     }
     
     public class WeaponHandler : NetworkBehaviour, INetworkRunnerCallbacks {
@@ -28,11 +30,10 @@ namespace Player {
         private Weapon _currentWeapon;
         private int _activeSlot;
         private NetworkRunner _runner;
-        private void Awake() {
+        private void Start() {
             _runner = NetworkContainer.Instance.runner;
             _runner.AddCallbacks(this);
-            SwapWeapon(WeaponSlot.Primary);
-            _activeSlot    = 1;
+            SwapWeapon(WeaponSlot.Secondary);
         }
 
         private WeaponEntry GetBySlot(WeaponSlot slot) {
@@ -41,62 +42,59 @@ namespace Player {
 
         public override void FixedUpdateNetwork() {
             base.FixedUpdateNetwork();
-            if (!GetInput(out WeaponInputData input)) return;
-            if (input.buttons.IsSet(WeaponButtons.Fire)) {
-                _currentWeapon.Fire();                
-            } else if (input.buttons.IsSet(WeaponButtons.AltFire)) {
-                _currentWeapon.AltFire();
-            } else {
-                _currentWeapon.Reset();
-            }
-            if (input.buttons.IsSet(WeaponButtons.Reload)) {
-                _currentWeapon.Reload();
+            if (!GetInput(out NetworkInputData input)) return;
+            if (_currentWeapon) {
+                if (input.weaponInput.IsSet(WeaponButtons.Fire)) {
+                    _currentWeapon.Fire();                
+                } else if (input.weaponInput.IsSet(WeaponButtons.AltFire)) {
+                    _currentWeapon.AltFire();
+                } else {
+                    _currentWeapon.Reset();
+                }
+                if (input.weaponInput.IsSet(WeaponButtons.Reload)) {
+                    _currentWeapon.Reload();
+                }
             }
             
-            if (input.buttons.IsSet(WeaponButtons.PrimarySlot)) {
-                _activeSlot = 1;
+            if (input.slotInput.IsSet(SlotButtons.PrimarySlot)) {
                 SwapWeapon(WeaponSlot.Primary);
             }
-            if (input.buttons.IsSet(WeaponButtons.SecondarySlot)) {
-                _activeSlot = 2;
-                SwapWeapon(WeaponSlot.Primary);
+            if (input.slotInput.IsSet(SlotButtons.SecondarySlot)) {
+                SwapWeapon(WeaponSlot.Secondary);
             }
-            if (input.buttons.IsSet(WeaponButtons.MeleeSlot)) {
-                _activeSlot = 3;
+            if (input.slotInput.IsSet(SlotButtons.MeleeSlot)) {
                 SwapWeapon(WeaponSlot.Melee);
             }
-            if (input.buttons.IsSet(WeaponButtons.GrenadeSlot)) {
-                _activeSlot = 4;
+            if (input.slotInput.IsSet(SlotButtons.GrenadeSlot)) {
                 SwapWeapon(WeaponSlot.Grenade);
             }
         }
 
         private void SwapWeapon(WeaponSlot slot) {
-            if (_currentWeapon) _currentWeapon.gameObject.SetActive(false);
+            if (_currentWeapon) {
+                _currentWeapon.gameObject.SetActive(false);
+                _currentWeapon.Reset();
+            }
             Weapon target = GetBySlot(slot).weapon;
+            _activeSlot = (int) slot;
             if (target == null) return;
             _currentWeapon = target;
             _currentWeapon.gameObject.SetActive(true);
-            leftIKTarget = _currentWeapon.leftIK;
-            rightIKTarget = _currentWeapon.rightIK;
+            SetIK(leftIKTarget, _currentWeapon.leftIK);
+            SetIK(rightIKTarget, _currentWeapon.rightIK);
             this.FireEvent(EventType.OnWeaponSwap, new WeaponMsg {
-                weaponName = _currentWeapon.name
+                weaponName = _currentWeapon.name,
+                weaponIcon = _currentWeapon.weaponIcon,
+                weapon = _currentWeapon
             });
         }
 
-        public void OnInput(NetworkRunner runner, NetworkInput input) {
-            WeaponInputData weaponInput = new();
-            weaponInput.buttons.Set(WeaponButtons.Fire, Input.GetMouseButton(0));
-            weaponInput.buttons.Set(WeaponButtons.AltFire, Input.GetMouseButton(1));
-            weaponInput.buttons.Set(WeaponButtons.Reload, Input.GetKey(KeyCode.R));
-
-            weaponInput.buttons.Set(WeaponButtons.PrimarySlot, Input.GetKey(KeyCode.Alpha1));
-            weaponInput.buttons.Set(WeaponButtons.SecondarySlot, Input.GetKey(KeyCode.Alpha2));
-            weaponInput.buttons.Set(WeaponButtons.MeleeSlot, Input.GetKey(KeyCode.Alpha3));
-            weaponInput.buttons.Set(WeaponButtons.GrenadeSlot, Input.GetKey(KeyCode.Alpha4));
-            input.Set(weaponInput);
+        private void SetIK(Transform currentIK, Transform targetIK) {
+            currentIK.position = targetIK.position;
+            currentIK.rotation = targetIK.rotation;
         }
-        
+
+        public void OnInput(NetworkRunner runner, NetworkInput input) { }
         public void OnPlayerJoined(NetworkRunner runner, PlayerRef player) { }
         public void OnPlayerLeft(NetworkRunner runner, PlayerRef player) { }
         public void OnInputMissing(NetworkRunner runner, PlayerRef player, NetworkInput input) { }

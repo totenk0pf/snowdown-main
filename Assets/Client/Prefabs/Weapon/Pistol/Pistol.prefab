@@ -57,6 +57,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5aa0d1f62f8a9e741b2c5bb15f6275a1, type: 3}
+--- !u!212 &4045297029347476879 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 7547383133859294229, guid: 5aa0d1f62f8a9e741b2c5bb15f6275a1, type: 3}
+  m_PrefabInstance: {fileID: 5809213403704994202}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &5160332872106161068 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1658265466817124918, guid: 5aa0d1f62f8a9e741b2c5bb15f6275a1, type: 3}
@@ -74,7 +79,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 845424fdefbd482f9ee705cc528c6d41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: 0
+  weaponType: 1
+  weaponIcon: {fileID: 0}
   Slot: 0
   attackSpeed: 1
   attackDelay: 1.5
@@ -85,12 +91,24 @@ MonoBehaviour:
   hitMask:
     serializedVersion: 2
     m_Bits: 0
-  muzzleSprites: []
-  muzzleLight: {fileID: 0}
-  projectilePrefab: {fileID: 0}
+  muzzleSprites:
+  - {fileID: 4045297029347476879}
+  - {fileID: 8112438798778383932}
+  muzzleLight: {fileID: 7123636629409067006}
+  projectilePrefab: {fileID: 1258010561939257876, guid: 1ce9fa8ba9f7fab4ba5c5487c48cfd6e, type: 3}
   reloadDelay: 0
   defaultAmmo: 0
   defaultReserve: 0
   reserveAdd: 0
   leftIK: {fileID: 0}
   rightIK: {fileID: 0}
+--- !u!108 &7123636629409067006 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 3621532961702495844, guid: 5aa0d1f62f8a9e741b2c5bb15f6275a1, type: 3}
+  m_PrefabInstance: {fileID: 5809213403704994202}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &8112438798778383932 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 2309032507612207014, guid: 5aa0d1f62f8a9e741b2c5bb15f6275a1, type: 3}
+  m_PrefabInstance: {fileID: 5809213403704994202}
+  m_PrefabAsset: {fileID: 0}
