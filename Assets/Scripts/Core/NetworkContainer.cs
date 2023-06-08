@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Core.Logging;
 using Core.System;
 using Fusion;
@@ -13,39 +14,53 @@ namespace Core {
     public class NetworkContainer : Singleton<NetworkContainer>, INetworkRunnerCallbacks {
         [ReadOnly] public NetworkRunner runner;
         private NetworkSceneManagerDefault _sceneManager;
+        private float _findMatchTimeout;
 
         private void Awake() {
             runner       = GetComponent<NetworkRunner>();
             _sceneManager = GetComponent<NetworkSceneManagerDefault>();
+            // NetworkConfiguration networkConfig = runner.Config.Network;
+            // _findMatchTimeout = (float) (networkConfig.ConnectAttempts * networkConfig.ConnectInterval);
         }
 
-        public async void CreateMatch() {
-            StartGameResult result = await runner.StartGame(new StartGameArgs {
+        public async Task<StartGameResult> CreateMatch() {
+            StartGameResult res = await runner.StartGame(new StartGameArgs {
                 GameMode     = GameMode.Host,
                 PlayerCount  = 4,
                 Scene        = 1,
                 SceneManager = _sceneManager
             });
-            if (result.Ok) {
+            if (res.Ok) {
                 NCLogger.Log($"Creating match...");
             } else {
                 NCLogger.Log($"Couldn't create match!\n" +
-                             $"res: {result.ShutdownReason}", LogLevel.ERROR);
+                             $"res: {res.ShutdownReason}", LogLevel.ERROR);
             }
+            return res;
         }
-        
-        public async void FindMatch() {
-            StartGameResult result = await runner.StartGame(new StartGameArgs {
+
+        public async Task<StartGameResult> FindMatch() {
+            // using CancellationTokenSource src = new();
+            // src.Token.Register(OnCancel);
+            // src.CancelAfter((int) (_findMatchTimeout * 1000));
+            // TaskCompletionSource<StartGameResult> completionSource = new();
+            // src.Token.Register(() => completionSource.TrySetCanceled());
+            StartGameResult res = await runner.StartGame(new StartGameArgs {
                 GameMode     = GameMode.Client,
                 Scene        = 1,
                 SceneManager = _sceneManager
             });
-            if (result.Ok) {
-                NCLogger.Log($"Match found, joining...");
+            if (res.Ok) {
+                NCLogger.Log("Match found, joining...");
             } else {
-                NCLogger.Log($"Couldn't find match!\n" +
-                             $"res: {result.ShutdownReason}", LogLevel.ERROR);
+                NCLogger.Log("Couldn't find match!\n" +
+                             $"res: {res.ShutdownReason}", LogLevel.ERROR);
             }
+            return res;
+        }
+
+        private void OnCancel() {
+            
         }
         
     #region Runner callbacks

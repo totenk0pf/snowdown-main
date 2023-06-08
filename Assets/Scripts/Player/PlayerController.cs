@@ -13,8 +13,10 @@ using Fusion.Sockets;
 using Player;
 using UnityEngine.Serialization;
 using Core;
+using Core.Events;
 using Core.Logging;
 using Unity.VisualScripting;
+using EventType = Core.Events.EventType;
 
 /// <summary>
 /// Player states.
@@ -194,6 +196,7 @@ public class PlayerController : NetworkBehaviour, INetworkRunnerCallbacks
         _moveVector = orientation.right * data.direction.x + orientation.forward * data.direction.y;
         if (_moveVector.magnitude > 0.1f) {
             Step();
+            this.FireEvent(EventType.OnPlayerMove);
             if (_currentState == PlayerState.Sliding) {
                 if (_slideVector == Vector3.zero) _slideVector = orientation.forward.normalized;
                 return;
@@ -205,7 +208,10 @@ public class PlayerController : NetworkBehaviour, INetworkRunnerCallbacks
             if (!data.moveInput.IsSet(InputButtons.Sprint) && !data.moveInput.IsSet(InputButtons.Crouch)) {
                 _currentState = PlayerState.Walking;
             }
-        } else _currentState = PlayerState.Idle;
+        } else {
+            _currentState = PlayerState.Idle;
+            this.FireEvent(EventType.OnPlayerStop);
+        }
         if (data.moveInput.IsSet(InputButtons.Crouch)) {
             // if (isGrounded && Rb.velocity.magnitude >= slideThreshold) {
                 // _currentState = PlayerState.Sliding;

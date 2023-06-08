@@ -59,10 +59,10 @@
     "Network": {
         "SocketSendBufferSize": 256,
         "SocketRecvBufferSize": 256,
-        "ConnectAttempts": 10,
-        "ConnectInterval": 0.5,
+        "ConnectAttempts": 3,
+        "ConnectInterval": 1.0,
         "ConnectionDefaultRtt": 0.1,
-        "ConnectionTimeout": 10.0,
+        "ConnectionTimeout": 15.0,
         "ConnectionPingInterval": 1.0,
         "ConnectionShutdownTime": 1.0,
         "MtuDefault": 1136,

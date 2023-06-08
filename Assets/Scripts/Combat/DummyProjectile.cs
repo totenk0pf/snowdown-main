@@ -5,7 +5,6 @@ namespace Combat {
     public class DummyProjectile : MonoBehaviour {
         public float aliveDuration;
         [SerializeField] private float speed;
-        [SerializeField] private LayerMask whatIsLevel;
         
         public void Awake() {
             Destroy(gameObject, aliveDuration);
@@ -16,9 +15,7 @@ namespace Combat {
         }
 
         private void OnTriggerEnter(Collider other) {
-            if (other.gameObject.layer.CheckLayer(whatIsLevel)) {
-                Destroy(gameObject);   
-            }
+            Destroy(gameObject);
         }
     }
 }

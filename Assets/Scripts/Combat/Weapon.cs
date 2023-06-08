@@ -64,7 +64,7 @@ namespace Combat {
         protected void RandomizeMuzzle() {
             for (var i = 0; i < muzzleSprites.Length; i++) {
                 var randomAngle = Random.Range(0f, 360f);
-                var randomScale = Random.Range(0.75f, 1.5f);
+                var randomScale = Random.Range(3f, 6f);
                 muzzleSprites[i].transform.eulerAngles = new Vector3(0f, randomAngle, 0f);
                 muzzleSprites[i].transform.localScale = new Vector3(randomScale, randomScale, randomScale);
             }

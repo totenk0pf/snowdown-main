@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5590509856091046996}
   - component: {fileID: 333897386816887555}
   - component: {fileID: 8001100546714546383}
+  - component: {fileID: 550386729576893801}
   m_Layer: 0
   m_Name: DummyProjectile
   m_TagString: Untagged
@@ -75,8 +76,8 @@ LineRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Positions:
-  - {x: 0, y: 0, z: -0.75}
-  - {x: 0, y: 0, z: 0.75}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 1.5}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -97,7 +98,7 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 0.975, b: 0.9, a: 0}
+      key0: {r: 1, g: 0.94, b: 0.75, a: 0}
       key1: {r: 1, g: 0.75, b: 0, a: 0.78431374}
       key2: {r: 1, g: 0.75, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
@@ -113,8 +114,8 @@ LineRenderer:
       ctime5: 0
       ctime6: 0
       ctime7: 0
-      atime0: 6554
-      atime1: 65535
+      atime0: 16384
+      atime1: 49151
       atime2: 0
       atime3: 0
       atime4: 0
@@ -145,7 +146,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aliveDuration: 5
-  speed: 100
+  speed: 150
   whatIsLevel:
     serializedVersion: 2
     m_Bits: 64
+--- !u!65 &550386729576893801
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1258010561939257876}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.05, y: 0.05, z: 1.5}
+  m_Center: {x: 0, y: 0, z: 0.75}
