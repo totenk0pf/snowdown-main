@@ -24,8 +24,6 @@ namespace Player {
     }
     
     public class WeaponHandler : NetworkBehaviour, INetworkRunnerCallbacks {
-        [SerializeField] private Transform leftIKTarget;
-        [SerializeField] private Transform rightIKTarget;
         public List<WeaponEntry> weaponInventory;
         private Weapon _currentWeapon;
         private int _activeSlot;
@@ -80,8 +78,8 @@ namespace Player {
             if (target == null) return;
             _currentWeapon = target;
             _currentWeapon.gameObject.SetActive(true);
-            SetIK(leftIKTarget, _currentWeapon.leftIK);
-            SetIK(rightIKTarget, _currentWeapon.rightIK);
+            // SetIK(leftIKTarget, _currentWeapon.leftIK);
+            // SetIK(rightIKTarget, _currentWeapon.rightIK);
             this.FireEvent(EventType.OnWeaponSwap, new WeaponMsg {
                 weaponName = _currentWeapon.name,
                 weaponIcon = _currentWeapon.weaponIcon,

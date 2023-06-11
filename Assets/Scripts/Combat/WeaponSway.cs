@@ -16,7 +16,7 @@ namespace Combat {
             );
 
             Quaternion rotX = Quaternion.AngleAxis(-input.y, Vector3.right);
-            Quaternion rotY = Quaternion.AngleAxis(input.x, Vector3.up);
+            Quaternion rotY = Quaternion.AngleAxis(-input.x, Vector3.up);
             Quaternion targetRot = targetRot = rotX * rotY;
 
             swayTransform.localRotation = Quaternion.Slerp(swayTransform.localRotation, targetRot, smoothing * Time.deltaTime);

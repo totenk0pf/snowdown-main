@@ -182,11 +182,13 @@ public class PlayerController : NetworkBehaviour, INetworkRunnerCallbacks
                              out var hit,
                              Vector3.Distance(orientation.position, stepOffset),
                              whatIsGround)) return;
-        if (hit.normal != Vector3.up) return;
-        Vector3 mirroredTarget = stepOffset;
-        mirroredTarget.y *= -1;
-        Vector3 forceDir = (mirroredTarget - orientation.position).normalized;
-        Rb.AddForce(forceDir * stepForce * _runner.DeltaTime, ForceMode.VelocityChange);
+        if (hit.normal == Vector3.up) {
+            Vector3 mirroredTarget = stepOffset;
+            mirroredTarget.y *= -1;
+            Vector3 forceDir = (mirroredTarget - orientation.position).normalized;
+            Rb.AddForce(forceDir * stepForce * _runner.DeltaTime, ForceMode.VelocityChange);
+        }
+        if (hit.normal)
     }
 
     public override void FixedUpdateNetwork() {
@@ -216,9 +218,10 @@ public class PlayerController : NetworkBehaviour, INetworkRunnerCallbacks
             // if (isGrounded && Rb.velocity.magnitude >= slideThreshold) {
                 // _currentState = PlayerState.Sliding;
             // }
+            _currentState = PlayerState.Crouching;
         }
         if (_currentState != PlayerState.Sliding && data.moveInput.IsSet(InputButtons.Crouch)) {
-            _currentState = PlayerState.Crouching;
+            // _currentState = PlayerState.Crouching;
         }
         if (data.moveInput.IsSet(InputButtons.Jump)) {
             if (!canJump) return;
