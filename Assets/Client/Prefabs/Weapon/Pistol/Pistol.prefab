@@ -90,7 +90,7 @@ MonoBehaviour:
   damageMod: 1
   hitMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 12288
   muzzleSprites:
   - {fileID: 4045297029347476879}
   - {fileID: 8112438798778383932}

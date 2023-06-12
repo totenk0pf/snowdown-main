@@ -5844,7 +5844,7 @@ MonoBehaviour:
   groundFriction: 5
   groundRadius: 0.2
   airFriction: 4.8
-  jumpForce: 3.5
+  jumpForce: 1.5
   slideSpeed: 120
   slideThreshold: 8
   sprintModifier: 1.5
@@ -5856,8 +5856,9 @@ MonoBehaviour:
   crouchModifier: 0.4
   stepHeightOffset: -0.9
   stepDistance: 0.55
-  stepExtents: {x: 1, y: 0.1, z: 1}
-  stepForce: 150
+  stepExtents: {x: 1.5, y: 0.1, z: 1.5}
+  stepForce: 200
+  slopeForce: 25
   gravityForce: 5000
   gravityLimit: 5000
   whatIsGround:
@@ -5886,8 +5887,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _interpolationDataSource: 0
-  leftIKTarget: {fileID: 0}
-  rightIKTarget: {fileID: 0}
   weaponInventory:
   - slot: 0
     weapon: {fileID: 8218421940562455346}

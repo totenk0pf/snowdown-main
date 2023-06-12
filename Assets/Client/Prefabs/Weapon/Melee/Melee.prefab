@@ -72,32 +72,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1658265466817124918, guid: 5aa0d1f62f8a9e741b2c5bb15f6275a1, type: 3}
   m_PrefabInstance: {fileID: 8882852002439567962}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1906035477543675763
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7801762269257891948}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53390594e8a84e6580933c418ee59da2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Type: 1
-  Slot: 0
-  attackSpeed: 1
-  attackDelay: 1
-  attackSpeedMod: 1
-  baseDamage: 1
-  damageMod: 1
-  muzzleSprites: []
-  muzzleLight: {fileID: 0}
-  defaultAmmo: 0
-  defaultReserve: 0
-  reserveAdd: 0
-  leftIK: {fileID: 3088177889907583669}
-  rightIK: {fileID: 5062352302668839712}
 --- !u!65 &1464045203185079743
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -111,3 +85,36 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2, y: 2, z: 1}
   m_Center: {x: 0, y: 0, z: 1}
+--- !u!114 &1906035477543675763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7801762269257891948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53390594e8a84e6580933c418ee59da2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponType: 0
+  weaponIcon: {fileID: 0}
+  Slot: 0
+  attackSpeed: 1
+  attackDelay: 1
+  attackSpeedMod: 1
+  baseDamage: 1
+  firePoint: {fileID: 0}
+  damageMod: 1
+  hitMask:
+    serializedVersion: 2
+    m_Bits: 12288
+  muzzleSprites: []
+  muzzleLight: {fileID: 0}
+  projectilePrefab: {fileID: 0}
+  reloadDelay: 0
+  defaultAmmo: 0
+  defaultReserve: 0
+  reserveAdd: 0
+  leftIK: {fileID: 3088177889907583669}
+  rightIK: {fileID: 5062352302668839712}

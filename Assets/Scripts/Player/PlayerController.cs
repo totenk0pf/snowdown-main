@@ -15,6 +15,7 @@ using UnityEngine.Serialization;
 using Core;
 using Core.Events;
 using Core.Logging;
+using Palmmedia.ReportGenerator.Core.Reporting.Builders;
 using Unity.VisualScripting;
 using EventType = Core.Events.EventType;
 
@@ -71,6 +72,11 @@ public class PlayerController : NetworkBehaviour, INetworkRunnerCallbacks
     [SerializeField] private Vector3 stepExtents;
     [SerializeField] private float stepForce;
 
+    [Header("Slope")] 
+    [SerializeField] private float slopeForce;
+    private bool _isOnSlope;
+    private Vector3 _slopeNormal;
+
     private float _currentStamina;
     private float _defaultHeight;
     private float _currentSprint;
@@ -79,6 +85,7 @@ public class PlayerController : NetworkBehaviour, INetworkRunnerCallbacks
     [SerializeField] private float gravityForce;
     [SerializeField] private float gravityLimit;
     [SerializeField] private LayerMask whatIsGround;
+    private Vector3 _gravityDir;
     
     [Header("Camera settings")]
     [SerializeField] private Transform orientation;
@@ -137,6 +144,7 @@ public class PlayerController : NetworkBehaviour, INetworkRunnerCallbacks
         _defaultHeight  = Col.height;
         _currentStamina = maxStamina;
         _currentSprint  = 1;
+        _gravityDir     = Vector3.down;
     }
 
     private void OnDestroy() {
@@ -155,11 +163,20 @@ public class PlayerController : NetworkBehaviour, INetworkRunnerCallbacks
     }
 
     private void Update() {
-        _cBox      = Col.bounds;
-        isGrounded = CheckGround(groundRadius);
-        Rb.drag    = isGrounded ? groundFriction : airFriction;
-        canJump    = isGrounded;
-        if (_currentState is not (PlayerState.Crouching or PlayerState.Sliding)) {
+        _cBox       = Col.bounds;
+        isGrounded  = CheckGround(groundRadius);
+        Rb.drag     = isGrounded ? groundFriction : airFriction;
+        if (IsOnSlope(out Vector3 normal)) {
+            _isOnSlope   = true;
+            _slopeNormal = normal;
+            _gravityDir  = normal;
+        } else {
+            _isOnSlope   = false;
+            _slopeNormal = Vector3.zero;
+            _gravityDir  = Vector3.down;
+        }
+        canJump     = isGrounded;
+        if (_currentState != PlayerState.Crouching) {
             ResetHeight();
         } else {
             DecreaseHeight();
@@ -173,30 +190,57 @@ public class PlayerController : NetworkBehaviour, INetworkRunnerCallbacks
 
     private void Step() {
         if (!isGrounded) return;
-        Vector3 stepOffset = orientation.position + _moveVector.normalized * stepDistance;
-        stepOffset.y += stepHeightOffset;
-        if (Physics.OverlapBox(stepOffset, stepExtents, Quaternion.identity).Length <= 0) return;
+        if (_isOnSlope) return;
+        Vector3 stepOffset = GetStepOffset();
         Vector3 dir = (stepOffset - orientation.position).normalized;
+        Debug.DrawLine(orientation.position, stepOffset, Color.green);
         if (!Physics.Raycast(orientation.position,
                              dir,
                              out var hit,
                              Vector3.Distance(orientation.position, stepOffset),
                              whatIsGround)) return;
-        if (hit.normal == Vector3.up) {
-            Vector3 mirroredTarget = stepOffset;
-            mirroredTarget.y *= -1;
-            Vector3 forceDir = (mirroredTarget - orientation.position).normalized;
-            Rb.AddForce(forceDir * stepForce * _runner.DeltaTime, ForceMode.VelocityChange);
+        Debug.DrawLine(orientation.position, hit.point, Color.yellow);
+        if (hit.normal != Vector3.up) return;
+        Vector3 mirroredTarget = stepOffset;
+        mirroredTarget.y *= -1;
+        Vector3 forceDir = (mirroredTarget - orientation.position).normalized;
+        Rb.AddForce(forceDir * stepForce * _runner.DeltaTime, ForceMode.VelocityChange);
+    }
+
+    private void SlopeStep() {
+        if (!_isOnSlope) return;
+        Vector3 slopeDir = Vector3.Cross(orientation.right, _slopeNormal).normalized;
+        Rb.AddForce(slopeDir * slopeForce * _runner.DeltaTime, ForceMode.VelocityChange);
+    }
+
+    private Vector3 GetStepOffset() {
+        Vector3 step = orientation.position + _moveVector.normalized * stepDistance;
+        step.y += stepHeightOffset;
+        return step;
+    }
+
+    private bool IsOnSlope(out Vector3 slopeNormal) {
+        Vector3 stepOffset = GetStepOffset();
+        Vector3 dir = (stepOffset - orientation.position).normalized;
+        if (!Physics.Raycast(orientation.position,
+                             dir,
+                             out RaycastHit hit,
+                             Vector3.Distance(orientation.position, stepOffset),
+                             whatIsGround)) {
+            slopeNormal = Vector3.zero;
+            return false;
         }
-        if (hit.normal)
+        slopeNormal = hit.normal;
+        var dot = Vector3.Dot(hit.normal, Vector3.up);
+        return dot is > 0 and < 1;
     }
 
     public override void FixedUpdateNetwork() {
         base.FixedUpdateNetwork();
-        ApplyGravity();
         if (!GetInput(out NetworkInputData data)) return;
         _moveVector = orientation.right * data.direction.x + orientation.forward * data.direction.y;
         if (_moveVector.magnitude > 0.1f) {
+            SlopeStep();
             Step();
             this.FireEvent(EventType.OnPlayerMove);
             if (_currentState == PlayerState.Sliding) {
@@ -227,6 +271,7 @@ public class PlayerController : NetworkBehaviour, INetworkRunnerCallbacks
             if (!canJump) return;
             Jump();
         }
+        ApplyGravity();
         switch (_currentState) {
             case PlayerState.Idle:
                 break;
@@ -304,7 +349,7 @@ public class PlayerController : NetworkBehaviour, INetworkRunnerCallbacks
     /// </summary>
     private void ApplyGravity() {
         if (Rb.velocity.y <= -gravityLimit) return;
-        Rb.AddForce(Vector3.down * gravityForce * _runner.DeltaTime, ForceMode.Acceleration);
+        Rb.AddForce(_gravityDir * gravityForce * _runner.DeltaTime, ForceMode.Acceleration);
     }
 
     private void Slide(Vector3 slideDirection) {
@@ -313,7 +358,7 @@ public class PlayerController : NetworkBehaviour, INetworkRunnerCallbacks
 
     private void DecreaseHeight() {
         if (Col.height > 0) {
-            Col.height -= heightSpeed * _runner.DeltaTime;
+            Col.height -= heightSpeed * Time.deltaTime;
         } else {
             Col.height = 0;
         }
@@ -322,7 +367,7 @@ public class PlayerController : NetworkBehaviour, INetworkRunnerCallbacks
     private void ResetHeight() {
         if (Col.height == _defaultHeight) return;
         if (Col.height < _defaultHeight) {
-            Col.height += heightResetSpeed * _runner.DeltaTime;
+            Col.height += heightResetSpeed * Time.deltaTime;
         } else {
             Col.height = _defaultHeight;
         }
