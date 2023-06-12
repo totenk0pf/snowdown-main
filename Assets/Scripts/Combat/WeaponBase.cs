@@ -33,7 +33,7 @@ namespace Combat {
         [SerializeField] protected float attackSpeed = 1f;
         [SerializeField] protected float attackDelay;
         public float attackSpeedMod = 1f;
-        [SerializeField] protected float baseDamage;
+        [SerializeField] protected int baseDamage;
         [SerializeField] protected Transform firePoint;
         public float damageMod = 1f;
         [SerializeField] protected LayerMask hitMask;

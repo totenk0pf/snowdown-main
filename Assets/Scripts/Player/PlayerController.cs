@@ -68,6 +68,7 @@ public class PlayerController : NetworkBehaviour, INetworkRunnerCallbacks
 
     [Header("Step")] 
     [SerializeField] private float stepHeightOffset;
+    [SerializeField] private float stepCrouchOffset;
     [SerializeField] private float stepDistance;
     [SerializeField] private Vector3 stepExtents;
     [SerializeField] private float stepForce;
@@ -191,12 +192,12 @@ public class PlayerController : NetworkBehaviour, INetworkRunnerCallbacks
     private void Step() {
         if (!isGrounded) return;
         if (_isOnSlope) return;
-        Vector3 stepOffset = GetStepOffset();
+        Vector3 stepOffset = _currentState == PlayerState.Crouching ? GetStepOffset(stepCrouchOffset) : GetStepOffset(stepHeightOffset);
         Vector3 dir = (stepOffset - orientation.position).normalized;
         Debug.DrawLine(orientation.position, stepOffset, Color.green);
         if (!Physics.Raycast(orientation.position,
                              dir,
-                             out var hit,
+                             out RaycastHit hit,
                              Vector3.Distance(orientation.position, stepOffset),
                              whatIsGround)) return;
         Debug.DrawLine(orientation.position, hit.point, Color.yellow);
@@ -213,14 +214,14 @@ public class PlayerController : NetworkBehaviour, INetworkRunnerCallbacks
         Rb.AddForce(slopeDir * slopeForce * _runner.DeltaTime, ForceMode.VelocityChange);
     }
 
-    private Vector3 GetStepOffset() {
+    private Vector3 GetStepOffset(float height) {
         Vector3 step = orientation.position + _moveVector.normalized * stepDistance;
-        step.y += stepHeightOffset;
+        step.y += height;
         return step;
     }
 
     private bool IsOnSlope(out Vector3 slopeNormal) {
-        Vector3 stepOffset = GetStepOffset();
+        Vector3 stepOffset = _currentState == PlayerState.Crouching ? GetStepOffset(stepCrouchOffset) : GetStepOffset(stepHeightOffset);
         Vector3 dir = (stepOffset - orientation.position).normalized;
         if (!Physics.Raycast(orientation.position,
                              dir,
@@ -394,7 +395,7 @@ public class PlayerController : NetworkBehaviour, INetworkRunnerCallbacks
     private void OnDrawGizmos() {
         Gizmos.color = Color.green;
         Vector3 o = orientation.position + _moveVector.normalized * stepDistance;
-        o.y += stepHeightOffset;
+        o.y += _currentState == PlayerState.Crouching ? stepCrouchOffset : stepHeightOffset;
         Gizmos.DrawWireCube(o, stepExtents);
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(new Vector3(_cBox.center.x, 

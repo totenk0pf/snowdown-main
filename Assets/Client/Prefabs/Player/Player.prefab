@@ -5855,8 +5855,9 @@ MonoBehaviour:
   heightResetSpeed: 32
   crouchModifier: 0.4
   stepHeightOffset: -0.9
+  stepCrouchOffset: -0.75
   stepDistance: 0.55
-  stepExtents: {x: 1.5, y: 0.1, z: 1.5}
+  stepExtents: {x: 1.5, y: 0.05, z: 1.5}
   stepForce: 200
   slopeForce: 25
   gravityForce: 5000

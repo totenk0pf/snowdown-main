@@ -96,6 +96,8 @@ namespace Combat {
             });
         }
 
+        protected int CalculateDamage() => Mathf.FloorToInt(baseDamage * damageMod);
+
         public override void SpawnProjectiles() {
             Instantiate(projectilePrefab, firePoint.position, firePoint.rotation, null);
         }

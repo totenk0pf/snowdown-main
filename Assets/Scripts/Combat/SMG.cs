@@ -1,6 +1,7 @@
 ﻿using Core.Logging;
 using Fusion;
 using UnityEngine;
+using Zombie;
 
 namespace Combat {
     public class SMG : Weapon {
@@ -14,6 +15,10 @@ namespace Combat {
                                                HitOptions.IgnoreInputAuthority,
                                                QueryTriggerInteraction.Ignore)) {
                 NCLogger.Log(hit.Hitbox.Root);
+                ZombieBehaviour zombie = hit.Hitbox.Root.GetComponent<ZombieBehaviour>();
+                if (zombie) {
+                    zombie.TakeDamage(CalculateDamage());
+                }
             }
             SpawnProjectiles();
             currentAmmo--;

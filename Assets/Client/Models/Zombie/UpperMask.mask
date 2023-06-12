@@ -7,7 +7,7 @@ AvatarMask:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: UpperMask
-  m_Mask: 00000000010000000100000000000000000000000100000001000000010000000100000000000000000000000000000000000000
+  m_Mask: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   m_Elements:
   - m_Path: 
     m_Weight: 1
@@ -20,7 +20,7 @@ AvatarMask:
   - m_Path: Character.003/Root/knee_IK.L
     m_Weight: 0
   - m_Path: Character.003/Root/spine
-    m_Weight: 1
+    m_Weight: 0
   - m_Path: Character.003/Root/spine/pelvis.L
     m_Weight: 0
   - m_Path: Character.003/Root/spine/pelvis.R
@@ -38,15 +38,15 @@ AvatarMask:
   - m_Path: Character.003/Root/spine/spine.001/spine.002/spine.003/shoulder.L
     m_Weight: 1
   - m_Path: Character.003/Root/spine/spine.001/spine.002/spine.003/shoulder.L/upper_arm.L
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Character.003/Root/spine/spine.001/spine.002/spine.003/shoulder.L/upper_arm.L/forearm.L
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Character.003/Root/spine/spine.001/spine.002/spine.003/shoulder.R
     m_Weight: 1
   - m_Path: Character.003/Root/spine/spine.001/spine.002/spine.003/shoulder.R/upper_arm.R
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Character.003/Root/spine/spine.001/spine.002/spine.003/shoulder.R/upper_arm.R/forearm.R
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Character.003/Root/spine/spine.001/spine.002/spine.003/spine.004
     m_Weight: 1
   - m_Path: Character.003/Root/spine/spine.001/spine.002/spine.003/spine.004/spine.005
