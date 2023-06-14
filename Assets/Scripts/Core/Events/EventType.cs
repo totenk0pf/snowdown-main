@@ -10,8 +10,15 @@ namespace Core.Events {
         OnWeaponStop,
         OnWeaponReloadStart,
         OnWeaponReloadEnd,
+        OnWeaponBobUpdate,
         
         OnPlayerMove,
-        OnPlayerStop
+        OnPlayerStop,
+        OnPlayerCrouch,
+        OnPlayerSprint,
+        OnPlayerHUDUpdate,
+
+        OnZombieDeathFinish,
+        OnZombieAttack
     }
 }

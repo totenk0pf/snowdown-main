@@ -21,6 +21,30 @@ ModelImporter:
   - first:
       74: -7085859668053261994
     second: Character.003|Dead
+  - first:
+      74: 2795905485908458069
+    second: Character.003|Attack_Alt
+  - first:
+      74: -145543132305393152
+    second: Character.004|Attack
+  - first:
+      74: 6186535647752863386
+    second: Character.004|Die
+  - first:
+      74: 7764779928611749785
+    second: Character.004|Hurt
+  - first:
+      74: 7645092068291227113
+    second: Character.004|Idle
+  - first:
+      74: -8797287670541018404
+    second: Character.004|Walk
+  - first:
+      74: -4096232496540140048
+    second: Character.004|Dead
+  - first:
+      74: -5045487591469673287
+    second: Character.004|Attack_Alt
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -56,8 +80,8 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Character.003|Attack
-      takeName: Character.003|Attack
+      name: Character.004|Attack
+      takeName: Character.004|Attack
       internalID: 0
       firstFrame: 0
       lastFrame: 24
@@ -79,14 +103,21 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0.5
+        functionName: OnDealDamage
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Character.003|Die
-      takeName: Character.003|Die
+      name: Character.004|Die
+      takeName: Character.004|Die
       internalID: 0
       firstFrame: 0
       lastFrame: 18
@@ -114,8 +145,8 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Character.003|Hurt
-      takeName: Character.003|Hurt
+      name: Character.004|Hurt
+      takeName: Character.004|Hurt
       internalID: 0
       firstFrame: 0
       lastFrame: 4
@@ -143,8 +174,8 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Character.003|Idle
-      takeName: Character.003|Idle
+      name: Character.004|Idle
+      takeName: Character.004|Idle
       internalID: 0
       firstFrame: 0
       lastFrame: 48
@@ -172,8 +203,8 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Character.003|Walk
-      takeName: Character.003|Walk
+      name: Character.004|Walk
+      takeName: Character.004|Walk
       internalID: 0
       firstFrame: 0
       lastFrame: 21
@@ -201,8 +232,8 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Character.003|Dead
-      takeName: Character.003|Dead
+      name: Character.004|Dead
+      takeName: Character.004|Dead
       internalID: 0
       firstFrame: 0
       lastFrame: 1
@@ -224,7 +255,50 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0
+        functionName: OnDeathFinish
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Character.004|Attack_Alt
+      takeName: Character.004|Attack_Alt
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.33031675
+        functionName: OnDealDamage
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}

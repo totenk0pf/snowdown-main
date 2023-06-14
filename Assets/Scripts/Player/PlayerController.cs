@@ -9,6 +9,7 @@ using UnityEngine;
 using Fusion;
 using System.Collections;
 using System.Collections.Generic;
+using Combat;
 using Fusion.Sockets;
 using Player;
 using UnityEngine.Serialization;
@@ -189,53 +190,6 @@ public class PlayerController : NetworkBehaviour, INetworkRunnerCallbacks
         }
     }
 
-    private void Step() {
-        if (!isGrounded) return;
-        if (_isOnSlope) return;
-        Vector3 stepOffset = _currentState == PlayerState.Crouching ? GetStepOffset(stepCrouchOffset) : GetStepOffset(stepHeightOffset);
-        Vector3 dir = (stepOffset - orientation.position).normalized;
-        Debug.DrawLine(orientation.position, stepOffset, Color.green);
-        if (!Physics.Raycast(orientation.position,
-                             dir,
-                             out RaycastHit hit,
-                             Vector3.Distance(orientation.position, stepOffset),
-                             whatIsGround)) return;
-        Debug.DrawLine(orientation.position, hit.point, Color.yellow);
-        if (hit.normal != Vector3.up) return;
-        Vector3 mirroredTarget = stepOffset;
-        mirroredTarget.y *= -1;
-        Vector3 forceDir = (mirroredTarget - orientation.position).normalized;
-        Rb.AddForce(forceDir * stepForce * _runner.DeltaTime, ForceMode.VelocityChange);
-    }
-
-    private void SlopeStep() {
-        if (!_isOnSlope) return;
-        Vector3 slopeDir = Vector3.Cross(orientation.right, _slopeNormal).normalized;
-        Rb.AddForce(slopeDir * slopeForce * _runner.DeltaTime, ForceMode.VelocityChange);
-    }
-
-    private Vector3 GetStepOffset(float height) {
-        Vector3 step = orientation.position + _moveVector.normalized * stepDistance;
-        step.y += height;
-        return step;
-    }
-
-    private bool IsOnSlope(out Vector3 slopeNormal) {
-        Vector3 stepOffset = _currentState == PlayerState.Crouching ? GetStepOffset(stepCrouchOffset) : GetStepOffset(stepHeightOffset);
-        Vector3 dir = (stepOffset - orientation.position).normalized;
-        if (!Physics.Raycast(orientation.position,
-                             dir,
-                             out RaycastHit hit,
-                             Vector3.Distance(orientation.position, stepOffset),
-                             whatIsGround)) {
-            slopeNormal = Vector3.zero;
-            return false;
-        }
-        slopeNormal = hit.normal;
-        var dot = Vector3.Dot(hit.normal, Vector3.up);
-        return dot is > 0 and < 1;
-    }
-
     public override void FixedUpdateNetwork() {
         base.FixedUpdateNetwork();
         if (!GetInput(out NetworkInputData data)) return;
@@ -279,16 +233,19 @@ public class PlayerController : NetworkBehaviour, INetworkRunnerCallbacks
             case PlayerState.Walking:
                 _currentSprint = 1.0f;
                 Walk(_moveVector);
+                UpdateBob(1f, 1f);
                 break;
             case PlayerState.Running:
                 _currentSprint = sprintModifier;
                 Walk(_moveVector);
+                UpdateBob(sprintModifier, sprintModifier);
                 break;
             case PlayerState.Sliding:
                 Slide(_slideVector);
                 break;
             case PlayerState.Crouching:
                 _currentSprint = crouchModifier;
+                UpdateBob(crouchModifier, crouchModifier);
                 Walk(_moveVector);
                 break;
         }
@@ -314,6 +271,60 @@ public class PlayerController : NetworkBehaviour, INetworkRunnerCallbacks
         }
     }
 #endregion
+    
+    private void Step() {
+        if (!isGrounded) return;
+        // if (_isOnSlope) return;
+        Vector3 stepOffset = _currentState == PlayerState.Crouching ? GetStepOffset(stepCrouchOffset) : GetStepOffset(stepHeightOffset);
+        Vector3 dir = (stepOffset - orientation.position).normalized;
+        Debug.DrawLine(orientation.position, stepOffset, Color.green);
+        if (!Physics.Raycast(orientation.position,
+                             dir,
+                             out RaycastHit hit,
+                             Vector3.Distance(orientation.position, stepOffset),
+                             whatIsGround)) return;
+        Debug.DrawLine(orientation.position, hit.point, Color.yellow);
+        if (hit.normal != Vector3.up) return;
+        Vector3 mirroredTarget = stepOffset;
+        mirroredTarget.y *= -1;
+        Vector3 forceDir = (mirroredTarget - orientation.position).normalized;
+        Rb.AddForce(forceDir * stepForce * _runner.DeltaTime, ForceMode.VelocityChange);
+    }
+
+    private void SlopeStep() {
+        if (!_isOnSlope) return;
+        Vector3 slopeDir = Vector3.Cross(orientation.right, _slopeNormal).normalized;
+        Rb.AddForce(slopeDir * slopeForce * _runner.DeltaTime, ForceMode.VelocityChange);
+    }
+
+    private Vector3 GetStepOffset(float height) {
+        Vector3 step = orientation.position + _moveVector.normalized * stepDistance;
+        step.y += height;
+        return step;
+    }
+
+    private bool IsOnSlope(out Vector3 slopeNormal) {
+        Vector3 stepOffset = _currentState == PlayerState.Crouching ? GetStepOffset(stepCrouchOffset) : GetStepOffset(stepHeightOffset);
+        Vector3 dir = (stepOffset - orientation.position).normalized;
+        if (!Physics.Raycast(orientation.position,
+                             dir,
+                             out RaycastHit hit,
+                             Vector3.Distance(orientation.position, stepOffset),
+                             whatIsGround)) {
+            slopeNormal = Vector3.zero;
+            return false;
+        }
+        slopeNormal = hit.normal;
+        var dot = Vector3.Dot(hit.normal, Vector3.up);
+        return dot is > 0 and < 1;
+    }
+    
+    private void UpdateBob(float h, float v) {
+        this.FireEvent(EventType.OnWeaponBobUpdate, new WeaponBobMsg {
+            horizontalMod = h,
+            verticalMod   = v,
+        });
+    }
 
     /// <summary>
     /// Check if the player is currently grounded.
@@ -397,6 +408,7 @@ public class PlayerController : NetworkBehaviour, INetworkRunnerCallbacks
         Vector3 o = orientation.position + _moveVector.normalized * stepDistance;
         o.y += _currentState == PlayerState.Crouching ? stepCrouchOffset : stepHeightOffset;
         Gizmos.DrawWireCube(o, stepExtents);
+        Gizmos.DrawLine(orientation.position, o);
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(new Vector3(_cBox.center.x, 
                                         _cBox.min.y - groundMargin, 

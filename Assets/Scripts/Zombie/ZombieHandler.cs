@@ -9,9 +9,11 @@ namespace Zombie {
         public Vector3 center;
         public float range;
         public float spawnInterval;
+        public float spawnRadiusCheck;
         [SerializeField] private float iterations;
         [SerializeField] private int amountPerWave;
         [SerializeField] private GameObject zombiePrefab;
+        [SerializeField] private LayerMask whatToAvoid;
         private NetworkRunner _runner;
         private float currentInterval;
 
@@ -20,8 +22,9 @@ namespace Zombie {
             if (!zombiePrefab) return;
             if (!_runner.IsServer) return;
             for (var i = 0; i < amountPerWave; i++) {
-                if (!GetRandomPoint(center, range, out Vector3 pos)) continue;
-                _runner.Spawn(zombiePrefab, pos, Quaternion.identity);
+                Vector3 pos = GetRandomPoint(center, range);
+                if (pos == Vector3.zero) continue;
+                _runner.Spawn(zombiePrefab, pos, Quaternion.AngleAxis(Random.Range(0, 360f), Vector3.up));
             }
         }
 
@@ -37,15 +40,14 @@ namespace Zombie {
             
         }
 
-        private bool GetRandomPoint(Vector3 center, float radius, out Vector3 res) {
+        private Vector3 GetRandomPoint(Vector3 center, float radius) {
             for (var i = 0; i < iterations; i++) {
                 Vector3 pos = center + Random.insideUnitSphere * radius;
-                if (!NavMesh.SamplePosition(pos, out NavMeshHit hit, radius, NavMesh.AllAreas)) continue;
-                res = hit.position;
-                return true;
+                if (!NavMesh.SamplePosition(pos, out NavMeshHit hit, radius, 1)) continue;
+                if (Physics.OverlapSphere(pos, spawnRadiusCheck, whatToAvoid, QueryTriggerInteraction.Collide).Length > 0) continue;
+                return hit.position;
             }
-            res = Vector3.zero;
-            return false;
+            return Vector3.zero;
         }
 
         private void OnDrawGizmosSelected() {

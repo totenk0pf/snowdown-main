@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections;
+using Fusion;
+using Player;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -28,6 +30,7 @@ namespace Combat {
         public WeaponType weaponType;
         public Sprite weaponIcon;
         [SerializeField] protected WeaponSlot Slot;
+        public PlayerDataHandler owner;
         
         [TitleGroup("Attack")]
         [SerializeField] protected float attackSpeed = 1f;

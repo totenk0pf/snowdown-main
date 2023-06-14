@@ -1,20 +1,30 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using Client.UI;
 using Combat;
 using Core;
 using Core.Events;
 using Fusion;
 using Fusion.Sockets;
-using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 using EventType = Core.Events.EventType;
 
 namespace Player {
     [Serializable]
-    public struct WeaponEntry {
+    public class WeaponEntry {
         public WeaponSlot slot;
         public Weapon weapon;
+        public WeaponPanel panel;
+    }
+
+    [Serializable]
+    public struct DefaultWeapons {
+        public Weapon defaultPrimary;
+        public Weapon defaultSecondary;
+        public Weapon defaultMelee;
+        public Weapon defaultGrenade;
     }
 
     public struct WeaponMsg {
@@ -25,17 +35,76 @@ namespace Player {
     
     public class WeaponHandler : NetworkBehaviour, INetworkRunnerCallbacks {
         public List<WeaponEntry> weaponInventory;
+        public DefaultWeapons defaultWeapons;
+        [SerializeField] private List<Weapon> weaponList;
+        [SerializeField] private GameObject weaponListUI;
+        [SerializeField] private float listHideTimer;
+        private float _hideTimer;
+        private bool _hideTimerActive;
         private Weapon _currentWeapon;
         private int _activeSlot;
         private NetworkRunner _runner;
         private void Start() {
             _runner = NetworkContainer.Instance.runner;
             _runner.AddCallbacks(this);
-            SwapWeapon(WeaponSlot.Secondary);
+            SetupWeapons();
+            SetupWeaponPanels();
+            SetupActiveWeapon();
         }
 
+        private void SetupWeapons() {
+            PlayerDataHandler data = GetComponent<PlayerDataHandler>();
+            foreach (Weapon weapon in weaponList) {
+                weapon.owner = data;
+            }
+            if (defaultWeapons.defaultPrimary) {
+                WeaponEntry entry = GetBySlot(WeaponSlot.Primary);
+                entry.weapon = defaultWeapons.defaultPrimary;
+            }
+            if (defaultWeapons.defaultSecondary) {
+                WeaponEntry entry = GetBySlot(WeaponSlot.Secondary);
+                entry.weapon = defaultWeapons.defaultSecondary;
+            }
+            if (defaultWeapons.defaultMelee) {
+                WeaponEntry entry = GetBySlot(WeaponSlot.Melee);
+                entry.weapon = defaultWeapons.defaultMelee;
+            }
+            if (defaultWeapons.defaultGrenade) {
+                WeaponEntry entry = GetBySlot(WeaponSlot.Grenade);
+                entry.weapon = defaultWeapons.defaultGrenade;
+            }
+        }
+
+        private void SetupWeaponPanels() {
+            var i = 1;
+            foreach (WeaponEntry entry in weaponInventory) {
+                WeaponPanel panel = entry.panel;
+                panel.indexText.text     = i.ToString();
+                i++;
+                if (!entry.weapon) {
+                    panel.gameObject.SetActive(false);
+                    return;
+                }
+                panel.weaponImage.sprite = entry.weapon.weaponIcon;
+            }
+            weaponListUI.SetActive(false);
+        }
+
+        private void SetupActiveWeapon() {
+            SwapWeapon(weaponInventory.First(x => x.weapon != null).slot);
+        }
+        
         private WeaponEntry GetBySlot(WeaponSlot slot) {
             return weaponInventory.Find(x => x.slot == slot);
+        }
+
+        private void Update() {
+            if (!_hideTimerActive) return;
+            _hideTimer += Time.deltaTime;
+            if (_hideTimer < listHideTimer) return; 
+            weaponListUI.SetActive(false);
+            _hideTimer       = 0f;
+            _hideTimerActive = false;
         }
 
         public override void FixedUpdateNetwork() {
@@ -69,11 +138,20 @@ namespace Player {
         }
 
         private void SwapWeapon(WeaponSlot slot) {
+            weaponListUI.SetActive(true);
+            _hideTimer       = 0f;
+            _hideTimerActive = true;
+            WeaponEntry entry = GetBySlot(slot);
+            if (entry.weapon == null) return;
             if (_currentWeapon) {
                 _currentWeapon.gameObject.SetActive(false);
                 _currentWeapon.Reset();
             }
-            Weapon target = GetBySlot(slot).weapon;
+            Weapon target = entry.weapon;
+            foreach (WeaponEntry i in weaponInventory) {
+                if (i.panel != entry.panel) i.panel.ToggleState(false);
+            }
+            entry.panel.ToggleState(true);
             _activeSlot = (int) slot;
             if (target == null) return;
             _currentWeapon = target;

@@ -4,6 +4,7 @@ using Core;
 using Core.Events;
 using Core.Logging;
 using Fusion;
+using Player;
 using UnityEngine;
 using EventType = Core.Events.EventType;
 using Random = UnityEngine.Random;
@@ -25,13 +26,10 @@ namespace Combat {
     public class Weapon : WeaponBase {
         protected WeaponState CurrentState;
         private bool _canFire;
-
-        protected NetworkContainer Container;
         protected NetworkRunner Runner;
 
         protected override void Awake() {
-            Container      = NetworkContainer.Instance;
-            Runner         = Container.runner;
+            Runner         = NetworkContainer.Instance.runner;
             CurrentState   = WeaponState.Idle;
             _canFire       = true;
             currentAmmo    = defaultAmmo;
