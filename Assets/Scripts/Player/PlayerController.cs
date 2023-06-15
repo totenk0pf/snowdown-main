@@ -204,7 +204,7 @@ public class PlayerController : NetworkBehaviour, INetworkRunnerCallbacks
             }
             _slideVector = Vector3.zero;
             if (data.moveInput.IsSet(InputButtons.Sprint)) {
-                _currentState = PlayerState.Running;
+                // _currentState = PlayerState.Running;
             }
             if (!data.moveInput.IsSet(InputButtons.Sprint) && !data.moveInput.IsSet(InputButtons.Crouch)) {
                 _currentState = PlayerState.Walking;

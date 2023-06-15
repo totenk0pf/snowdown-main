@@ -25,6 +25,12 @@ namespace Combat {
         Grenade
     }
     
+    [Serializable]
+    public enum FireType {
+        Full,
+        Semi
+    }
+    
     public abstract class WeaponBase : MonoBehaviour, IWeapon {
         [TitleGroup("General")]
         public WeaponType weaponType;
@@ -40,6 +46,7 @@ namespace Combat {
         [SerializeField] protected Transform firePoint;
         public float damageMod = 1f;
         [SerializeField] protected LayerMask hitMask;
+        [SerializeField] protected FireType fireType;
         
         [Space]
         [HideIf("IsMelee")] [SerializeField] protected SpriteRenderer[] muzzleSprites;
