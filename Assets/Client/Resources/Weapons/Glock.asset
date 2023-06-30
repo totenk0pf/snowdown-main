@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Glock
   m_EditorClassIdentifier: 
   slot: 1
-  weaponPrefab: {fileID: 0}
-  weaponSprite: {fileID: 21300000, guid: ad7dd421c986d9c4798a997f47f204e0, type: 3}
+  weaponPrefab: {fileID: 919472881455437389, guid: 2750369ae6d75834e8da8b67a7403ee9, type: 3}
+  weaponSprite: {fileID: 21300008, guid: dccc05b8d01dde54f88f9910329187c2, type: 3}
   cost: 800

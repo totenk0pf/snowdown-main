@@ -50,6 +50,18 @@ namespace Player {
             SetupWeapons();
             SetupWeaponPanels();
             SetupActiveWeapon();
+            
+            this.AddListener(EventType.OnPrimaryAmmoAdd, _ => {
+                WeaponEntry entry = GetBySlot(WeaponSlot.Primary);
+                entry.weapon.AddAmmo();
+            });
+            
+            this.AddListener(EventType.OnSecondaryAmmoAdd, _ => {
+                WeaponEntry entry = GetBySlot(WeaponSlot.Secondary);
+                entry.weapon.AddAmmo();
+            });
+            
+            this.AddListener(EventType.OnWeaponBought, weapon => SwitchWeapon((GameObject) weapon));
         }
 
         private void SetupWeapons() {
@@ -96,6 +108,19 @@ namespace Player {
         
         private WeaponEntry GetBySlot(WeaponSlot slot) {
             return weaponInventory.Find(x => x.slot == slot);
+        }
+
+        private void SwitchWeapon(GameObject weapon) {
+            var weaponScript = weapon.GetComponent<Weapon>();
+
+            if (weaponScript.GetSlot != (WeaponSlot) _activeSlot) return;
+            
+            var item = weaponInventory.Find(x => x.slot == (WeaponSlot) _activeSlot);
+            item.weapon.gameObject.SetActive(false);
+            item.weapon = weaponList.Find(w => w.name == weapon.name);
+
+            item.panel.weaponImage.sprite = item.weapon.weaponIcon;
+            SwapWeapon((WeaponSlot) _activeSlot);
         }
 
         private void Update() {

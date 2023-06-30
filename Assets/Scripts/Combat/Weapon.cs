@@ -34,6 +34,18 @@ namespace Combat {
             _canFire       = true;
             currentAmmo    = defaultAmmo;
             currentReserve = defaultReserve + reserveAdd;
+            
+            this.AddListener(EventType.SetPlayerMovement, state => {
+                _canFire = (bool)state;
+            });
+        }
+
+        public void AddAmmo() {
+            currentReserve += defaultAmmo;
+            this.FireEvent(EventType.OnWeaponFire, new AmmoMsg {
+                ammo = currentAmmo,
+                reserve = currentReserve
+            });
         }
 
         private void OnEnable() {

@@ -25,6 +25,8 @@ namespace Combat {
         private Weapon _previousWeapon;
         private Weapon _currentWeapon;
 
+        private bool _canBob;
+
         private void Awake() {
             this.AddListener(EventType.OnPlayerMove, _ => _isMoving = true);
             this.AddListener(EventType.OnPlayerStop, _ => _isMoving = false);
@@ -43,6 +45,10 @@ namespace Combat {
                 originalWeaponPos                       = _currentWeapon.transform.localPosition;
             });
             originalArmPos = arms.localPosition;
+            
+            this.AddListener(EventType.SetPlayerMovement, state => {
+                _canBob = (bool)state;
+            });
         }
 
         private void UpdateWeaponBob(WeaponBobMsg msg) {
@@ -51,6 +57,7 @@ namespace Combat {
         }
         
         private void Update() {
+            if (!_canBob) return;
             if (!_currentWeapon ^ !arms) return;
             if (_isMoving) {
                 Vector3 moveVector = new(

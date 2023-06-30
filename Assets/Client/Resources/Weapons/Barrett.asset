@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Barrett
   m_EditorClassIdentifier: 
   slot: 0
-  weaponPrefab: {fileID: 0}
-  weaponSprite: {fileID: 0}
-  cost: 0
+  weaponPrefab: {fileID: 165704033723799563, guid: 84d2d508963ba3948bc6599b3a7b70d9, type: 3}
+  weaponSprite: {fileID: 21300032, guid: dccc05b8d01dde54f88f9910329187c2, type: 3}
+  cost: 83

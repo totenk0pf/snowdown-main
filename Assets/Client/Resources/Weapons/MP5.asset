@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slot: 0
   weaponPrefab: {fileID: 4348254221801417578, guid: dbe9428321473504ebb15e2a08603cd6, type: 3}
-  weaponSprite: {fileID: 21300000, guid: 5f9465604b6241440b5495d98673f807, type: 3}
+  weaponSprite: {fileID: 21300028, guid: dccc05b8d01dde54f88f9910329187c2, type: 3}
   cost: 2400

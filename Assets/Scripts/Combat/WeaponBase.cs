@@ -36,6 +36,7 @@ namespace Combat {
         public WeaponType weaponType;
         public Sprite weaponIcon;
         [SerializeField] protected WeaponSlot Slot;
+        public WeaponSlot GetSlot => Slot;
         public PlayerDataHandler owner;
         
         [TitleGroup("Attack")]
@@ -68,7 +69,7 @@ namespace Combat {
         [TitleGroup("View")] 
         public Transform leftIK;
         public Transform rightIK;
-        
+
         public abstract void Fire();
         public abstract void Reset();
         public abstract void HandleAttack();

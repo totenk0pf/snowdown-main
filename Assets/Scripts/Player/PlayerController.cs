@@ -42,6 +42,7 @@ public class PlayerController : NetworkBehaviour, INetworkRunnerCallbacks
     [Header("Speed")]
     [SerializeField] private float maxSpeed;
     [SerializeField] private float acceleration;
+    private bool _canMove = true; 
     
     [Header("Ground")]
     [SerializeField] private float groundMargin;
@@ -147,6 +148,10 @@ public class PlayerController : NetworkBehaviour, INetworkRunnerCallbacks
         _currentStamina = maxStamina;
         _currentSprint  = 1;
         _gravityDir     = Vector3.down;
+        
+        this.AddListener(EventType.SetPlayerMovement, state => {
+            _canMove = (bool)state;
+        });
     }
 
     private void OnDestroy() {
@@ -193,6 +198,7 @@ public class PlayerController : NetworkBehaviour, INetworkRunnerCallbacks
     public override void FixedUpdateNetwork() {
         base.FixedUpdateNetwork();
         if (!GetInput(out NetworkInputData data)) return;
+        if (!_canMove) return;
         _moveVector = orientation.right * data.direction.x + orientation.forward * data.direction.y;
         if (_moveVector.magnitude > 0.1f) {
             SlopeStep();

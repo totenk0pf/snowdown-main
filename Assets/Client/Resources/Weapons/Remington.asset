@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Remington
   m_EditorClassIdentifier: 
   slot: 0
-  weaponPrefab: {fileID: 0}
-  weaponSprite: {fileID: 0}
-  cost: 0
+  weaponPrefab: {fileID: 2877797656378865880, guid: e9bfeab1632a92846b0be1608ba2439a, type: 3}
+  weaponSprite: {fileID: 21300018, guid: dccc05b8d01dde54f88f9910329187c2, type: 3}
+  cost: 300

@@ -17,6 +17,18 @@ namespace Core.Events {
         OnPlayerCrouch,
         OnPlayerSprint,
         OnPlayerHUDUpdate,
+        OnPlayerBuy,
+        
+        OnBuyMenu,
+        OnBuySucceeded,
+        OnBuyFailed,
+        
+        OnWeaponBought,
+        OnPrimaryAmmoAdd, 
+        OnSecondaryAmmoAdd,
+        OnArmorAdd,
+        
+        SetPlayerMovement,
 
         OnZombieDeathFinish,
         OnZombieAttack

@@ -81,7 +81,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponType: 1
   weaponIcon: {fileID: 0}
-  Slot: 0
+  Slot: 1
+  owner: {fileID: 0}
   attackSpeed: 1
   attackDelay: 1.5
   attackSpeedMod: 1
@@ -91,6 +92,7 @@ MonoBehaviour:
   hitMask:
     serializedVersion: 2
     m_Bits: 12288
+  fireType: 0
   muzzleSprites:
   - {fileID: 4045297029347476879}
   - {fileID: 8112438798778383932}

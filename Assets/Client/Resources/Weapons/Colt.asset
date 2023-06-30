@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Colt
   m_EditorClassIdentifier: 
   slot: 0
-  weaponPrefab: {fileID: 0}
-  weaponSprite: {fileID: 0}
-  cost: 0
+  weaponPrefab: {fileID: 919472881455437389, guid: 4a725eb16a1fde644b15a4c124ce2a51, type: 3}
+  weaponSprite: {fileID: 21300012, guid: dccc05b8d01dde54f88f9910329187c2, type: 3}
+  cost: 1911

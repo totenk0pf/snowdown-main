@@ -7,6 +7,8 @@ Last modified by: Huu Quang Nguyen
 using UnityEngine;
 using DG.Tweening;
 using Cinemachine;
+using Core.Events;
+using EventType = Core.Events.EventType;
 
 /// <summary>
 /// Script responsible for camera controls and mouse looking.
@@ -20,6 +22,7 @@ public class MouseLook : MonoBehaviour
     public Transform orientation;
     public Transform viewTransform;
     private CinemachineVirtualCamera _cam;
+    private bool _canLook = true;
     [SerializeField] private Camera[] overlayCamList;
     [SerializeField] private float fovTransitionTime;
     #endregion
@@ -30,6 +33,13 @@ public class MouseLook : MonoBehaviour
         _cam             = GetComponent<CinemachineVirtualCamera>();
         Cursor.visible   = false;
         Cursor.lockState = CursorLockMode.Locked;
+        
+        this.AddListener(EventType.SetPlayerMovement, state => {
+            var b = (bool)state;
+            _canLook = b;
+            Cursor.visible   = !b;
+            Cursor.lockState = !b ? CursorLockMode.Confined : CursorLockMode.Locked;
+        });
     }
 
     private void Look() {
@@ -42,6 +52,7 @@ public class MouseLook : MonoBehaviour
     
     private void LateUpdate() {
         if (!orientation) return;
+        if (!_canLook) return;
         Look();
     }
 

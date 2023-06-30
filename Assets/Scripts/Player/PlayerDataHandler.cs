@@ -32,6 +32,8 @@ namespace Player {
                 money = defaultMoney,
                 player = this
             });
+            this.AddListener(EventType.OnPlayerBuy, amount => ReduceMoney((int)amount));
+            this.AddListener(EventType.OnArmorAdd, amount => AddArmor((int)amount));
         }
 
         public void TakeDamage(int damage) {
@@ -61,6 +63,26 @@ namespace Player {
             } else {
                 currentMoney += money;
             }
+        }
+
+        public void AddArmor(int amount) {
+            if (currentArmor >= maxArmor) return;
+            if (currentArmor + amount > maxArmor) {
+                currentArmor = maxArmor;
+            }
+            else {
+                currentArmor += amount;
+            }
+        }
+
+        public void ReduceMoney(int money) {
+            if (currentMoney <= 0 || currentMoney - money <= 0) {
+                this.FireEvent(EventType.OnBuyFailed);
+                return;
+            }
+            
+            this.FireEvent(EventType.OnBuySucceeded);
+            currentMoney -= money;
         }
 
         public static void OnUpdateHUD(Changed<PlayerDataHandler> changed) {
