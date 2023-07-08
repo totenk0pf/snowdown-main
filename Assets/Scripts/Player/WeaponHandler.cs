@@ -34,6 +34,7 @@ namespace Player {
     }
     
     public class WeaponHandler : NetworkBehaviour, INetworkRunnerCallbacks {
+        public PlayerController playerController; 
         public List<WeaponEntry> weaponInventory;
         public DefaultWeapons defaultWeapons;
         [SerializeField] private List<Weapon> weaponList;
@@ -50,6 +51,8 @@ namespace Player {
             SetupWeapons();
             SetupWeaponPanels();
             SetupActiveWeapon();
+
+            this.AddListener(EventType.OnWeaponFire, _ => HandleRecoil());
             
             this.AddListener(EventType.OnPrimaryAmmoAdd, _ => {
                 WeaponEntry entry = GetBySlot(WeaponSlot.Primary);
@@ -123,6 +126,16 @@ namespace Player {
             SwapWeapon((WeaponSlot) _activeSlot);
         }
 
+        private void HandleRecoil() {
+            if (_currentWeapon.weaponType is WeaponType.Melee or WeaponType.Grenade) return;
+            playerController.mouseLook
+                .Recoil(
+                    _currentWeapon.verticalSpread,
+                    _currentWeapon.horizontalSpread,
+                    _currentWeapon.recoverRate,
+                    _currentWeapon.recoverTime);
+        }
+
         private void Update() {
             if (!_hideTimerActive) return;
             _hideTimer += Time.deltaTime;
@@ -137,7 +150,7 @@ namespace Player {
             if (!GetInput(out NetworkInputData input)) return;
             if (_currentWeapon) {
                 if (input.weaponInput.IsSet(WeaponButtons.Fire)) {
-                    _currentWeapon.Fire();                
+                    _currentWeapon.Fire();
                 } else if (input.weaponInput.IsSet(WeaponButtons.AltFire)) {
                     _currentWeapon.AltFire();
                 } else {

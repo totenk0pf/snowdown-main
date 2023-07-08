@@ -40,8 +40,8 @@ namespace Combat {
         public PlayerDataHandler owner;
         
         [TitleGroup("Attack")]
-        [SerializeField] protected float attackSpeed = 1f;
-        [SerializeField] protected float attackDelay;
+        public float attackSpeed = 1f;
+        public float attackDelay;
         public float attackSpeedMod = 1f;
         [SerializeField] protected int baseDamage;
         [SerializeField] protected Transform firePoint;
@@ -65,6 +65,13 @@ namespace Combat {
         [HideIf("IsMelee")] [SerializeField] protected int defaultAmmo;
         [HideIf("IsMelee")] [SerializeField] protected int defaultReserve;
         [HideIf("IsMelee")] [SerializeField] public int reserveAdd;
+
+        [TitleGroup("Recoil")] 
+        [HideIf("IsMelee")] public float verticalSpread = 2f;
+        [HideIf("IsMelee")] public float horizontalSpread = 2f;
+        [Space]
+        [HideIf("IsMelee")] public float recoverRate = 0.5f;
+        [HideIf("IsMelee")] public float recoverTime = 1f;
 
         [TitleGroup("View")] 
         public Transform leftIK;

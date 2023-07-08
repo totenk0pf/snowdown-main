@@ -17,6 +17,7 @@ using Core;
 using Core.Events;
 using Core.Logging;
 using Palmmedia.ReportGenerator.Core.Reporting.Builders;
+using Sirenix.OdinInspector;
 using Unity.VisualScripting;
 using EventType = Core.Events.EventType;
 
@@ -108,8 +109,8 @@ public class PlayerController : NetworkBehaviour, INetworkRunnerCallbacks
     [Header("Components")] 
     [SerializeField] private GameObject body;
     [SerializeField] private Canvas hud;
+    [ReadOnly] public MouseLook mouseLook;
     private CameraHandler _cameraHandler;
-    private MouseLook _mouseLook;
     private NetworkContainer _container;
     private NetworkRunner _runner;
     private NetworkObject _networkObject;
@@ -141,7 +142,7 @@ public class PlayerController : NetworkBehaviour, INetworkRunnerCallbacks
 
         _networkObject = GetComponent<NetworkObject>();
         _cameraHandler = FindObjectOfType<CameraHandler>();
-        _mouseLook     = _cameraHandler.mouseLook;
+        mouseLook     = _cameraHandler.mouseLook;
         if (hud) hud.worldCamera = _cameraHandler.uiCamera;
 
         _defaultHeight  = Col.height;
@@ -163,9 +164,9 @@ public class PlayerController : NetworkBehaviour, INetworkRunnerCallbacks
         if (_networkObject.HasInputAuthority) {
             body.SetActive(false);
             _cameraHandler.StartFollowing(camTransform);
-            _mouseLook.orientation   = orientation;
-            _mouseLook.viewTransform = viewTransform;
-            _mouseLook.SetupView();
+            mouseLook.orientation   = orientation;
+            mouseLook.viewTransform = viewTransform;
+            mouseLook.SetupView();
         }
     }
 
@@ -260,19 +261,19 @@ public class PlayerController : NetworkBehaviour, INetworkRunnerCallbacks
     private void LateUpdate() {
         switch (_currentState) {
             case PlayerState.Idle:
-                _mouseLook.TransitionFOV(defaultFOV);
+                mouseLook.TransitionFOV(defaultFOV);
                 break;
             case PlayerState.Walking:
-                _mouseLook.TransitionFOV(defaultFOV);
+                mouseLook.TransitionFOV(defaultFOV);
                 break;
             case PlayerState.Running:
-                _mouseLook.TransitionFOV(sprintFOV);
+                mouseLook.TransitionFOV(sprintFOV);
                 break;
             case PlayerState.Sliding:
-                _mouseLook.TransitionFOV(slideFOV);
+                mouseLook.TransitionFOV(slideFOV);
                 break;
             case PlayerState.Crouching:
-                _mouseLook.TransitionFOV(defaultFOV);
+                mouseLook.TransitionFOV(defaultFOV);
                 break;
         }
     }

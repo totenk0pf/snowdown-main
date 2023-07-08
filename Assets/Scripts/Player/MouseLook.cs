@@ -4,11 +4,14 @@ Author: Huu Quang Nguyen
 Last modified by: Huu Quang Nguyen
 --------------------------------------*/
 
+using System;
 using UnityEngine;
 using DG.Tweening;
 using Cinemachine;
 using Core.Events;
+using Sirenix.OdinInspector;
 using EventType = Core.Events.EventType;
+using Random = UnityEngine.Random;
 
 /// <summary>
 /// Script responsible for camera controls and mouse looking.
@@ -25,6 +28,14 @@ public class MouseLook : MonoBehaviour
     private bool _canLook = true;
     [SerializeField] private Camera[] overlayCamList;
     [SerializeField] private float fovTransitionTime;
+    
+    //lycoris recoil stuff
+    private float _currVerticalSpread;
+    private float _currHorizontalSpread;
+    private float _currRecoilTime;
+    private float _currRecoverRate;
+    private float _currRecoverTime;
+    
     #endregion
 
     #region Unity Methods
@@ -49,7 +60,29 @@ public class MouseLook : MonoBehaviour
         orientation.eulerAngles = new Vector3(0, lookVector.y, 0);
         transform.eulerAngles = lookVector;
     }
-    
+
+    private void FixedUpdate() {
+        if (_currRecoilTime > 0) {
+            lookVector.x -= _currVerticalSpread * Time.fixedDeltaTime / _currRecoilTime;
+            lookVector.y += Random.Range(-_currHorizontalSpread , _currHorizontalSpread) * Time.fixedDeltaTime / _currRecoilTime;
+            _currRecoilTime -= Time.fixedDeltaTime;
+        }
+
+        if (_currRecoverTime > 0) {
+            
+            if (lookVector.x >= 2.5f) {
+                lookVector = Vector3.Lerp(lookVector, new Vector3(lookVector.x + _currVerticalSpread * 2, lookVector.y), _currRecoverRate * Time.fixedDeltaTime);
+                _currRecoverTime -= Time.fixedDeltaTime * 2;
+
+                if (lookVector.x <= 3f) _currRecoverTime = 0;
+                return;
+            }
+            
+            _currRecoverTime -= Time.fixedDeltaTime;
+            lookVector = Vector3.Lerp(lookVector, new Vector3(2.5f, lookVector.y), _currRecoverRate * Time.fixedDeltaTime);
+        }
+    }
+
     private void LateUpdate() {
         if (!orientation) return;
         if (!_canLook) return;
@@ -73,6 +106,15 @@ public class MouseLook : MonoBehaviour
                        targetFOV, 
                        fovTransitionTime);
         } 
+    }
+
+    public void Recoil(float v, float h, float reR, float reT) {
+        _currVerticalSpread = v;
+        _currHorizontalSpread = h;
+        _currRecoilTime = 0.05f;
+
+        _currRecoverRate = reR;
+        _currRecoverTime = reT;
     }
     #endregion
 }
